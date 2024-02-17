@@ -68,8 +68,8 @@ export const authOptions: NextAuthOptions = {
 							  token,
 							  user,
 						}: {
-				  token: ExtendedToken; // Assuming ExtendedToken correctly extends JWT
-				  user?: CustomUser; // Use an extended or compatible user type
+				  token: ExtendedToken; 
+				  user?: CustomUser; 
 				  account?: Account | null;
 				  profile?: Profile | undefined;
 				  isNewUser?: boolean;
