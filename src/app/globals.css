@@ -42,3 +42,75 @@ body {
 .image {
   object-fit: cover;
 }
+
+
+/* Mouse Scroll CSS*/
+/* styles/globals.css */
+@keyframes drawOval {
+  0% {
+    stroke-dashoffset: 157;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawPurpleOval {
+  0%, 25% {
+    stroke-dashoffset: 157;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes zigzag {
+  0%, 100% {
+    height: 0;
+    background: transparent;
+  }
+  50% {
+    height: 50px;
+    background: purple;
+  }
+}
+
+@keyframes drawDown {
+  0%, 100% {
+    height: 0;
+    background: transparent;
+  }
+  50% {
+    height: 50px;
+    background: purple;
+  }
+}
+
+@keyframes drawArrow {
+  0%, 50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-drawOval {
+  animation: drawOval 1s forwards;
+}
+
+.animate-drawPurpleOval {
+  animation: drawPurpleOval 1s 1s forwards;
+}
+
+.animate-zigzag {
+  animation: zigzag 2s 2s infinite;
+}
+
+.animate-drawDown {
+  animation: drawDown 2s 2s infinite;
+}
+
+.animate-drawArrow {
+  animation: drawArrow 2s 2s forwards;
+}

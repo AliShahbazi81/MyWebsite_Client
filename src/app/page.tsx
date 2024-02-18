@@ -1,8 +1,13 @@
-import Image from "next/image";
 import HomePageImage from "@/components/HomePageImage";
+import Navbar from "@/components/Navbar";
+import MouseScroll from "@/components/MouseScroll";
 
 export default function Home() {
 	  return (
-			<HomePageImage/>
+			<div className={'flex flex-auto'}>
+				  <Navbar />
+				  <HomePageImage/>
+					<MouseScroll />
+			</div>
 	  );
 }
