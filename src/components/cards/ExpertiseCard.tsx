@@ -111,8 +111,8 @@ export default function ExpertiseCard() {
 						/>
 				  </div>
 				  <div className={'flex items-center justify-center space-x-4 z-50'}>
-						<button onClick={prevCard} className="px-4 py-2 rounded-full">Prev</button>
-						<button onClick={nextCard} className="px-4 py-2 rounded-full">Next</button>
+						<button onClick={prevCard} className="px-4 py-2 rounded-full text-primary shine-effect">&#60;</button>
+						<button onClick={nextCard} className="px-4 py-2 rounded-full text-primary shine-effect">&#62;</button>
 				  </div>
 			</div>
 	  );

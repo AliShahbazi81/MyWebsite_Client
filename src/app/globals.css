@@ -258,6 +258,30 @@ nav {
     @apply ml-2;
 }
 
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Slider Navigation-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+.shine-effect {
+    position: relative;
+    color: #FFA500;
+    animation: pulseShine 1s infinite alternate;
+}
+
+@keyframes pulseShine {
+    from {
+        text-shadow:
+                0 0 8px #ffd700, 
+                0 0 12px #ff8c00,
+                0 0 24px #ff4500; 
+    }
+    to {
+        text-shadow:
+                0 0 15px #ffff00, 
+                0 0 25px #ff4500, 
+                0 0 40px #ff8c00,
+                0 0 60px #ffd700, 
+                0 0 80px #ffff00;
+    }
+}
+
 .navigation {
     @apply flex justify-center items-center w-full z-50;
 }
