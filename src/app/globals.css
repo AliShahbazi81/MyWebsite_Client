@@ -48,7 +48,7 @@ body {
 }
 
 .icon {
-    @apply w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16;
+    @apply w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16 mr-2 ml-5;
 }
 
 .divBackground{
@@ -151,9 +151,12 @@ body {
 
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Expertise Card -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .card{
-    @apply border-0 border-white flex items-start justify-center p-5;
+    @apply border-0 border-white flex flex-col items-start justify-center p-5;
+}
+.cardHeader {
+    @apply flex items-start justify-center;
 }
 .cardTitle{
-    @apply text-white font-bold mt-2;
+    @apply text-white font-bold mt-2 whitespace-pre-wrap;
     font-size: min(2vw, 24px);
 }

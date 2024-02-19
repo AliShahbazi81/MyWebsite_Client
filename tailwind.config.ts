@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      whitespace: {
+        'pre-wrap': 'pre-wrap',
+      },
       backgroundImage: {
         'melted-gradient': "linear-gradient(to bottom, transparent, #1A191D)",
       },
