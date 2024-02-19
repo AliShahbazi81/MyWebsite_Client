@@ -248,3 +248,10 @@ nav {
     width: 2px; 
 }
 
+.technologyTitle{
+    @apply mt-5 mb-5;
+    font-size: min(1vw, 24px);
+}
+.technologyIcons {
+    @apply ml-2;
+}

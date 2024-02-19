@@ -3,6 +3,7 @@ import CardHeader from "@/components/cards/CardHeader";
 import TagElement from "@/components/cards/TagElement";
 import DescriptionLine from "@/components/cards/DescriptionLine";
 import Image from "next/image";
+import Technologies from "@/components/cards/Technologies";
 
 export default function ExpertiseCard() {
 	  return (
@@ -18,11 +19,17 @@ export default function ExpertiseCard() {
 									{/* Title description*/}
 									<div className={'cardBody'}>
 										  <DescriptionLine>
-												<p className={'descriptionText'}>Seasoned in .NET with <span className={'text-primary'}><u><b>6+ years</b></u></span> crafting scalable solutions, adept in <span className={'text-primary'}><u><b>OOP, SOLID</b></u></span> principles, and best coding practices.</p>
+												<p className={'descriptionText'}>Seasoned in .NET with <span className={'text-primary'}><b>6+ years</b></span> crafting scalable solutions, adept in <span className={'text-primary'}><b>OOP, SOLID</b></span> principles, and best coding practices.</p>
 										  </DescriptionLine>
 									</div>
 									{/* h2 element - end*/}
 									<TagElement softwareDevelopment={true}/>
+							  </div>
+							  <div className={'flex flex-col items-start justify-start'}>
+									<h1 className={'technologyTitle'}>Technologies: </h1>
+									<div className={'flex items-center justify-center'}>
+										  
+									</div>
 							  </div>
 						</div>
 						<div className={'card backendCard'}>
@@ -34,11 +41,20 @@ export default function ExpertiseCard() {
 									{/* Title description*/}
 									<div className={'cardBody'}>
 										  <DescriptionLine>
-												<p className={'descriptionText'}>Expert in <span className={'text-primary'}><u><b>.NET</b></u></span> with a strong focus on robust, scalable backends, complemented by proficiency in <span className={'text-primary'}><u><b>Django</b></u></span> and <span className={'text-primary'}><u><b>Spring Boot.</b></u></span></p>
+												<p className={'descriptionText'}>Expert in <span className={'text-primary'}><b>.NET</b></span> with a strong focus on robust, scalable backends, complemented by proficiency in <span className={'text-primary'}><b>Django</b></span> and <span className={'text-primary'}><b>Spring Boot.</b></span></p>
 										  </DescriptionLine>
 									</div>
 									{/* h2 element - End*/}
 									<TagElement backend={true}/>
+							  </div>
+							  <div className={'flex flex-col items-start justify-start'}>
+									<h1 className={'technologyTitle'}>Technologies: </h1>
+									<div className={'flex items-center justify-center'}>
+										  <Technologies keyword={"DotNetCore"}/>
+										  <Technologies keyword={"Django"}/>
+										  <Technologies keyword={"SpringBoot"}/>
+										  <Technologies keyword={"Python"}/>
+									</div>
 							  </div>
 						</div>
 						<div className={'card frontendCard'}>
@@ -50,13 +66,24 @@ export default function ExpertiseCard() {
 									{/* Title description*/}
 									<div className={'cardBody'}>
 										  <DescriptionLine>
-												<p className={'descriptionText'}> Skilled in <span className={'text-primary'}><u><b>React</b></u></span>, <span className={'text-primary'}><u><b>Next.js</b></u></span>, and <span className={'text-primary'}><u><b>TypeScript</b></u></span> creating responsive, user-focused interfaces that seamlessly integrate with dynamic backends.</p>
+												<p className={'descriptionText'}> Skilled in <span className={'text-primary'}><b>React</b></span>, <span className={'text-primary'}><b>Next.js</b></span>, and <span className={'text-primary'}><b>TypeScript</b></span> creating responsive, user-focused interfaces that seamlessly integrate with dynamic backends.</p>
 										  </DescriptionLine>
 									</div>
 									{/* h2 element - End*/}
 									<TagElement frontend={true}/>
 							  </div>
-
+							  <div className={'flex flex-col items-start justify-start'}>
+									<h1 className={'technologyTitle'}>Technologies: </h1>
+									<div className={'flex items-center justify-center'}>
+										  <Technologies keyword={"React"}/>
+										  <Technologies keyword={"Redux"}/>
+										  <Technologies keyword={"NextJs"}/>
+										  <Technologies keyword={"MaterialUI"}/>
+										  <Technologies keyword={"Tailwind"}/>
+										  <Technologies keyword={"JavaScript"}/>
+										  <Technologies keyword={"TypeScript"}/>
+									</div>
+							  </div>
 						</div>
 						<div className={'card databaseCard'}>
 							  <CardHeader expertise={"Database"}/>
@@ -68,13 +95,23 @@ export default function ExpertiseCard() {
 									<div className={'cardBody'}>
 										  <DescriptionLine>
 												<p className={'descriptionText'}>
-													  Proficient with <span className={'text-primary'}><u><b>SQL Server</b></u></span>, <span className={'text-primary'}><u><b>PostgreSQL</b></u></span>, <span className={'text-primary'}><u><b>MongoDB</b></u></span>, optimizing data storage and retrieval for high-performance, scalable applications.
+													  Proficient with <span className={'text-primary'}><b>SQL Server</b></span>, <span className={'text-primary'}><b>PostgreSQL</b></span>, <span className={'text-primary'}><b>MongoDB</b></span>, optimizing data storage and retrieval for high-performance, scalable applications.
 													  
 												</p>
 										  </DescriptionLine>
 									</div>
 									{/* h2 element - End*/}
 									<TagElement database={true}/>
+							  </div>
+							  <div className={'flex flex-col items-start justify-start'}>
+									<h1 className={'technologyTitle'}>Technologies: </h1>
+									<div className={'flex items-center justify-center'}>
+										  <Technologies keyword={"MongoDb"}/>
+										  <Technologies keyword={"PostgresSql"}/>
+										  <Technologies keyword={"Redis"}/>
+										  <Technologies keyword={"SqlServer"}/>
+										  <Technologies keyword={"MySql"}/>
+									</div>
 							  </div>
 						</div>
 				  </div>
