@@ -3,6 +3,7 @@ import CardHeader from "@/components/cards/CardHeader";
 import TagElement from "@/components/cards/TagElement";
 import DescriptionLine from "@/components/cards/DescriptionLine";
 import Technologies from "@/components/cards/Technologies";
+import {CSSTransition, TransitionGroup} from 'react-transition-group'
 import Image from "next/image";
 
 const cardData = [
@@ -62,43 +63,55 @@ export default function ExpertiseCard() {
 	  };
 
 	  const prevCard = () => {
-			setCurrentIndex((prevIndex) => (prevIndex + totalCards - 1) % totalCards);
+			setCurrentIndex((prevIndex) => {
+				  return prevIndex - 1 < 0 ? totalCards - 1 : prevIndex - 1;
+			});
 	  };
 
-	  const visibleCards = cardData.slice(currentIndex, currentIndex + 3).concat(cardData.slice(0, Math.max(0, currentIndex + 3 - totalCards)));
+	  const determineVisibleCards = () => {
+			let cardsToShow = [];
+			for (let i = 0; i < 3; i++) {
+				  let index = (currentIndex + i) % totalCards;
+				  cardsToShow.push(cardData[index]);
+			}
+			return cardsToShow;
+	  };
 
+	  const visibleCards = determineVisibleCards();
 	  return (
 			<div className={'flex flex-col items-center justify-start space-y-4'}>
-				  <div className={"flex justify-start items-start space-x-4 overflow-hidden"}>
+				  <TransitionGroup className="flex justify-start items-start space-x-4 overflow-hidden">
 						{visibleCards.map((card) => (
-							  <div key={card.id} className={`card ${card.id + "Card"}`}>
-									{/* Card Header*/}
-									<CardHeader
-										  expertise={card.expertise}
-										  nextLine={card.nextLine} secondExpertise={card.secondExpertise}
-									/>
-									{/*Card Body*/}
-									<div className={'mt-4'}>
-										  <TagElement {...{[card.id]: true}} />
-										  <div className={'cardBody'}>
-												<DescriptionLine>
-													  {card.description}
-												</DescriptionLine>
-										  </div>
-										  <TagElement {...{[card.id]: true}} />
-										  {/*Technologies */}
-										  <div className={'flex flex-col items-start justify-start'}>
-												<h1 className={'technologyTitle'}>Technologies: </h1>
-												<div className={'flex items-center justify-center'}>
-													  {card.technologies.map((tech) => (
-															<Technologies key={tech} keyword={tech}/>
-													  ))}
+							  <CSSTransition key={card.id} timeout={1000} classNames="slide">
+									<div key={card.id} className={`card ${card.id + "Card"}`}>
+										  {/* Card Header*/}
+										  <CardHeader
+												expertise={card.expertise}
+												nextLine={card.nextLine} secondExpertise={card.secondExpertise}
+										  />
+										  {/*Card Body*/}
+										  <div className={'mt-4'}>
+												<TagElement {...{[card.id]: true}} />
+												<div className={'cardBody'}>
+													  <DescriptionLine>
+															{card.description}
+													  </DescriptionLine>
+												</div>
+												<TagElement {...{[card.id]: true}} />
+												{/*Technologies */}
+												<div className={'flex flex-col items-start justify-start'}>
+													  <h1 className={'technologyTitle'}>Technologies: </h1>
+													  <div className={'flex items-center justify-center'}>
+															{card.technologies.map((tech) => (
+																  <Technologies key={tech} keyword={tech}/>
+															))}
+													  </div>
 												</div>
 										  </div>
 									</div>
-							  </div>
+							  </CSSTransition>
 						))}
-				  </div>
+				  </TransitionGroup>
 				  {/* Blur Logo*/}
 				  <div className={'flex items-center justify-center'}>
 						<Image
@@ -107,7 +120,7 @@ export default function ExpertiseCard() {
 							  alt={"Logo"}
 							  width={800}
 							  height={900}
-							  
+
 						/>
 				  </div>
 				  <div className={'flex items-center justify-center space-x-4 z-50'}>
