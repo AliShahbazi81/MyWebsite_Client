@@ -151,18 +151,37 @@ body {
 
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Expertise Card -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .card{
-    @apply border-0 border-white flex flex-col items-start justify-center p-7;
+    @apply border-0 border-white flex flex-col items-start justify-center p-7 max-w-96;
 }
 .cardHeader {
     @apply flex items-start justify-start;
+}
+.cardBody {
+    @apply mb-5 ml-4 mt-5;
 }
 .cardTitle{
     @apply text-white font-bold mt-2 whitespace-pre-wrap ml-4;
     font-size: min(2vw, 24px);
 }
 
-
-
 .element {
     @apply text-gray-500;
 }
+
+.descriptionText {
+    @apply leading-7 text-base font-light;
+}
+
+.description-container {
+    @apply relative pl-4 ;
+}
+
+.description-container::before {
+    content: '';
+    @apply absolute bg-gray-600; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px; 
+}
+
