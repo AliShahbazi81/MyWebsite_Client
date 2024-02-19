@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import MouseScroll from "@/components/MouseScroll";
+import ExpertiseCard from "@/components/cards/ExpertiseCard";
 
 export default function HomePageImage() {
 	  return (
@@ -39,11 +40,15 @@ export default function HomePageImage() {
 							  <MouseScroll/>
 						</div>
 				  </div>
-				  <div className={'relative flex items-center justify-center h-screen bg-background'}>
-						<h1>
+				  <div className={'divBackground'}>
+						<h1 className={'title'}>
 							  My Expertise
 						</h1>
+						{/* Expertise Card*/}
+						<ExpertiseCard />
+						
 				  </div>
+				  
 			</>
 	  );
 }
