@@ -7,7 +7,7 @@ export default function ExpertiseCard() {
 	  return (
 			<div className={'flex justify-center items-start sm: '}>
 				  {/* Title and icon*/}
-				  <div className={'card'}>
+				  <div className={'card softwareDevelopmentCard'}>
 						<CardHeader expertise={"Software"} nextLine={true} secondExpertise={"Development"}/>
 						{/* Card's Body*/}
 						<div className={'mt-4'}>
@@ -23,7 +23,7 @@ export default function ExpertiseCard() {
 							  <TagElement softwareDevelopment={true}/>
 						</div>
 				  </div>
-				  <div className={'card'}>
+				  <div className={'card backendCard'}>
 						<CardHeader expertise={"Backend"}/>
 						{/* Card's Body*/}
 						<div className={'mt-8'}>
@@ -39,7 +39,7 @@ export default function ExpertiseCard() {
 							  <TagElement backend={true}/>
 						</div>
 				  </div>
-				  <div className={'card'}>
+				  <div className={'card frontendCard'}>
 						<CardHeader expertise={"Frontend"}/>
 						{/* Card's Body*/}
 						<div className={'mt-8'}>
@@ -56,7 +56,7 @@ export default function ExpertiseCard() {
 						</div>
 
 				  </div>
-				  <div className={'card'}>
+				  <div className={'card databaseCard'}>
 						<CardHeader expertise={"Database"}/>
 						{/* Card's Body*/}
 						<div className={'mt-8'}>
