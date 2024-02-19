@@ -103,13 +103,16 @@ body {
     }
 }
 .name {
-    @apply absolute text-center font-bold text-white z-10;
+    @apply text-center font-bold z-10 text-white;
     /*Set maximum font size to 8vw*/
     font-size: min(8vw, 100px);
     animation: fadeIn 1s ease-in-out 1s forwards;
 }
 .nameInitial {
-    
+    @apply text-center font-bold z-10 text-primary;
+    /*Set maximum font size to 8vw*/
+    font-size: min(8vw, 100px);
+    animation: fadeIn 1s ease-in-out 1s forwards;
 }
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Profession -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .profession {

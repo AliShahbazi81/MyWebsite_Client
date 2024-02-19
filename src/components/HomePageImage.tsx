@@ -17,13 +17,25 @@ export default function HomePageImage() {
 							  quality={100}
 							  loading={"eager"}
 						/>
-						<h1 className={'name'}>
-							  Ali Shahbazi
-						</h1>
-						<h2 className={'profession'}>
-							  Web Developer, Full Stack Developer & App Developer
-						</h2>
-						<div className={'absolute bottom-0 mb-5'}>	  
+						<div className={'flex items-center justify-center space-x-0 z-10'}>
+							  <h1 className={'nameInitial'}>
+									A
+							  </h1>
+							  <h1 className={'name'}>
+									li
+							  </h1>
+							  <div className={'w-4'}/>
+							  <h1 className={'nameInitial'}>
+									S
+							  </h1>
+							  <h1 className={'name'}>
+									hahbazi
+							  </h1>
+							  <h2 className={'profession'}>
+									Web Developer, Full Stack Developer & App Developer
+							  </h2>
+						</div>
+						<div className={'absolute bottom-0 mb-5'}>
 							  <MouseScroll/>
 						</div>
 				  </div>
