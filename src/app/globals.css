@@ -44,73 +44,45 @@ body {
 }
 
 
-/* Mouse Scroll CSS*/
-/* styles/globals.css */
-@keyframes drawOval {
+.mouse {
+  height: 60px;
+  width: 32px;
+  border: 2px solid white;
+  border-radius: 32px;
+  position: relative;
+  .scrollWheel {
+    height: 20px;
+    width: 2px;
+    background: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 10px;
+    border-radius: 1px;
+    transform: scaleY(0);
+    animation: scroll 2s linear infinite;
+  }
+}
+
+@keyframes scroll {
   0% {
-    stroke-dashoffset: 157;
+    transform: scaleY(0);
+    transform-origin: top;
   }
-  100% {
-    stroke-dashoffset: 0;
+  25% {
+    transform: scaleY(1);
+    transform-origin: top;
   }
-}
-
-@keyframes drawPurpleOval {
-  0%, 25% {
-    stroke-dashoffset: 157;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes zigzag {
-  0%, 100% {
-    height: 0;
-    background: transparent;
+  26% {
+    transform-origin: bottom;
   }
   50% {
-    height: 50px;
-    background: purple;
-  }
-}
-
-@keyframes drawDown {
-  0%, 100% {
-    height: 0;
-    background: transparent;
-  }
-  50% {
-    height: 50px;
-    background: purple;
-  }
-}
-
-@keyframes drawArrow {
-  0%, 50% {
-    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
   }
   100% {
-    opacity: 1;
+    transform: scaleY(0);
+    transform-origin: bottom;
   }
-}
-
-.animate-drawOval {
-  animation: drawOval 1s forwards;
-}
-
-.animate-drawPurpleOval {
-  animation: drawPurpleOval 1s 1s forwards;
-}
-
-.animate-zigzag {
-  animation: zigzag 2s 2s infinite;
-}
-
-.animate-drawDown {
-  animation: drawDown 2s 2s infinite;
-}
-
-.animate-drawArrow {
-  animation: drawArrow 2s 2s forwards;
 }
