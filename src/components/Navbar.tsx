@@ -23,14 +23,20 @@ export default function Navbar() {
 	  }, []);
 	  return (
 			<nav className={`fixed top-0 left-0 w-full z-30 transition-all ease-in-out duration-1000 ${isSticky ? 'animate-slideDown bg-opacity-60 backdrop-filter backdrop-blur' : 'bg-transparent'}`}>
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 						<div className="flex items-center justify-center h-16">
-							  <div className="flex items-center">
-									<div className="flex-shrink-0 col-auto">
-										  
-									</div>
+							  <div className="flex items-center justify-start">
+									<Link href={"/"}>
+										  <Image
+												src={"/images/Logo.png"}
+												alt={"Logo"}
+												width={70}
+												height={70}
+										  />
+									</Link>
 									<div className="hidden md:block">
 										  <div className="ml-10 flex items-baseline space-x-4">
+
 												{/* Navigation Links */}
 												<Link href="/" className="navLink">
 													  Home

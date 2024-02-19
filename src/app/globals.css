@@ -135,10 +135,15 @@ nav {
 }
 
 .navLink {
-    @apply text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium;
+    @apply text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium;
 }
 
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ HomePage -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Blur Logo -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+.blurLogo {
+    @apply absolute opacity-5 z-0;
+    font-size: 2vw;
+}
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Name -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 @keyframes fadeIn {
     from {
@@ -177,18 +182,17 @@ nav {
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Profession -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .profession {
     @apply absolute text-center text-white z-10 pt-36;
-    /*Set minimum font size to 1.5vw and maximum to 2vw*/
     font-size: min(2vw, 24px);
 }
 
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Expertise Card -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .card{
-    @apply border-0 border-white flex flex-col items-start justify-center p-7 max-w-96;
+    @apply border-0 border-white flex flex-col items-start justify-center p-7 max-w-96 z-20;
     :hover .cardTitle {
-        color: transparent; /* Hide the text color to show the background image */
-        -webkit-text-fill-color: transparent; /* Specifically for Safari */
-        background-size: auto 100%; /* Adjust background size as needed */
-        animation: slideBackground 5s linear infinite; /* Apply the scrolling animation */
+        color: transparent;
+        -webkit-text-fill-color: transparent; 
+        background-size: auto 100%; 
+        animation: slideBackground 5s linear infinite; 
     }
 }
 .cardHeader {
@@ -198,13 +202,13 @@ nav {
     @apply mb-5 ml-4 mt-5;
 }
 .cardTitle{
-    @apply text-white font-bold mt-2 whitespace-pre-wrap ml-4;
+    @apply text-white font-bold mt-2 whitespace-pre-wrap ml-4 cursor-default;
     font-size: min(2vw, 24px);
-    color: white; /* Default text color */
+    color: white; 
     display: inline-block;
     -webkit-background-clip: text;
     background-clip: text;
-    transition: color 2s ease; /* Smooth transition for the color */
+    transition: color 2s ease;
 }
 /* Hover styles for each card type */
 .databaseCard:hover .cardTitle {
