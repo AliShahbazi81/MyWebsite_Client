@@ -34,7 +34,7 @@ export default function HomePageImage() {
 							  </h1>
 						</div>
 						<h2 className="profession">
-							  Web Developer, Full Stack Developer & App Developer
+							  Web, Full Stack & App Developer
 						</h2>
 						<div className="absolute bottom-0 mb-5">
 							  <MouseScroll/>
