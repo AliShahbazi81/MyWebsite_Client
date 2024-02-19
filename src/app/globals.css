@@ -110,6 +110,30 @@ body {
     }
 }
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ NavBar -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.animate-slideDown {
+    animation: slideDown 1s ease-in-out forwards;
+}
+nav {
+    transition: background-color 1s ease-in-out, backdrop-filter 0.5s ease;
+}
+.navbar-visible {
+    @apply visible bg-opacity-60 backdrop-filter backdrop-blur-lg;
+}
+
+.navbar-hidden {
+    @apply invisible;
+}
+
 .navLink {
     @apply text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium;
 }
@@ -184,7 +208,7 @@ body {
 }
 /* Hover styles for each card type */
 .databaseCard:hover .cardTitle {
-    background-image: url('../../public/images/SqlServer.jpg');
+    background-image: url('../../public/images/PostgresSql.png');
 }
 
 .backendCard:hover .cardTitle {

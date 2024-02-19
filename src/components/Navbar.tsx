@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link';
-import {Fragment} from 'react';
+import {Fragment, useEffect, useState} from 'react';
 import {Menu, Transition} from '@headlessui/react';
 import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline';
 import Image from "next/image";
@@ -10,9 +10,20 @@ function classNames(...classes: any) {
 }
 
 export default function Navbar() {
+	  const [isSticky, setIsSticky] = useState(false);
+
+	  useEffect(() => {
+			const handleScroll = () => {
+				  const shouldBeSticky = window.scrollY > window.innerHeight * 0.30;
+				  setIsSticky(shouldBeSticky);
+			};
+
+			window.addEventListener('scroll', handleScroll);
+			return () => window.removeEventListener('scroll', handleScroll);
+	  }, []);
 	  return (
-			<nav className="absolute top-0 left-0 w-full z-30">
-				  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<nav className={`fixed top-0 left-0 w-full z-30 transition-all ease-in-out duration-1000 ${isSticky ? 'animate-slideDown bg-opacity-60 backdrop-filter backdrop-blur' : 'bg-transparent'}`}>
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 						<div className="flex items-center justify-center h-16">
 							  <div className="flex items-center">
 									<div className="flex-shrink-0 col-auto">
