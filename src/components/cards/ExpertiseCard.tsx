@@ -1,119 +1,86 @@
-import React from "react";
+import React, {useState} from 'react';
 import CardHeader from "@/components/cards/CardHeader";
 import TagElement from "@/components/cards/TagElement";
 import DescriptionLine from "@/components/cards/DescriptionLine";
-import Image from "next/image";
 import Technologies from "@/components/cards/Technologies";
+import Image from "next/image";
+
+const cardData = [
+	  {
+			id: 'softwareDevelopment',
+			nextLine: true,
+			expertise: 'Software',
+			secondExpertise: 'Development',
+			description: 'Seasoned in .NET with 6+ years crafting scalable solutions, adept in OOP, SOLID principles, and best coding practices.',
+			technologies: [],
+	  },
+	  {
+			id: 'backend',
+			nextLine: false,
+			expertise: 'Backend',
+			description: 'Expert in .NET with a strong focus on robust, scalable backends, complemented by proficiency in Django and Spring Boot.',
+			technologies: ['DotNetCore', 'Django', 'SpringBoot'],
+	  },
+	  {
+			id: 'frontend',
+			nextLine: false,
+			expertise: 'Frontend',
+			description: 'Skilled in React, Next.js, and TypeScript creating responsive, user-focused interfaces that seamlessly integrate with dynamic backends.',
+			technologies: ['React', 'Redux', 'NextJs', 'MaterialUI', 'Tailwind', 'JavaScript', 'TypeScript'],
+	  },
+	  {
+			id: 'database',
+			nextLine: false,
+			expertise: 'Database',
+			description: 'Proficient with SQL Server, PostgreSQL, MongoDB, optimizing data storage and retrieval for high-performance, scalable applications.',
+			technologies: ['MongoDb', 'PostgresSql', 'Redis', 'SqlServer', 'MySql'],
+	  },
+];
 
 export default function ExpertiseCard() {
+	  const [currentIndex, setCurrentIndex] = useState(0);
+	  const totalCards = cardData.length;
+
+	  const nextCard = () => {
+			setCurrentIndex((prevIndex) => (prevIndex + 1) % totalCards);
+	  };
+
+	  const prevCard = () => {
+			setCurrentIndex((prevIndex) => (prevIndex + totalCards - 1) % totalCards);
+	  };
+
+	  const visibleCards = cardData.slice(currentIndex, currentIndex + 3).concat(cardData.slice(0, Math.max(0, currentIndex + 3 - totalCards)));
+
 	  return (
-			<div className={'flex flex-col items-center justify-center'}>
-				  <div className={"flex justify-center items-start "}>
-						{/* Title and icon*/}
-						<div className={'card softwareDevelopmentCard'}>
-							  <CardHeader expertise={"Software"} nextLine={true} secondExpertise={"Development"}/>
-							  {/* Card's Body*/}
-							  <div className={'mt-4'}>
-									{/* h2 element */}
-									<TagElement softwareDevelopment={true}/>
-									{/* Title description*/}
-									<div className={'cardBody'}>
-										  <DescriptionLine>
-												<p className={'descriptionText'}>Seasoned in .NET with <span className={'text-primary'}><b>6+ years</b></span> crafting scalable solutions, adept in <span className={'text-primary'}><b>OOP, SOLID</b></span> principles, and best coding practices.</p>
-										  </DescriptionLine>
-									</div>
-									{/* h2 element - end*/}
-									<TagElement softwareDevelopment={true}/>
-							  </div>
-							  <div className={'flex flex-col items-start justify-start'}>
-									<h1 className={'technologyTitle'}>Technologies: </h1>
-									<div className={'flex items-center justify-center'}>
-										  
-									</div>
-							  </div>
-						</div>
-						<div className={'card backendCard'}>
-							  <CardHeader expertise={"Backend"}/>
-							  {/* Card's Body*/}
-							  <div className={'mt-8'}>
-									{/* h2 element - Start*/}
-									<TagElement backend={true}/>
-									{/* Title description*/}
-									<div className={'cardBody'}>
-										  <DescriptionLine>
-												<p className={'descriptionText'}>Expert in <span className={'text-primary'}><b>.NET</b></span> with a strong focus on robust, scalable backends, complemented by proficiency in <span className={'text-primary'}><b>Django</b></span> and <span className={'text-primary'}><b>Spring Boot.</b></span></p>
-										  </DescriptionLine>
-									</div>
-									{/* h2 element - End*/}
-									<TagElement backend={true}/>
-							  </div>
-							  <div className={'flex flex-col items-start justify-start'}>
-									<h1 className={'technologyTitle'}>Technologies: </h1>
-									<div className={'flex items-center justify-center'}>
-										  <Technologies keyword={"DotNetCore"}/>
-										  <Technologies keyword={"Django"}/>
-										  <Technologies keyword={"SpringBoot"}/>
-										  <Technologies keyword={"Python"}/>
+			<div className={'flex flex-col items-center justify-start space-y-4'}>
+				  <div className={"flex justify-start items-start space-x-4 overflow-hidden"}>
+						{visibleCards.map((card) => (
+							  <div key={card.id} className={`card ${card.id + "Card"}`}>
+									{/* Card Header*/}
+									<CardHeader
+										  expertise={card.expertise}
+										  nextLine={card.nextLine} secondExpertise={card.secondExpertise}
+									/>
+									{/*Card Body*/}
+									<div className={'mt-4'}>
+										  <TagElement {...{[card.id]: true}} />
+										  <div className={'cardBody'}>
+												<DescriptionLine>
+													  <p className={'descriptionText'}>{card.description}</p>
+												</DescriptionLine>
+										  </div>
+										  {/*Technologies */}
+										  <div className={'flex flex-col items-start justify-start'}>
+												<h1 className={'technologyTitle'}>Technologies: </h1>
+												<div className={'flex items-center justify-center'}>
+													  {card.technologies.map((tech) => (
+															<Technologies key={tech} keyword={tech}/>
+													  ))}
+												</div>
+										  </div>
 									</div>
 							  </div>
-						</div>
-						<div className={'card frontendCard'}>
-							  <CardHeader expertise={"Frontend"}/>
-							  {/* Card's Body*/}
-							  <div className={'mt-8'}>
-									{/* h2 element */}
-									<TagElement frontend={true}/>
-									{/* Title description*/}
-									<div className={'cardBody'}>
-										  <DescriptionLine>
-												<p className={'descriptionText'}> Skilled in <span className={'text-primary'}><b>React</b></span>, <span className={'text-primary'}><b>Next.js</b></span>, and <span className={'text-primary'}><b>TypeScript</b></span> creating responsive, user-focused interfaces that seamlessly integrate with dynamic backends.</p>
-										  </DescriptionLine>
-									</div>
-									{/* h2 element - End*/}
-									<TagElement frontend={true}/>
-							  </div>
-							  <div className={'flex flex-col items-start justify-start'}>
-									<h1 className={'technologyTitle'}>Technologies: </h1>
-									<div className={'flex items-center justify-center'}>
-										  <Technologies keyword={"React"}/>
-										  <Technologies keyword={"Redux"}/>
-										  <Technologies keyword={"NextJs"}/>
-										  <Technologies keyword={"MaterialUI"}/>
-										  <Technologies keyword={"Tailwind"}/>
-										  <Technologies keyword={"JavaScript"}/>
-										  <Technologies keyword={"TypeScript"}/>
-									</div>
-							  </div>
-						</div>
-						<div className={'card databaseCard'}>
-							  <CardHeader expertise={"Database"}/>
-							  {/* Card's Body*/}
-							  <div className={'mt-8'}>
-									{/* h2 element */}
-									<TagElement database={true}/>
-									{/* Title description*/}
-									<div className={'cardBody'}>
-										  <DescriptionLine>
-												<p className={'descriptionText'}>
-													  Proficient with <span className={'text-primary'}><b>SQL Server</b></span>, <span className={'text-primary'}><b>PostgreSQL</b></span>, <span className={'text-primary'}><b>MongoDB</b></span>, optimizing data storage and retrieval for high-performance, scalable applications.
-													  
-												</p>
-										  </DescriptionLine>
-									</div>
-									{/* h2 element - End*/}
-									<TagElement database={true}/>
-							  </div>
-							  <div className={'flex flex-col items-start justify-start'}>
-									<h1 className={'technologyTitle'}>Technologies: </h1>
-									<div className={'flex items-center justify-center'}>
-										  <Technologies keyword={"MongoDb"}/>
-										  <Technologies keyword={"PostgresSql"}/>
-										  <Technologies keyword={"Redis"}/>
-										  <Technologies keyword={"SqlServer"}/>
-										  <Technologies keyword={"MySql"}/>
-									</div>
-							  </div>
-						</div>
+						))}
 				  </div>
 				  {/* Blur Logo*/}
 				  <div className={'flex items-center justify-center'}>
@@ -122,8 +89,14 @@ export default function ExpertiseCard() {
 							  src={"/images/Logo.png"}
 							  alt={"Logo"}
 							  width={800}
-							  height={900}/>
+							  height={900}
+							  
+						/>
+				  </div>
+				  <div className={'flex items-center justify-center space-x-4 z-50'}>
+						<button onClick={prevCard} className="px-4 py-2 rounded-full">Prev</button>
+						<button onClick={nextCard} className="px-4 py-2 rounded-full">Next</button>
 				  </div>
 			</div>
-	  )
+	  );
 }

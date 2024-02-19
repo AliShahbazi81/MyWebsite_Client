@@ -187,7 +187,9 @@ nav {
 
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Expertise Card -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .card{
-    @apply border-0 border-white flex flex-col items-start justify-center p-7 max-w-96 z-20;
+    @apply border-0 p-7 max-w-96 z-20;
+    width: calc(100% / 3); 
+    text-align: center; 
     :hover .cardTitle {
         color: transparent;
         -webkit-text-fill-color: transparent; 
@@ -254,4 +256,8 @@ nav {
 }
 .technologyIcons {
     @apply ml-2;
+}
+
+.navigation {
+    @apply flex justify-center items-center w-full z-50;
 }
