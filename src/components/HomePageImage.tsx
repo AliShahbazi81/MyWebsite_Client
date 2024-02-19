@@ -1,7 +1,6 @@
 'use client'
 
 import Image from "next/image";
-import * as http2 from "http2";
 import MouseScroll from "@/components/MouseScroll";
 
 export default function HomePageImage() {
@@ -17,29 +16,34 @@ export default function HomePageImage() {
 							  quality={100}
 							  loading={"eager"}
 						/>
-						<div className={'flex items-center justify-center space-x-0 z-10'}>
-							  <h1 className={'nameInitial'}>
+						<div className="absolute inset-0 z-10" style={{ background: 'linear-gradient(to bottom, transparent, #1A191D)' }}></div>
+						<div className="flex items-center justify-center z-10">
+							  <h1 className="nameInitial">
 									A
 							  </h1>
-							  <h1 className={'name'}>
+							  <h1 className="name">
 									li
 							  </h1>
-							  <div className={'w-4'}/>
-							  <h1 className={'nameInitial'}>
+							  <div className="nameSpace" />
+							  <h1 className="nameInitial">
 									S
 							  </h1>
-							  <h1 className={'name'}>
+							  <h1 className="name">
 									hahbazi
 							  </h1>
-							  <h2 className={'profession'}>
-									Web Developer, Full Stack Developer & App Developer
-							  </h2>
 						</div>
-						<div className={'absolute bottom-0 mb-5'}>
+						<h2 className="profession">
+							  Web Developer, Full Stack Developer & App Developer
+						</h2>
+						<div className="absolute bottom-0 mb-5">
 							  <MouseScroll/>
 						</div>
 				  </div>
+				  <div className={'relative flex items-center justify-center h-screen bg-background'}>
+						<h1>
+							  My Expertise
+						</h1>
+				  </div>
 			</>
-
 	  );
 }

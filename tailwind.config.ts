@@ -9,13 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'melted-gradient': "linear-gradient(to bottom, transparent, #1A191D)",
       },
       colors: {
         primary: "#0AD3FF",
         secondary: "",
+        background: "#1A191D",
         accent: "",
         error: "",
         success: "",

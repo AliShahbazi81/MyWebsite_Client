@@ -49,9 +49,10 @@ body {
     border: 2px solid white;
     border-radius: 32px;
     position: relative;
+    z-index: 10;
 
     .scrollWheel {
-        height: 20px;
+        height: 10px;
         width: 2px;
         background: white;
         position: absolute;
@@ -102,22 +103,36 @@ body {
         opacity: 1;
     }
 }
-.name {
-    @apply text-center font-bold z-10 text-white;
-    /*Set maximum font size to 8vw*/
-    font-size: min(8vw, 100px);
-    animation: fadeIn 1s ease-in-out 1s forwards;
+@keyframes slideToRight {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0); 
+        opacity: 1;
+    }
 }
+
 .nameInitial {
     @apply text-center font-bold z-10 text-primary;
-    /*Set maximum font size to 8vw*/
     font-size: min(8vw, 100px);
-    animation: fadeIn 1s ease-in-out 1s forwards;
+    opacity: 0;
+    animation: slideToRight 1s ease-in-out 1s forwards;
+}
+
+.name {
+    @apply text-center font-bold z-10 text-white;
+    font-size: min(8vw, 100px);
+    animation: fadeIn 1s ease-in-out forwards; 
+}
+.nameSpace{
+    @apply min-w-2 max-w-4;
 }
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Profession -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .profession {
     @apply absolute text-center text-white z-10 pt-36;
-    /*Set maximum font size to 4vw*/
-    font-size: min(4vw, 30px);
+    /*Set minimum font size to 1.5vw and maximum to 2vw*/
+    font-size: min(2vw, 24px);
 }
 
