@@ -189,7 +189,7 @@ nav {
 .card{
     @apply border-0 p-7 max-w-96 z-20;
     width: calc(100% / 3); 
-    text-align: center; 
+    text-align: left; 
     :hover .cardTitle {
         color: transparent;
         -webkit-text-fill-color: transparent; 

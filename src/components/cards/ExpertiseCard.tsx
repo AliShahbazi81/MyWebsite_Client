@@ -11,28 +11,44 @@ const cardData = [
 			nextLine: true,
 			expertise: 'Software',
 			secondExpertise: 'Development',
-			description: 'Seasoned in .NET with 6+ years crafting scalable solutions, adept in OOP, SOLID principles, and best coding practices.',
+			description: (
+				  <p className={'descriptionText'}>
+						Seasoned in .NET with <span className="text-primary"><b>6+ years</b></span> crafting scalable solutions, adept in <span className="text-primary"><b>OOP</b></span>, <span className="text-primary"><b>SOLID principles</b></span>, and best coding practices.
+				  </p>
+			),
 			technologies: [],
 	  },
 	  {
 			id: 'backend',
 			nextLine: false,
 			expertise: 'Backend',
-			description: 'Expert in .NET with a strong focus on robust, scalable backends, complemented by proficiency in Django and Spring Boot.',
+			description: (
+				  <p className={'descriptionText'}>
+						Expert in <span className="text-primary"><b>.NET</b></span> with a strong focus on robust, scalable backends, complemented by proficiency in <span className="text-primary"><b>Django</b></span> and <span className="text-primary"><b>Spring Boot</b></span>.
+				  </p>
+			),
 			technologies: ['DotNetCore', 'Django', 'SpringBoot'],
 	  },
 	  {
 			id: 'frontend',
 			nextLine: false,
 			expertise: 'Frontend',
-			description: 'Skilled in React, Next.js, and TypeScript creating responsive, user-focused interfaces that seamlessly integrate with dynamic backends.',
+			description: (
+				  <p className={'descriptionText'}>
+						Skilled in <span className="text-primary"><b>React</b></span>, <span className="text-primary"><b>Next.js</b></span>, and <span className="text-primary"><b>TypeScript</b></span> creating responsive, user-focused interfaces that seamlessly integrate with dynamic backends.
+				  </p>
+			),
 			technologies: ['React', 'Redux', 'NextJs', 'MaterialUI', 'Tailwind', 'JavaScript', 'TypeScript'],
 	  },
 	  {
 			id: 'database',
 			nextLine: false,
 			expertise: 'Database',
-			description: 'Proficient with SQL Server, PostgreSQL, MongoDB, optimizing data storage and retrieval for high-performance, scalable applications.',
+			description: (
+				  <p className={'descriptionText'}>
+						Proficient with <span className="text-primary"><b>SQL Server</b></span>, <span className="text-primary"><b>PostgreSQL</b></span>,<span className="text-primary"><b> MongoDB</b></span>, optimizing data storage and retrieval for high-performance, scalable applications.
+				  </p>
+			),
 			technologies: ['MongoDb', 'PostgresSql', 'Redis', 'SqlServer', 'MySql'],
 	  },
 ];
@@ -66,9 +82,10 @@ export default function ExpertiseCard() {
 										  <TagElement {...{[card.id]: true}} />
 										  <div className={'cardBody'}>
 												<DescriptionLine>
-													  <p className={'descriptionText'}>{card.description}</p>
+													  {card.description}
 												</DescriptionLine>
 										  </div>
+										  <TagElement {...{[card.id]: true}} />
 										  {/*Technologies */}
 										  <div className={'flex flex-col items-start justify-start'}>
 												<h1 className={'technologyTitle'}>Technologies: </h1>
