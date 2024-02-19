@@ -11,7 +11,7 @@ function classNames(...classes: any) {
 
 export default function Navbar() {
 	  return (
-			<nav className="z-10 w-full">
+			<nav className="absolute top-0 left-0 w-full z-30">
 				  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 						<div className="flex items-center justify-between h-16">
 							  <div className="flex items-center">
@@ -21,11 +21,20 @@ export default function Navbar() {
 									<div className="hidden md:block">
 										  <div className="ml-10 flex items-baseline space-x-4">
 												{/* Navigation Links */}
-												<Link href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+												<Link href="/" className="navLink">
 													  Home
 												</Link>
-												<Link href="/about" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+												<Link href="/Experience" className="navLink">
+													  Experience
+												</Link>
+												<Link href="/Education" className="navLink">
+													  Education
+												</Link>
+												<Link href="/about" className="navLink">
 													  About
+												</Link>
+												<Link href="/Contact" className="navLink">
+													  Contact
 												</Link>
 												{/* More navigation links here */}
 										  </div>

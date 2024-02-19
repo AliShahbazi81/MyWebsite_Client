@@ -1,15 +1,11 @@
 import HomePageImage from "@/components/HomePageImage";
 import Navbar from "@/components/Navbar";
-import MouseScroll from "@/components/MouseScroll";
 
 export default function Home() {
 	  return (
-			<div className={'flex flex-col justify-center'}>
+			<div className={'relative h-screen'}>
 				  <Navbar/>
-				  <div>
-						<HomePageImage/>
-						<MouseScroll/>
-				  </div>
+				  <HomePageImage/>
 			</div>
 	  );
 }

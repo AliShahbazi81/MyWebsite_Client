@@ -3,86 +3,118 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+    ) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
 }
 
 .container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .image {
-  object-fit: cover;
+    object-fit: cover;
 }
 
 
 .mouse {
-  height: 60px;
-  width: 32px;
-  border: 2px solid white;
-  border-radius: 32px;
-  position: relative;
-  .scrollWheel {
-    height: 20px;
-    width: 2px;
-    background: white;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    top: 10px;
-    border-radius: 1px;
-    transform: scaleY(0);
-    animation: scroll 2s linear infinite;
-  }
+    height: 60px;
+    width: 32px;
+    border: 2px solid white;
+    border-radius: 32px;
+    position: relative;
+
+    .scrollWheel {
+        height: 20px;
+        width: 2px;
+        background: white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 10px;
+        border-radius: 1px;
+        transform: scaleY(0);
+        animation: scroll 2s linear infinite;
+    }
 }
 
 @keyframes scroll {
-  0% {
-    transform: scaleY(0);
-    transform-origin: top;
-  }
-  25% {
-    transform: scaleY(1);
-    transform-origin: top;
-  }
-  26% {
-    transform-origin: bottom;
-  }
-  50% {
-    transform: scaleY(0);
-    transform-origin: bottom;
-  }
-  100% {
-    transform: scaleY(0);
-    transform-origin: bottom;
-  }
+    0% {
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    25% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    26% {
+        transform-origin: bottom;
+    }
+    50% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+    100% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
 }
+
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ NavBar -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+.navLink {
+    @apply text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium;
+}
+
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ HomePage -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Name -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.name {
+    @apply absolute text-center font-bold text-white z-10;
+    /*Set maximum font size to 8vw*/
+    font-size: min(8vw, 100px);
+    animation: fadeIn 1s ease-in-out 1s forwards;
+}
+.nameInitial {
+    
+}
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Profession -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+.profession {
+    @apply absolute text-center text-white z-10 pt-36;
+    /*Set maximum font size to 4vw*/
+    font-size: min(4vw, 30px);
+}
+
