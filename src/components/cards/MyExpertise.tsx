@@ -54,7 +54,7 @@ const cardData = [
 	  },
 ];
 
-export default function ExpertiseCard() {
+export default function MyExpertise() {
 	  const [currentIndex, setCurrentIndex] = useState(0);
 	  const totalCards = cardData.length;
 
@@ -79,11 +79,11 @@ export default function ExpertiseCard() {
 
 	  const visibleCards = determineVisibleCards();
 	  return (
-			<div className={'flex flex-col items-center justify-start space-y-4'}>
-				  <TransitionGroup className="flex justify-start items-start space-x-4 overflow-hidden">
+			<div className={'flex flex-col items-center justify-start space-y-4 w-full min-h-screen'}>
+				  <TransitionGroup className="flex justify-start items-start space-x-4 overflow-auto">
 						{visibleCards.map((card) => (
 							  <CSSTransition key={card.id} timeout={1000} classNames="slide">
-									<div key={card.id} className={`card ${card.id + "Card"}`}>
+									<div className={`card ${card.id + "Card"} sm:w-1/2 md:w-1/3 lg:w-1/2 xl:w-1/2`}>
 										  {/* Card Header*/}
 										  <CardHeader
 												expertise={card.expertise}
@@ -115,7 +115,7 @@ export default function ExpertiseCard() {
 				  {/* Blur Logo*/}
 				  <div className={'flex items-center justify-center'}>
 						<Image
-							  className={'blurLogo'}
+							  className={'blurLogo w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg'}
 							  src={"/images/Logo.png"}
 							  alt={"Logo"}
 							  width={800}
@@ -124,8 +124,9 @@ export default function ExpertiseCard() {
 						/>
 				  </div>
 				  <div className={'flex items-center justify-center space-x-4 z-50'}>
-						<button onClick={prevCard} className="px-4 py-2 rounded-full text-primary shine-effect">&#60;</button>
-						<button onClick={nextCard} className="px-4 py-2 rounded-full text-primary shine-effect">&#62;</button>
+						<button onClick={prevCard} className="px-2 py-1 sm:px-4 sm:py-2 rounded-full text-primary shine-effect">&#60;</button>
+						<button onClick={nextCard} className="px-2 py-1 sm:px-4 sm:py-2 rounded-full text-primary shine-effect">&#62;</button>
+
 				  </div>
 			</div>
 	  );

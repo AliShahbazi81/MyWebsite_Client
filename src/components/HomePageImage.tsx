@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import MouseScroll from "@/components/MouseScroll";
-import ExpertiseCard from "@/components/cards/ExpertiseCard";
+import MyExpertise from "@/components/cards/MyExpertise";
 
 export default function HomePageImage() {
 	  return (
 			<>
-				  <div className={'relative flex items-center justify-center h-screen'}>
+				  <div className={'relative flex items-center justify-center container'}>
 						<Image
 							  src="/images/BackgroundImage.jpg"
 							  alt="BackgroundImage"
@@ -15,7 +15,6 @@ export default function HomePageImage() {
 							  objectFit={"cover"}
 							  objectPosition={"center"}
 							  quality={100}
-							  loading={"eager"}
 						/>
 						<div className="absolute inset-0 z-10" style={{ background: 'linear-gradient(to bottom, transparent, #1A191D)' }}></div>
 						<div className="flex items-center justify-center z-10">
@@ -40,13 +39,17 @@ export default function HomePageImage() {
 							  <MouseScroll/>
 						</div>
 				  </div>
-				  <div className={'divBackground'}>
+				  <div className={'divBackground container'}>
 						<h1 className={'title'}>
 							  My Expertise
 						</h1>
 						{/* Expertise Card*/}
-						<ExpertiseCard />
-						
+						<MyExpertise />
+				  </div>
+				  <div className={'divBackground container'}>
+						<h1 className={'title'}>
+							  My Projects
+						</h1>
 				  </div>
 				  
 			</>
