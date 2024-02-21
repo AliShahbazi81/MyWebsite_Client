@@ -42,14 +42,14 @@ export default function HomePageImage() {
 							  <MouseScroll/>
 						</div>
 				  </div>
-				  <div className={'divBackground container'}>
+				  <div className={'divBackground'}>
 						<h1 className={'title'}>
 							  My Expertise
 						</h1>
 						{/* Expertise Card*/}
 						<MyExpertise />
 				  </div>
-				  <div className={'divBackground container'}>
+				  <div className={'divBackground'}>
 						<h1 className={'title'}>
 							  My Projects
 						</h1>

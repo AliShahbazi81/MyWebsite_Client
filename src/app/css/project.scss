@@ -1,0 +1,13 @@
+@tailwind components;
+
+.projectEnv{
+  @apply flex justify-center items-start flex-wrap bg-transparent p-5 h-full;
+  max-width: 1920px;
+}
+.projectCardEnv{
+  @apply flex flex-col flex-wrap w-full h-full p-2;
+}
+
+.projectImage{
+  border-radius: 13px;
+}

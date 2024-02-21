@@ -1,12 +1,22 @@
-import BlurCard from "@/components/BlurCard";
 import GlassCard from "@/components/GlassCard";
+import "./../../app/css/project.scss"
+import ProjectCard from "@/components/projects/ProjectCard";
 
 export default function MyProjects()
 {
 	  return(
-			<div className="min-h-screen bg-transparent p-10">
+			<div className="projectEnv">
 				  <GlassCard>
-						<p className="text-white">This is some content inside a glass effect card.</p>
+						<ProjectCard imageName={"Auctria"}/>
+				  </GlassCard>
+				  <GlassCard>
+						<ProjectCard imageName={"CarAuction"}/>
+				  </GlassCard>
+				  <GlassCard>
+						<ProjectCard imageName={"RideShare"}/>
+				  </GlassCard>
+				  <GlassCard>
+						<ProjectCard imageName={"OnlineLearning"}/>
 				  </GlassCard>
 			</div>
 	  )
