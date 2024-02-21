@@ -3,6 +3,7 @@
 import Image from "next/image";
 import MouseScroll from "@/components/MouseScroll";
 import MyExpertise from "@/components/cards/MyExpertise";
+import MyProjects from "@/components/projects/MyProjects";
 
 export default function HomePageImage() {
 	  return (
@@ -50,6 +51,7 @@ export default function HomePageImage() {
 						<h1 className={'title'}>
 							  My Projects
 						</h1>
+						<MyProjects />
 				  </div>
 				  
 			</>

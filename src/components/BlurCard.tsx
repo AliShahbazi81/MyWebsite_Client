@@ -9,13 +9,12 @@ type Props = {
 export default function BlurCard({imageName}: Props)
 {
 	  return(
-			<div className={'blurEnv blurCard'}>
+			<div className={'blurEnv blueProjectCard'}>
 				  <Image 
-						src={`/images/project/${imageName}`} 
+						src={`/images/${imageName}.jpg`} 
 						alt={imageName}
-						width={50}
 						height={50}
-						layout={"fill"}
+						width={50}
 						objectFit={"cover"}
 				  />
 			</div>

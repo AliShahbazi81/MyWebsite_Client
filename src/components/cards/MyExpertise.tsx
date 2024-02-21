@@ -5,6 +5,7 @@ import DescriptionLine from "@/components/cards/DescriptionLine";
 import Technologies from "@/components/cards/Technologies";
 import {CSSTransition, TransitionGroup} from 'react-transition-group'
 import Image from "next/image";
+import "../../app/css/expertise.scss"
 
 const cardData = [
 	  {
@@ -79,11 +80,11 @@ export default function MyExpertise() {
 
 	  const visibleCards = determineVisibleCards();
 	  return (
-			<div className={'flex flex-col items-center justify-start space-y-4 w-full min-h-screen'}>
-				  <TransitionGroup className="flex justify-start items-start space-x-4 overflow-auto">
+			<div className={'cardEnv'}>
+				  <TransitionGroup className="cardTransition">
 						{visibleCards.map((card) => (
 							  <CSSTransition key={card.id} timeout={1000} classNames="slide">
-									<div className={`card ${card.id + "Card"} sm:w-1/2 md:w-1/3 lg:w-1/2 xl:w-1/2`}>
+									<div className={`cardExpertise ${card.id + "Card"}`}>
 										  {/* Card Header*/}
 										  <CardHeader
 												expertise={card.expertise}

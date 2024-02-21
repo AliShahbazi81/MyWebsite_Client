@@ -2,8 +2,10 @@
 import Link from 'next/link';
 import {Fragment, useEffect, useState} from 'react';
 import {Menu, Transition} from '@headlessui/react';
-import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline';
+import {Bars3Icon} from '@heroicons/react/24/outline';
 import Image from "next/image";
+import "../app/globals.css"
+import "../app/css/navbar.scss"
 
 function classNames(...classes: any) {
 	  return classes.filter(Boolean).join(' ');

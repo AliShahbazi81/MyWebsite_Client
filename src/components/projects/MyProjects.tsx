@@ -1,6 +1,10 @@
+import BlurCard from "@/components/BlurCard";
+
 export default function MyProjects()
 {
 	  return(
-			<div>Hello</div>
+			<div>
+				  <BlurCard imageName={'SqlServer'} />
+			</div>
 	  )
 }

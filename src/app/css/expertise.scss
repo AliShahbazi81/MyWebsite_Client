@@ -1,0 +1,93 @@
+@tailwind components;
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Expertise Card -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+.cardEnv {
+  @apply flex flex-col items-center justify-start space-y-4 w-full min-h-screen;
+}
+
+.cardExpertise {
+  @apply z-20 ;
+  text-align: left;
+
+  :hover .cardTitle {
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-size: auto 100%;
+    animation: slideBackground 5s linear infinite;
+  }
+}
+
+.cardHeader {
+  @apply flex items-start justify-start;
+}
+
+.cardBody {
+  @apply mb-5 ml-4 mt-5;
+}
+
+.cardTitle {
+  @apply text-white font-bold mt-2 whitespace-pre-wrap ml-4 cursor-default;
+  font-size: min(2vw, 24px);
+  color: white;
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: color 2s ease;
+}
+
+/* Hover styles for each card type */
+.databaseCard:hover .cardTitle {
+  background-image: url('../../../public/images/PostgresSql.png');
+}
+
+.backendCard:hover .cardTitle {
+  background-image: url('../../../public/images/CSharp.png');
+}
+
+.frontendCard:hover .cardTitle {
+  background-image: url('../../../public/images/React.jpg');
+}
+
+.softwareDevelopmentCard:hover .cardTitle {
+  background-image: url('../../../public/images/CSharp.png');
+}
+
+.element {
+  @apply text-gray-500;
+}
+
+.descriptionText {
+  @apply leading-7 text-base font-light;
+}
+
+.description-container {
+  @apply relative pl-4 ;
+}
+
+.description-container::before {
+  content: '';
+  @apply absolute bg-gray-600;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+}
+
+.technologyTitle {
+  @apply mt-5 mb-5;
+  font-size: min(1vw, 24px);
+}
+
+.technologyIcons {
+  @apply ml-2;
+}
+
+@layer components {
+  @media (max-width: 768px) {
+    .cardEnv {
+      @apply w-full h-full;
+    }
+    .cardExpertise{
+      @apply pl-8 pr-8 pb-8 w-full;
+    }
+  }
+}
