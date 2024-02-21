@@ -68,13 +68,23 @@ body {
     width: 100vw; /* Full viewport width coverage */
 }
 
+.break-line {
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to right,
+    rgba(var(--text-secondary-rgb), 0.2), /* Start with 20% opacity */
+    rgba(var(--text-secondary-rgb), 1) 25%, /* Transition to 100% opacity */
+    rgba(var(--text-secondary-rgb), 1) 75%, /* Keep 100% opacity to the middle */
+    rgba(var(--text-secondary-rgb), 0.2)); /* End with 20% opacity */
+}
+
 
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Blur card -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .blurEnv {
+    @apply pt-2 pr-5 pl-5 pb-7;
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border-radius: 13px;
-    padding: 20px;
     margin: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }

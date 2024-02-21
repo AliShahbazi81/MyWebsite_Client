@@ -9,7 +9,7 @@ type Props = {
 export default function BlurCard({imageName}: Props)
 {
 	  return(
-			<div className={'blurEnv blueProjectCard'}>
+			<div className={'blurEnv blurProjectCard'}>
 				  <Image 
 						src={`/images/${imageName}.jpg`} 
 						alt={imageName}

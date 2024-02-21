@@ -1,13 +1,51 @@
 @tailwind components;
 
 .projectEnv{
-  @apply flex justify-center items-start flex-wrap bg-transparent p-5 h-full;
+  @apply flex justify-center items-start flex-wrap bg-transparent p-5 h-full pl-28 pr-28;
   max-width: 1920px;
 }
+
 .projectCardEnv{
-  @apply flex flex-col flex-wrap w-full h-full p-2;
+  @apply flex flex-col flex-wrap w-full h-full p-2 cursor-pointer;
+  max-width: 410px;
+}
+
+.projectCardBodyEnv{
+  @apply flex flex-col
+}
+
+.blurEnv {
+  :hover .projectImage {
+    filter: none;
+  }
 }
 
 .projectImage{
+  @apply mb-5;
   border-radius: 13px;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease-in-out;
+}
+
+.projectTitle{
+  @apply text-white font-bold pb-5;
+  font-size: min(3vw, 20px);
+}
+
+.projectBodyDetail {
+  @apply leading-7 text-base font-light mt-5;
+  font-size: min(2.5vw, 16px);
+}
+
+@layer components{
+  @media (max-width: 768px) {
+    .projectImage{
+      
+    }
+    @media (min-width: 1024px) {
+      .break-line {
+        opacity: 100 !important;
+      }
+    }
+  }
 }

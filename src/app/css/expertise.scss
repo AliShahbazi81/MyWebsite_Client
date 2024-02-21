@@ -11,7 +11,7 @@
   @apply flex justify-start items-start space-x-4;
 }
 .cardEnv {
-  @apply flex flex-col items-center justify-start overflow-x-hidden;
+  @apply flex flex-col items-center justify-start;
 }
 
 
@@ -100,16 +100,6 @@
   @apply absolute opacity-5 z-0;
 }
 
-.break-line {
-  height: 1px;
-  width: 100%;
-  background-image: linear-gradient(to right,
-          rgba(var(--text-secondary-rgb), 0.2), /* Start with 20% opacity */
-          rgba(var(--text-secondary-rgb), 1) 25%, /* Transition to 100% opacity */
-          rgba(var(--text-secondary-rgb), 1) 75%, /* Keep 100% opacity to the middle */
-          rgba(var(--text-secondary-rgb), 0.2)); /* End with 20% opacity */
-}
-
 .navigation {
   @apply flex justify-center items-center w-full z-50 opacity-0;
 }
@@ -178,7 +168,7 @@
     .technologyIcons {
       @apply w-8 h-8 mb-0;
     }
-    .break-line {
+    .cardExpertise .break-line {
       @apply opacity-100;
       opacity: 1 !important;;
     }
@@ -190,7 +180,7 @@
     
   }
   @media (min-width: 769px) {
-    .break-line {
+    .cardExpertise .break-line {
       @apply opacity-0;
       opacity: 0 !important;;
     }

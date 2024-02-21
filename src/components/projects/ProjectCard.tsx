@@ -2,9 +2,11 @@ import Image from "next/image";
 
 type Props = {
 	  imageName: string
+	  projectName: string
+	  projectDetail: string
 }
 
-export default function ProjectCard({imageName}: Props)
+export default function ProjectCard({imageName, projectName, projectDetail}: Props)
 {
 	  return(
 			<div className={'projectCardEnv'}>
@@ -16,7 +18,16 @@ export default function ProjectCard({imageName}: Props)
 						height={400}
 						quality={100}
 				  />
-				  <p>Hey there</p>
+				  <div className={'projectCardBodyEnv'}>
+						<h2 className={'projectTitle'}>
+							  {projectName}
+						</h2>
+						<div className={'break-line'}></div>
+						<h6 className={'projectBodyDetail'}>
+							  {projectDetail}
+						</h6>
+				  </div>
+				  
 						
 			</div>
 	  )
