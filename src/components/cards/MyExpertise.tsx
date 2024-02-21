@@ -125,7 +125,7 @@ export default function MyExpertise() {
 
 						/>
 				  </div>
-				  <div className={'flex items-center justify-center space-x-4 z-50'}>
+				  <div className={'navigation'}>
 						<button onClick={prevCard} className="px-2 py-1 sm:px-4 sm:py-2 rounded-full text-primary shine-effect">&#60;</button>
 						<button onClick={nextCard} className="px-2 py-1 sm:px-4 sm:py-2 rounded-full text-primary shine-effect">&#62;</button>
 
