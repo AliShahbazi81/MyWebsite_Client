@@ -16,6 +16,14 @@
     }
 }
 
+@layer components {
+    @media (max-width: 768px) {
+        .divBackground {
+        @apply w-full h-full;
+        }
+    }
+}
+
 body {
     height: 100%;
     min-height: 100%;
@@ -39,10 +47,11 @@ body {
     .cardTransition {
         @apply flex justify-start items-start space-x-4 overflow-auto;
     }
-    
+
     @media (max-width: 768px) {
         .card {
         }
+
         .cardTransition {
             @apply flex flex-col
         }
@@ -132,7 +141,6 @@ body {
 }
 
 
-
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ HomePage -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Blur Logo -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .blurLogo {
@@ -184,7 +192,6 @@ body {
     @apply absolute text-center text-white z-10 pt-36;
     font-size: min(2vw, 24px);
 }
-
 
 
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Slider Navigation-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
