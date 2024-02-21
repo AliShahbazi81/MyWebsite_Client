@@ -6,12 +6,15 @@
 }
 
 .projectCardEnv{
-  @apply flex flex-col flex-wrap w-full h-full p-2 cursor-pointer;
+  @apply flex flex-col flex-wrap w-full h-full p-2;
   max-width: 410px;
 }
 
 .projectCardBodyEnv{
-  @apply flex flex-col
+  @apply flex flex-col;
+  .break-line{
+    @apply mb-3 mt-1;
+  }
 }
 
 .blurEnv {
@@ -21,19 +24,19 @@
 }
 
 .projectImage{
-  @apply mb-5;
+  @apply mb-5 cursor-pointer;
   border-radius: 13px;
   filter: grayscale(100%);
-  transition: filter 0.5s ease-in-out;
+  transition: filter 0.3s ease-in-out;
 }
 
 .projectTitle{
-  @apply text-white font-bold pb-5;
+  @apply text-white font-bold pb-1;
   font-size: min(3vw, 20px);
 }
 
 .projectBodyDetail {
-  @apply leading-7 text-base font-light mt-5;
+  @apply leading-7 text-base font-light mb-3;
   font-size: min(2.5vw, 16px);
 }
 
@@ -43,7 +46,7 @@
       
     }
     @media (min-width: 1024px) {
-      .break-line {
+      .projectCardBodyEnv .break-line {
         opacity: 100 !important;
       }
     }
