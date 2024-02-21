@@ -4,6 +4,8 @@ import Image from "next/image";
 import MouseScroll from "@/components/MouseScroll";
 import MyExpertise from "@/components/cards/MyExpertise";
 import MyProjects from "@/components/projects/MyProjects";
+import "./../app/css/homepage.scss"
+import "./../app/globals.css"
 
 export default function HomePageImage() {
 	  return (

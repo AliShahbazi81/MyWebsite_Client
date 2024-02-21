@@ -11,13 +11,12 @@
   @apply flex justify-start items-start space-x-4;
 }
 .cardEnv {
-  @apply flex flex-col items-center justify-start w-full h-full overflow-x-hidden;
+  @apply flex flex-col items-center justify-start overflow-x-hidden;
 }
 
 
 .cardExpertise {
-  @apply z-20;
-  box-sizing: border-box ;
+  @apply z-20 mb-4;
 
   :hover .cardTitle {
     color: transparent;
@@ -115,6 +114,47 @@
   @apply flex justify-center items-center w-full z-50 opacity-0;
 }
 
+.slide-enter {
+  transform: translateX(100%);
+}
+
+.slide-enter-active {
+  transform: translateX(0);
+  transition: transform 1000ms ease-in-out;
+}
+
+.slide-exit {
+  position: absolute;
+  width: 100%;
+}
+
+.slide-exit-active {
+  transform: translateX(-100%);
+  transition: transform 1000ms ease-in-out;
+}
+
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Slider Navigation-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+.shine-effect {
+  position: relative;
+  color: #FFA500;
+  animation: pulseShine 1s infinite alternate;
+}
+
+@keyframes pulseShine {
+  from {
+    text-shadow: 0 0 8px #ffd700,
+    0 0 12px #ff8c00,
+    0 0 24px #ff4500;
+  }
+  to {
+    text-shadow: 0 0 15px #ffff00,
+    0 0 25px #ff4500,
+    0 0 40px #ff8c00,
+    0 0 60px #ffd700,
+    0 0 80px #ffff00;
+  }
+}
+
 
 @layer components {
   @media (max-width: 640px) {
@@ -139,8 +179,8 @@
       @apply w-8 h-8 mb-0;
     }
     .break-line {
-      @apply opacity-0;
-      opacity: 100 !important;;
+      @apply opacity-100;
+      opacity: 1 !important;;
     }
     .blurLogo{
       margin-bottom: 50%;
@@ -150,6 +190,10 @@
     
   }
   @media (min-width: 769px) {
+    .break-line {
+      @apply opacity-0;
+      opacity: 0 !important;;
+    }
     .navigation{
       opacity: 100 !important;
     }

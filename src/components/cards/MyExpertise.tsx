@@ -108,7 +108,7 @@ export default function MyExpertise() {
 															))}
 													  </div>
 												</div>
-												<div className={'break-line'}></div>
+												<div className={'break-line shine-effect'}></div>
 										  </div>
 									</div>
 							  </CSSTransition>
@@ -126,8 +126,8 @@ export default function MyExpertise() {
 						/>
 				  </div>
 				  <div className={'navigation'}>
-						<button onClick={prevCard} className="px-2 py-1 sm:px-4 sm:py-2 rounded-full text-primary shine-effect">&#60;</button>
-						<button onClick={nextCard} className="px-2 py-1 sm:px-4 sm:py-2 rounded-full text-primary shine-effect">&#62;</button>
+						<button onClick={prevCard} className="px-2 py-1 sm:px-4 sm:py-2 shine-effect">&#60;</button>
+						<button onClick={nextCard} className="px-2 py-1 sm:px-4 sm:py-2 shine-effect">&#62;</button>
 
 				  </div>
 			</div>
