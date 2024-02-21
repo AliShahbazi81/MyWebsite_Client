@@ -100,14 +100,15 @@ export default function MyExpertise() {
 												</div>
 												<TagElement {...{[card.id]: true}} />
 												{/*Technologies */}
-												<div className={'flex flex-col items-start justify-start'}>
+												<div className={'technologyEnv'}>
 													  <h1 className={'technologyTitle'}>Technologies: </h1>
-													  <div className={'flex items-center justify-center'}>
+													  <div className={'flex items-center justify-center flex-wrap'}>
 															{card.technologies.map((tech) => (
 																  <Technologies key={tech} keyword={tech}/>
 															))}
 													  </div>
 												</div>
+												<div className={'break-line'}></div>
 										  </div>
 									</div>
 							  </CSSTransition>
@@ -116,7 +117,7 @@ export default function MyExpertise() {
 				  {/* Blur Logo*/}
 				  <div className={'flex items-center justify-center'}>
 						<Image
-							  className={'blurLogo w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg'}
+							  className={'blurLogo'}
 							  src={"/images/Logo.png"}
 							  alt={"Logo"}
 							  width={800}

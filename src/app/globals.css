@@ -6,6 +6,7 @@
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
+    --text-primary: #0AD3FF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,20 +44,6 @@ body {
     }
 }
 
-@layer components {
-    .cardTransition {
-        @apply flex justify-start items-start space-x-4 overflow-auto;
-    }
-
-    @media (max-width: 768px) {
-        .card {
-        }
-
-        .cardTransition {
-            @apply flex flex-col
-        }
-    }
-}
 
 .container {
     position: relative;
@@ -74,7 +61,7 @@ body {
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ General -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .title {
     @apply text-white font-bold cursor-default mb-16;
-    font-size: min(2vw, 50px);
+    font-size: min(3vw, 40px);
 }
 
 .icon {
@@ -142,12 +129,7 @@ body {
 
 
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ HomePage -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
-/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Blur Logo -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
-.blurLogo {
-    @apply absolute opacity-5 z-0;
-    height: calc(100% / 2);
-    width: calc(100% / 2);
-}
+
 
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Name -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 @keyframes fadeIn {
