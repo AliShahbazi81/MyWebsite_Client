@@ -10,7 +10,7 @@ export default function MyProjects() {
 							  imageName={"CarAuction"}
 							  projectName={"Car Auction"}
 							  projectDetail={"Carsties Auctions offers an online platform for car auctions with microservices architecture, enabling listings, bidding, and auction management in a user-friendly interface."}
-							  techName={['.NET Core', 'NextJS', 'Tailwind', 'Zustand']}
+							  techName={['.NET', 'NextJS', 'Tailwind', 'Zustand']}
 							  github={"https://github.com/AliShahbazi81/Carsties_Auctions"}
 						/>
 				  </GlassCard>
@@ -28,7 +28,7 @@ export default function MyProjects() {
 							  imageName={"RideShare"}
 							  projectName={"RideShare"}
 							  projectDetail={"The RideShare app is a backend-driven platform, utilizing SOLID principles and n-tier architecture, to automatically connect applicants with drivers, including payment functionality."}
-							  techName={['.NET Core', 'SqlServer', 'Redis']}
+							  techName={['.NET', 'SqlServer', 'Redis']}
 						/>
 				  </GlassCard>
 				  <GlassCard>
@@ -45,7 +45,7 @@ export default function MyProjects() {
 							  imageName={"ActivityApplication"}
 							  projectName={"User's Activity"}
 							  projectDetail={"The Activity Application is a .NET Core and React-based platform for creating, sharing, and joining activities, featuring user interaction and participation management."}
-							  techName={['.NET Core', "React", 'MobX', 'PostgresSQL']}
+							  techName={['.NET', "React", 'MobX', 'PostgresSQL']}
 							  github={"https://github.com/AliShahbazi81/Activity_Application"}
 						/>
 				  </GlassCard>
@@ -54,7 +54,7 @@ export default function MyProjects() {
 							  imageName={"CinemaTicket"}
 							  projectName={"Cinema Ticket"}
 							  projectDetail={"Cinema Ticket is a full-stack web application using React and ASP.NET Core, enabling users to buy tickets and administrators to manage listings and sales."}
-							  techName={['.NET Core', "React", 'Redux', 'MUI', 'SqlServer']}
+							  techName={['.NET', "React", 'Redux', 'MUI', 'SqlServer']}
 							  github={"https://github.com/AliShahbazi81/Cinema-Ticket"}
 						/>
 				  </GlassCard>

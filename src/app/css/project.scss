@@ -35,7 +35,6 @@
 
 .projectTitle {
   @apply text-white font-bold;
-  font-size: min(3vw, 20px);
 }
 
 .projectBodyDetail {
@@ -43,7 +42,7 @@
   font-size: min(2.5vw, 16px);
 }
 .projectTechnologyEnv{
-  @apply flex justify-center items-start flex-wrap;
+  @apply flex flex-wrap;
 }
 .projectTechnology{
   @apply bg-blue-950 text-white rounded-xl pr-2 pl-2 pt-1 pb-1 mt-1 mr-2;
@@ -93,8 +92,9 @@
 
 
 @layer components {
-  @media (max-width: 375px) {
+  @media (max-width: 570px) {
     .projectEnv{
+      @apply p-6;
     }
     .projectCardEnv {
       @apply flex flex-col justify-center items-center w-full h-full overflow-hidden p-3;
@@ -103,7 +103,7 @@
       @apply w-full h-full object-cover mb-3;
     }
     .projectTechnologyEnv{
-      @apply mb-0;
+      @apply mb-0 justify-center items-center;
     }
     .projectViewMoreNav{
       @apply opacity-0 m-0;
@@ -111,7 +111,35 @@
     .break-line{
       @apply mb-2 mt-2 opacity-100;
     }
+  }
+  @media (min-width: 571px) {
+    .projectCardEnv {
+      @apply flex justify-center items-start w-full h-full overflow-hidden p-3;
+      
+      .projectCardBodyEnv{
+        @apply mr-3 mt-0;
+        
+        .projectBodyDetail{
+          @apply mt-5;
+        }
+      }
+    }
+    .projectImage{
+      @apply object-cover mr-4;
+      height: 100%;
+      width: 40%;
+    }
+    .projectTechnologyEnv{
+      @apply mt-1 justify-start;
+      .projectTechnology{
+        @apply mt-5;
+        font-size: min(2vw, 12px);
+      }
+    }
     
+    .projectViewMoreNav{
+      @apply opacity-0 m-0;
+    }
   }
   @media (min-width: 979px) {
     .projectCardEnv {
@@ -135,23 +163,6 @@
     }
     .projectViewMoreNav{
       @apply pb-5;
-    }
-  }
-  @media (min-width: 981px) {
-    .projectEnv{
-      @apply flex justify-start items-start flex-wrap;
-    }
-    .projectCardEnv {
-      @apply flex flex-col flex-wrap w-full h-full;
-    }
-    .projectImage {
-      filter: grayscale(100%);
-      transition: filter 0.3s ease-in-out;
-    }
-  }
-  @media (min-width: 1024px) {
-    .projectCardBodyEnv .break-line {
-      opacity: 100 !important;
     }
   }
   @media (max-width: 1280px) {
