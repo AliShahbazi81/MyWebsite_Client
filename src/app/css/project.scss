@@ -182,6 +182,39 @@
     }
   }
   @media (min-width: 1281px) {
-  
+    .blurEnv {
+      max-width: 30%;
+      @apply flex-wrap;
+    }
+    .projectEnv {
+      @apply flex justify-center items-center flex-wrap pl-20 pr-20;
+    }
+    .projectCardBodyEnv {
+      @apply ml-7 mr-7 mb-4 mt-4;
+      .projectBodyDetail {
+        @apply m-0;
+        font-size: min(2vw, 15px);
+      }
+    }
+    .projectCardEnv {
+      @apply flex flex-col justify-center items-center overflow-hidden w-full;
+    }
+    .projectImage {
+      @apply mt-5;
+      max-width: 90%;
+      max-height: 90%;
+    }
+    .projectTechnologyEnv {
+      @apply flex justify-center items-center mt-1;
+      .projectTechnology {
+        font-size: min(2vw, 16px);
+      }
+    }
+    .projectViewMoreNav {
+      @apply opacity-0 m-0;
+    }
+    .break-line {
+      @apply mb-2 mt-2 opacity-100;
+    }
   }
 }
