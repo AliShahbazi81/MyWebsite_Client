@@ -23,7 +23,7 @@ export default function ProjectCard({imageName, projectName, projectDetail, tech
 						quality={100}
 				  />
 				  <div className={'projectCardBodyEnv'}>
-						<div className={'flex justify-between'}>
+						<div className={'flex justify-between items-center'}>
 							  <h2 className={'projectTitle'}>
 									{projectName}
 							  </h2>
@@ -44,7 +44,7 @@ export default function ProjectCard({imageName, projectName, projectDetail, tech
 						</h6>
 						<div className={'break-line'}></div>
 						<ProjectTechnology techName={techName}/>
-						<div className={'flex items-end justify-end cursor-pointer'}>
+						<div className={'projectViewMoreNav'}>
 							  <span className={"projectIcon projectArrow"}></span>
 						</div>
 				  </div>

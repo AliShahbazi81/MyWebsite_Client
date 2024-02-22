@@ -5,14 +5,11 @@
 }
 
 .projectEnv {
-  @apply flex justify-center items-start flex-wrap bg-transparent p-5 h-full pl-28 pr-28;
+  @apply bg-transparent h-full;
   max-width: 1920px;
 }
 
 .projectCardEnv {
-  @apply flex flex-col flex-wrap w-full h-full p-2;
-  max-width: 410px;
-
   :hover .projectIcon {
     &.projectArrow {
       background: white;
@@ -23,9 +20,6 @@
 
 .projectCardBodyEnv {
   @apply flex flex-col;
-  .break-line {
-    @apply mb-3 mt-1;
-  }
 }
 
 .blurEnv {
@@ -35,20 +29,29 @@
 }
 
 .projectImage {
-  @apply mb-5 cursor-pointer;
+  @apply cursor-pointer;
   border-radius: 13px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease-in-out;
 }
 
 .projectTitle {
-  @apply text-white font-bold pb-1;
+  @apply text-white font-bold;
   font-size: min(3vw, 20px);
 }
 
 .projectBodyDetail {
-  @apply leading-7 text-base font-light mb-3;
+  @apply leading-7 text-base font-light;
   font-size: min(2.5vw, 16px);
+}
+.projectTechnologyEnv{
+  @apply flex justify-center items-start flex-wrap;
+}
+.projectTechnology{
+  @apply bg-blue-950 text-white rounded-xl pr-2 pl-2 pt-1 pb-1 mt-1 mr-2;
+  font-size: min(2.2vw, 20px);
+}
+
+.projectViewMoreNav{
+  @apply flex items-end justify-end cursor-pointer; 
 }
 
 
@@ -90,14 +93,73 @@
 
 
 @layer components {
-  @media (max-width: 768px) {
+  @media (max-width: 375px) {
+    .projectEnv{
+    }
+    .projectCardEnv {
+      @apply flex flex-col justify-center items-center w-full h-full overflow-hidden p-3;
+    }
+    .projectImage{
+      @apply w-full h-full object-cover mb-3;
+    }
+    .projectTechnologyEnv{
+      @apply mb-0;
+    }
+    .projectViewMoreNav{
+      @apply opacity-0 m-0;
+    }
+    .break-line{
+      @apply mb-2 mt-2 opacity-100;
+    }
+    
+  }
+  @media (min-width: 979px) {
+    .projectCardEnv {
+      @apply flex justify-start items-start mt-2;
+    }
+    
+    .projectCardBodyEnv{
+      @apply mt-5 mr-5;
+    }
     .projectImage {
+      @apply m-5;
+      width: 50%;
+      height: 70%;
+      filter: none;
+    }
+    .projectBodyDetail{
+      @apply mt-2 mb-2;
+    }
+    .break-line{
+      @apply mb-0 mt-0;
+    }
+    .projectViewMoreNav{
+      @apply pb-5;
+    }
+  }
+  @media (min-width: 981px) {
+    .projectEnv{
+      @apply flex justify-start items-start flex-wrap;
+    }
+    .projectCardEnv {
+      @apply flex flex-col flex-wrap w-full h-full;
+    }
+    .projectImage {
+      filter: grayscale(100%);
+      transition: filter 0.3s ease-in-out;
+    }
+  }
+  @media (min-width: 1024px) {
+    .projectCardBodyEnv .break-line {
+      opacity: 100 !important;
+    }
+  }
+  @media (max-width: 1280px) {
+    .projectEnv {
+      @apply pl-1;
+    }
+  }
+  @media (min-width: 1281px) {
 
-    }
-    @media (min-width: 1024px) {
-      .projectCardBodyEnv .break-line {
-        opacity: 100 !important;
-      }
-    }
   }
 }

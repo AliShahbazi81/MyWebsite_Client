@@ -81,7 +81,6 @@ body {
 
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Blur card -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .blurEnv {
-    @apply pt-2 pr-5 pl-5 pb-7;
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border-radius: 13px;
