@@ -41,16 +41,18 @@
   @apply leading-7 text-base font-light;
   font-size: min(2.5vw, 16px);
 }
-.projectTechnologyEnv{
+
+.projectTechnologyEnv {
   @apply flex flex-wrap;
 }
-.projectTechnology{
+
+.projectTechnology {
   @apply bg-blue-950 text-white rounded-xl pr-2 pl-2 pt-1 pb-1 mt-1 mr-2;
   font-size: min(2.2vw, 20px);
 }
 
-.projectViewMoreNav{
-  @apply flex items-end justify-end cursor-pointer; 
+.projectViewMoreNav {
+  @apply flex items-end justify-end cursor-pointer;
 }
 
 
@@ -93,84 +95,93 @@
 
 @layer components {
   @media (max-width: 570px) {
-    .projectEnv{
+    .projectEnv {
       @apply p-6;
     }
     .projectCardEnv {
       @apply flex flex-col justify-center items-center w-full h-full overflow-hidden p-3;
     }
-    .projectImage{
+    .projectImage {
       @apply w-full h-full object-cover mb-3;
     }
-    .projectTechnologyEnv{
+    .projectTechnologyEnv {
       @apply mb-0 justify-center items-center;
     }
-    .projectViewMoreNav{
+    .projectViewMoreNav {
       @apply opacity-0 m-0;
     }
-    .break-line{
+    .break-line {
       @apply mb-2 mt-2 opacity-100;
     }
   }
   @media (min-width: 571px) {
-    .projectCardEnv {
-      @apply flex justify-center items-start w-full h-full overflow-hidden p-3;
-      
-      .projectCardBodyEnv{
-        @apply mr-3 mt-0;
-        
-        .projectBodyDetail{
-          @apply mt-5;
+    @media (max-width: 978px) {
+      .projectCardEnv {
+        @apply flex justify-center items-start w-full h-full overflow-hidden p-3;
+
+        .projectCardBodyEnv {
+          @apply mr-3 mt-0;
+
+          .projectBodyDetail {
+            @apply mt-5;
+          }
         }
       }
-    }
-    .projectImage{
-      @apply object-cover mr-4;
-      height: 100%;
-      width: 40%;
-    }
-    .projectTechnologyEnv{
-      @apply mt-1 justify-start;
-      .projectTechnology{
-        @apply mt-5;
-        font-size: min(2vw, 12px);
+      .projectImage {
+        @apply object-cover mr-4;
+        height: 100%;
+        width: 40%;
       }
-    }
-    
-    .projectViewMoreNav{
-      @apply opacity-0 m-0;
+      .projectTechnologyEnv {
+        @apply mt-1 justify-start;
+        .projectTechnology {
+          @apply mt-5;
+          font-size: min(2vw, 12px);
+        }
+      }
+      .projectViewMoreNav {
+        @apply opacity-0 m-0;
+      }
     }
   }
   @media (min-width: 979px) {
-    .projectCardEnv {
-      @apply flex justify-start items-start mt-2;
-    }
-    
-    .projectCardBodyEnv{
-      @apply mt-5 mr-5;
-    }
-    .projectImage {
-      @apply m-5;
-      width: 50%;
-      height: 70%;
-      filter: none;
-    }
-    .projectBodyDetail{
-      @apply mt-2 mb-2;
-    }
-    .break-line{
-      @apply mb-0 mt-0;
-    }
-    .projectViewMoreNav{
-      @apply pb-5;
-    }
-  }
-  @media (max-width: 1280px) {
-    .projectEnv {
-      @apply pl-1;
+    @media (max-width: 1280px) {
+      .blurEnv {
+        max-width: 45%;
+        @apply flex-wrap;
+      }
+      .projectEnv {
+        @apply flex justify-start items-start flex-wrap p-1;
+      }
+      .projectCardBodyEnv {
+        @apply ml-7 mr-7 mb-4 mt-4;
+        .projectBodyDetail {
+          @apply m-0;
+        }
+      }
+      .projectCardEnv {
+        @apply flex flex-col justify-center items-center overflow-hidden w-full;
+      }
+      .projectImage {
+        @apply mt-5;
+        max-width: 90%;
+        max-height: 90%;
+      }
+      .projectTechnologyEnv {
+        @apply flex justify-center items-center mt-1;
+        .projectTechnology {
+          font-size: min(2vw, 12px);
+        }
+      }
+      .projectViewMoreNav {
+        @apply opacity-0 m-0;
+      }
+      .break-line {
+        @apply mb-2 mt-2 opacity-100;
+      }
     }
   }
   @media (min-width: 1281px) {
-
+  
   }
 }
