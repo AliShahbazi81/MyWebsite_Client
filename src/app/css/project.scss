@@ -96,16 +96,16 @@
 @layer components {
   @media (max-width: 570px) {
     .projectEnv {
-      @apply p-6;
+      @apply p-6 transition-all duration-300;
     }
     .projectCardEnv {
-      @apply flex flex-col justify-center items-center w-full h-full overflow-hidden p-3;
+      @apply flex flex-col justify-center items-center w-full h-full overflow-hidden p-3 transition-all duration-300;
     }
     .projectImage {
-      @apply w-full h-full object-cover mb-3;
+      @apply w-full h-full object-cover mb-3 transition-all duration-300;
     }
     .projectTechnologyEnv {
-      @apply mb-0 justify-center items-center;
+      @apply mb-0 justify-center items-center transition-all duration-300;
     }
     .projectViewMoreNav {
       @apply opacity-0 m-0;
@@ -116,11 +116,14 @@
   }
   @media (min-width: 571px) {
     @media (max-width: 978px) {
+      .projectEnv{
+        @apply transition-all;
+      }
       .projectCardEnv {
-        @apply flex justify-center items-start w-full h-full overflow-hidden p-3;
+        @apply flex justify-center items-start w-full h-full overflow-hidden p-3 transition-all duration-300;
 
         .projectCardBodyEnv {
-          @apply mr-3 mt-0;
+          @apply mr-3 mt-0 transition-all duration-300;
 
           .projectBodyDetail {
             @apply mt-5;
@@ -133,7 +136,7 @@
         width: 40%;
       }
       .projectTechnologyEnv {
-        @apply mt-1 justify-start;
+        @apply mt-1 justify-start transition-all duration-300;
         .projectTechnology {
           @apply mt-5;
           font-size: min(2vw, 12px);
@@ -148,19 +151,19 @@
     @media (max-width: 1280px) {
       .blurEnv {
         max-width: 45%;
-        @apply flex-wrap;
+        @apply flex-wrap transition-all duration-300;
       }
       .projectEnv {
-        @apply flex justify-start items-start flex-wrap p-1;
+        @apply flex justify-start items-start flex-wrap p-1 transition-all duration-300;
       }
       .projectCardBodyEnv {
-        @apply ml-7 mr-7 mb-4 mt-4;
+        @apply ml-7 mr-7 mb-4 mt-4 transition-all duration-300;
         .projectBodyDetail {
           @apply m-0;
         }
       }
       .projectCardEnv {
-        @apply flex flex-col justify-center items-center overflow-hidden w-full;
+        @apply flex flex-col justify-center items-center overflow-hidden w-full transition-all duration-300;
       }
       .projectImage {
         @apply mt-5;
@@ -168,7 +171,7 @@
         max-height: 90%;
       }
       .projectTechnologyEnv {
-        @apply flex justify-center items-center mt-1;
+        @apply flex justify-center items-center mt-1 transition-all duration-300;
         .projectTechnology {
           font-size: min(2vw, 12px);
         }
@@ -184,20 +187,20 @@
   @media (min-width: 1281px) {
     .blurEnv {
       max-width: 30%;
-      @apply flex-wrap;
+      @apply flex-wrap transition-all duration-300;
     }
     .projectEnv {
-      @apply flex justify-center items-center flex-wrap pl-20 pr-20;
+      @apply flex justify-center items-center flex-wrap pl-20 pr-20 transition-all duration-300;
     }
     .projectCardBodyEnv {
-      @apply ml-7 mr-7 mb-4 mt-4;
+      @apply ml-7 mr-7 mb-4 mt-4 transition-all duration-300;
       .projectBodyDetail {
         @apply m-0;
         font-size: min(2vw, 15px);
       }
     }
     .projectCardEnv {
-      @apply flex flex-col justify-center items-center overflow-hidden w-full;
+      @apply flex flex-col justify-center items-center overflow-hidden w-full transition-all duration-300;
     }
     .projectImage {
       @apply mt-5;
@@ -205,7 +208,7 @@
       max-height: 90%;
     }
     .projectTechnologyEnv {
-      @apply flex justify-center items-center mt-1;
+      @apply flex justify-center items-center mt-1 transition-all duration-300;
       .projectTechnology {
         font-size: min(2vw, 16px);
       }

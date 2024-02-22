@@ -24,7 +24,7 @@ export default function Navbar() {
 			return () => window.removeEventListener('scroll', handleScroll);
 	  }, []);
 	  return (
-			<nav className={`fixed top-0 left-0 w-full z-30 transition-all ease-in-out duration-1000 ${isSticky ? 'animate-slideDown bg-opacity-60 backdrop-filter backdrop-blur' : 'bg-transparent'}`}>
+			<nav className={`left-0 w-full z-40 ease-in-ease-out duration-1000 ${isSticky ? 'fixed transition-all top-0 animate-slideDown bg-opacity-60 backdrop-filter backdrop-blur-sm' : 'relative top-10 bg-transparent h-0'}`}>
 				  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 						<div className="flex items-center justify-center h-16">
 							  <div className="flex items-center justify-start">

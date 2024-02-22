@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default function Home() {
 	  return (
-			<div className={'relative h-screen w-max overflow-x-hidden'}>
+			<div className={'relative overflow-clip'}>
 				  <Navbar/>
 				  <HomePageImage/>
 			</div>
