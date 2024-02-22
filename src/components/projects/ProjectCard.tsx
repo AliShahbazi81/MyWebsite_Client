@@ -11,13 +11,12 @@ type Props = {
 	  techName: string[]
 }
 
-export default function ProjectCard({imageName, projectName, projectDetail, techName, github}: Props)
-{
-	  return(
+export default function ProjectCard({imageName, projectName, projectDetail, techName, github}: Props) {
+	  return (
 			<div className={'projectCardEnv'}>
 				  <Image
 						className={'projectImage'}
-						src={`/images/project/${imageName}.png`} 
+						src={`/images/project/${imageName}.png`}
 						alt={`${imageName}`}
 						width={500}
 						height={400}
@@ -28,25 +27,29 @@ export default function ProjectCard({imageName, projectName, projectDetail, tech
 							  <h2 className={'projectTitle'}>
 									{projectName}
 							  </h2>
-							  <Link href={'/'}>
-									<Image
-										  className={''}
-										  src={'/images/keywords/GitHub.png'}
-										  alt={'GitHub'}
-										  width={25}
-										  height={20}
-									/>
-							  </Link>
+							  {github ? (
+									<Link href={github}>
+										  <Image
+												src="/images/keywords/GitHub.png"
+												alt="GitHub"
+												width={25}
+												height={20}
+										  />
+									</Link>
+							  ) : null}
 						</div>
 						<div className={'break-line'}></div>
 						<h6 className={'projectBodyDetail'}>
 							  {projectDetail}
 						</h6>
 						<div className={'break-line'}></div>
-						<ProjectTechnology techName={techName} />
+						<ProjectTechnology techName={techName}/>
+						<div className={'flex items-end justify-end cursor-pointer'}>
+							  <span className={"projectIcon projectArrow"}></span>
+						</div>
 				  </div>
-				  
-						
+
+
 			</div>
 	  )
 }

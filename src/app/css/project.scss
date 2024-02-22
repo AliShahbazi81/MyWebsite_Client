@@ -1,18 +1,29 @@
 @tailwind components;
 
-.projectEnv{
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+  transition: $property $duration $ease;
+}
+
+.projectEnv {
   @apply flex justify-center items-start flex-wrap bg-transparent p-5 h-full pl-28 pr-28;
   max-width: 1920px;
 }
 
-.projectCardEnv{
+.projectCardEnv {
   @apply flex flex-col flex-wrap w-full h-full p-2;
   max-width: 410px;
+
+  :hover .projectIcon {
+    &.projectArrow {
+      background: white;
+      transform: translate(1rem, 0);
+    }
+  }
 }
 
-.projectCardBodyEnv{
+.projectCardBodyEnv {
   @apply flex flex-col;
-  .break-line{
+  .break-line {
     @apply mb-3 mt-1;
   }
 }
@@ -23,14 +34,14 @@
   }
 }
 
-.projectImage{
+.projectImage {
   @apply mb-5 cursor-pointer;
   border-radius: 13px;
   filter: grayscale(100%);
   transition: filter 0.3s ease-in-out;
 }
 
-.projectTitle{
+.projectTitle {
   @apply text-white font-bold pb-1;
   font-size: min(3vw, 20px);
 }
@@ -40,10 +51,48 @@
   font-size: min(2.5vw, 16px);
 }
 
-@layer components{
+
+.projectCardEnv:hover .link-text {
+  opacity: 0;
+}
+
+.projectCardEnv:hover .link-text-hover {
+  opacity: 1;
+}
+
+.projectIcon {
+  @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
+  position: relative;
+  top: 0;
+  bottom: 0;
+  background: white;
+
+  &.projectArrow {
+    @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
+    left: -0.5rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -0.25rem;
+      right: 0.0625rem;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-top: 0.125rem solid #fff;
+      border-right: 0.125rem solid #fff;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+
+@layer components {
   @media (max-width: 768px) {
-    .projectImage{
-      
+    .projectImage {
+
     }
     @media (min-width: 1024px) {
       .projectCardBodyEnv .break-line {
