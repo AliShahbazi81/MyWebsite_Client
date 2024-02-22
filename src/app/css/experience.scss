@@ -1,0 +1,32 @@
+@tailwind components;
+.expEnv{
+  @apply flex flex-col justify-center items-center flex-wrap transition-all duration-300 w-full h-full;
+  max-width: 1920px;
+
+  .headerEnv{
+    @apply flex justify-between items-center flex-wrap bg-blue-950 rounded-xl text-white font-bold p-4;
+    width: 50%;
+
+    .headerDetail{
+      @apply flex justify-start items-center flex-wrap w-1/2;
+      
+      .headerCountry{
+        @apply ml-5 text-gray-400;
+      }
+    }
+  }
+
+  .bodyEnv{
+    @apply flex justify-between items-start m-3;
+
+    .bodyImage{
+      @apply w-1/2 h-1/2;
+    }
+  }
+  
+  @layer components{
+    @media (min-width: 768px) {
+      
+    }
+  }
+}

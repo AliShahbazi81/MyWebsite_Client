@@ -5,12 +5,12 @@ import MouseScroll from "@/components/MouseScroll";
 import MyExpertise from "@/components/cards/MyExpertise";
 import MyProjects from "@/components/projects/MyProjects";
 import "./../app/css/homepage.scss"
-import "./../app/globals.css"
+import MyExperience from "@/components/experience/ExperienceEnv";
 
 export default function HomePageImage() {
 	  return (
 			<>
-				  <div className={'relative flex items-center justify-center container'}>
+				  <div className={'flex items-center justify-center container'}>
 						<Image
 							  src="/images/BackgroundImage.jpg"
 							  alt="BackgroundImage"
@@ -55,7 +55,12 @@ export default function HomePageImage() {
 						</h1>
 						<MyProjects />
 				  </div>
-				  
+				  <div className={'divBackground'}>
+						<h1 className={'title'}>
+							  My Experience
+						</h1>
+						<MyExperience />
+				  </div>
 			</>
 	  );
 }
