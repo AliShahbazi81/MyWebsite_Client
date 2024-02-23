@@ -19,6 +19,8 @@ const config: Config = {
         primary: "#0AD3FF",
         secondary: "",
         background: "#1A191D",
+        card: "#172554",
+        cardActive: "#1B2C63",
         accent: "",
         error: "",
         success: "",

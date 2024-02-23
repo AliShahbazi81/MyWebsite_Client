@@ -1,32 +1,63 @@
 @tailwind components;
-.expEnv{
-  @apply flex flex-col justify-center items-center flex-wrap transition-all duration-300 w-full h-full;
-  max-width: 1920px;
 
-  .headerEnv{
-    @apply flex justify-between items-center flex-wrap bg-blue-950 rounded-xl text-white font-bold p-4;
+.expEnv {
+  @apply flex flex-col justify-center items-center flex-wrap transition-all duration-300 w-full h-full z-20;
+  max-width: 1920px;
+  
+  
+
+  .headerEnv {
+    @apply flex justify-between items-center flex-wrap rounded-xl text-white font-bold p-4 cursor-pointer;
     width: 50%;
 
-    .headerDetail{
-      @apply flex justify-start items-center flex-wrap w-1/2;
-      
-      .headerCountry{
-        @apply ml-5 text-gray-400;
+    .headerDetail {
+      @apply flex justify-start items-center flex-wrap w-1/2 mb-1;
+
+      .headerCountry {
+        @apply flex items-center justify-start ml-5 text-gray-400;
       }
     }
   }
 
-  .bodyEnv{
-    @apply flex justify-between items-start m-3;
+  .bodyEnv {
+    @apply flex justify-between items-start -mt-3 bg-blue-950 text-white rounded-b-xl transition-all duration-300 mb-5;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    overflow: hidden;
+    width: 50%;
+    
+    .descriptionEnv{
+      @apply m-6 mb-8;
+      
+      .experienceDescription{
+        width: 90%;
+        @apply leading-7 text-base font-light;
+      }
+    }
 
-    .bodyImage{
-      @apply w-1/2 h-1/2;
+    .bodyImage {
+      @apply p-3;
+      height: 75%;
+      width: 75%;
     }
   }
-  
-  @layer components{
-    @media (min-width: 768px) {
-      
+
+  .bodyEnv.visible{
+    opacity: 1;
+  }
+
+  @layer components {
+    @media (min-width: 1281px) {
+      .headerEnv {
+
+        .headerDetail {
+
+          .headerCountry {
+            font-size: min(2vw, 14px);
+
+          }
+        }
+      }
     }
   }
 }

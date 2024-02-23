@@ -5,7 +5,7 @@ import MouseScroll from "@/components/MouseScroll";
 import MyExpertise from "@/components/cards/MyExpertise";
 import MyProjects from "@/components/projects/MyProjects";
 import "./../app/css/homepage.scss"
-import MyExperience from "@/components/experience/ExperienceEnv";
+import MyExperience from "@/components/experience/MyExperience";
 
 export default function HomePageImage() {
 	  return (
