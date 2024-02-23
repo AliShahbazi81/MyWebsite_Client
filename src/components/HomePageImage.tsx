@@ -61,6 +61,11 @@ export default function HomePageImage() {
 						</h1>
 						<MyExperience />
 				  </div>
+				<div className={'divBackground'}>
+					<h1 className={'title'}>
+						References
+					</h1>
+				</div>
 			</>
 	  );
 }

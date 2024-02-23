@@ -43,7 +43,7 @@ export default function ExperienceCard(
 					<h3 className={'headerCountry'}><CiLocationOn color={"white"} className={'mr-1'}/> {country} -
 						({position})</h3>
 				</div>
-				<h2>{dateFrom} - {dateTo}</h2>
+				<h2 >{dateFrom} - {dateTo}</h2>
 			</div>
 			<div className={`bodyEnv ${isActive ? 'visible max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
 				<ExperienceDescription description={description} role={role}/>
