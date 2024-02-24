@@ -1,5 +1,8 @@
 @tailwind components;
 
 .footerEnv{
+  @apply flex items-start justify-between flex-wrap w-full p-16;
+  background: linear-gradient(to bottom, #1A191D, #171D26);
+  height: 45vh;
   
 }
