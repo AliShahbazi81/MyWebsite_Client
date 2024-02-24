@@ -6,54 +6,106 @@
 
   .headerEnv {
     @apply flex justify-between items-center flex-wrap rounded-xl text-white font-bold p-4 cursor-pointer;
-    width: 50%;
+
 
     .headerDetail {
-      @apply flex justify-start items-center flex-wrap w-3/4 mb-1;
+      @apply flex justify-start items-center flex-wrap mb-1;
+      width: 60%;
+
+      .expHeader {
+        font-size: min(2vw, 18px);
+      }
 
       .headerCountry {
         @apply flex items-center justify-start ml-5 text-gray-400;
+        font-size: min(1.6vw, 14px);
       }
+    }
+
+    .expDate {
+      font-size: min(2vw, 18px);
     }
   }
 
   .bodyEnv {
-    @apply flex justify-between items-start -mt-3 bg-blue-950 text-white rounded-b-xl transition-all duration-300 mb-5;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    @apply flex justify-between items-start -mt-3 bg-blue-950 text-white rounded-b-xl transition-all duration-300 mb-5 overflow-hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, max-width 0.3s ease-in-out;
     opacity: 0;
     overflow: hidden;
-    width: 50%;
-    
-    .descriptionEnv{
+
+    .descriptionEnv {
       @apply m-6 mb-8;
       
-      .experienceDescription{
+      .projectTitle{
+        font-size: min(3vw, 18px);
+      }
+
+      .experienceDescription {
+        @apply font-light;
         width: 90%;
-        @apply leading-7 text-base font-light;
+        font-size: min(2vw, 16px);
       }
     }
 
     .bodyImage {
       @apply p-3;
-      height: 75%;
-      width: 75%;
     }
   }
 
-  .bodyEnv.visible{
+  .bodyEnv.visible {
     opacity: 1;
   }
 
   @layer components {
-    @media (min-width: 1281px) {
+    @media (max-width: 768px) {
       .headerEnv {
+        @apply transition-all duration-300 ease-in-out;
+        width: 90%;
+      }
+      .bodyEnv{
+        width: 90%;
 
-        .headerDetail {
+        .bodyImage {
+          width: min(20%, 40%);
+          height: min(20%, 40%);
+        }
 
-          .headerCountry {
-            font-size: min(2vw, 14px);
+        .experienceDescription{
+          @apply text-base leading-5 ;
+        }
+      }
+    }
+    @media (min-width: 769px) {
+      @media (max-width: 1280px) {
+        .headerEnv {
+          @apply transition-all duration-300 ease-in-out;
+          width: 70%;
+        }
+
+        .bodyEnv{
+          width: 70%;
+
+          .experienceDescription{
+            @apply  leading-6;
           }
         }
+      }
+    }
+    
+
+    @media (min-width: 1281px) {
+      .headerEnv {
+        width: 50%;
+
+        .headerDetail {
+        }
+      }
+      .bodyEnv {
+        width: 50%;
+      }
+      
+      .experienceDescription{
+        @apply leading-7;
       }
     }
   }

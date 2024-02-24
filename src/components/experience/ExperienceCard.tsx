@@ -42,7 +42,7 @@ export default function ExperienceCard(
 					<h3 className={'headerCountry'}><CiLocationOn color={"white"} className={'mr-1'}/> {country} -
 						({position})</h3>
 				</div>
-				<h2>{dateFrom} - {dateTo}</h2>
+				<h2 className={'expDate'}>{dateFrom} - {dateTo}</h2>
 			</div>
 			<div
 				className={`bodyEnv ${isActive ? 'visible max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}
@@ -53,7 +53,7 @@ export default function ExperienceCard(
 				/>
 				{image &&
                     <Image
-                        className={'bodyImage w-1/2 h-1/2'}
+                        className={'bodyImage'}
                         src={`/images/experience/${imageUrl}.png`}
                         alt={`${companyName} icon`}
                         width={100}
