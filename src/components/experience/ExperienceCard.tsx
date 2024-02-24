@@ -3,6 +3,7 @@ import "./../../app/css/experience.scss";
 import {DateTime} from "next-auth/providers/kakao";
 import ExperienceDescription from "@/components/experience/ExperienceDescription";
 import {CiLocationOn} from "react-icons/ci";
+
 type Props = {
 	companyName: string;
 	dateFrom: DateTime;

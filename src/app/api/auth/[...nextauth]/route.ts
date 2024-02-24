@@ -1,7 +1,6 @@
-import NextAuth, {NextAuthOptions, User as NextAuthUser, Account, Profile} from "next-auth";
+import NextAuth, {Account, NextAuthOptions, Profile, Session, User as NextAuthUser} from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import {JWT} from "next-auth/jwt";
-import {Session} from "next-auth";
 
 // Assuming this is the structure of your user object returned from the server
 interface User {

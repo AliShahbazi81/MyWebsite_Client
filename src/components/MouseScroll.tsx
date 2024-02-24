@@ -1,5 +1,6 @@
 'use client'
 import "./../app/css/homepage.scss"
+
 export default function MouseScroll()
 {
 	  return(

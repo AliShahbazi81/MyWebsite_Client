@@ -1,5 +1,3 @@
-import {MouseEventHandler} from "react";
-
 type Props = {
 	  onClick?: () => void
 	  next: boolean

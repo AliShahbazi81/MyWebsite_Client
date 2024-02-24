@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type {Config} from "tailwindcss";
 
 const config: Config = {
   content: [
@@ -19,6 +19,7 @@ const config: Config = {
         primary: "#0AD3FF",
         secondary: "",
         background: "#1A191D",
+        background_darkBlue: "#171D26",
         card: "#172554",
         cardActive: "#1B2C63",
         accent: "",
