@@ -3,15 +3,13 @@
 .expEnv {
   @apply flex flex-col justify-center items-center flex-wrap transition-all duration-300 w-full z-20;
   max-width: 1920px;
-  
-  
 
   .headerEnv {
     @apply flex justify-between items-center flex-wrap rounded-xl text-white font-bold p-4 cursor-pointer;
     width: 50%;
 
     .headerDetail {
-      @apply flex justify-start items-center flex-wrap w-1/2 mb-1;
+      @apply flex justify-start items-center flex-wrap w-3/4 mb-1;
 
       .headerCountry {
         @apply flex items-center justify-start ml-5 text-gray-400;
@@ -54,7 +52,6 @@
 
           .headerCountry {
             font-size: min(2vw, 14px);
-
           }
         }
       }

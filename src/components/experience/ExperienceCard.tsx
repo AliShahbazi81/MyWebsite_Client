@@ -3,9 +3,6 @@ import "./../../app/css/experience.scss";
 import {DateTime} from "next-auth/providers/kakao";
 import ExperienceDescription from "@/components/experience/ExperienceDescription";
 import {CiLocationOn} from "react-icons/ci";
-import {white} from "next/dist/lib/picocolors";
-
-
 type Props = {
 	companyName: string;
 	dateFrom: DateTime;
@@ -19,7 +16,6 @@ type Props = {
 	imageUrl?: string;
 	onHeaderClick: () => void;
 }
-
 export default function ExperienceCard(
 	{
 		companyName,
@@ -36,17 +32,24 @@ export default function ExperienceCard(
 	}: Props) {
 	return (
 		<>
-			<div className={`headerEnv cursor-pointer ${isActive ? 'bg-cardActive' : 'bg-card'}`}
-				 onClick={onHeaderClick}>
+			<div
+				className={`headerEnv ${isActive ? 'bg-cardActive' : 'bg-card'}`}
+				onClick={onHeaderClick}
+			>
 				<div className={'headerDetail'}>
 					<h2 className={'expHeader'}>{companyName}</h2>
 					<h3 className={'headerCountry'}><CiLocationOn color={"white"} className={'mr-1'}/> {country} -
 						({position})</h3>
 				</div>
-				<h2 >{dateFrom} - {dateTo}</h2>
+				<h2>{dateFrom} - {dateTo}</h2>
 			</div>
-			<div className={`bodyEnv ${isActive ? 'visible max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
-				<ExperienceDescription description={description} role={role}/>
+			<div
+				className={`bodyEnv ${isActive ? 'visible max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}
+			>
+				<ExperienceDescription
+					description={description}
+					role={role}
+				/>
 				{image &&
                     <Image
                         className={'bodyImage w-1/2 h-1/2'}

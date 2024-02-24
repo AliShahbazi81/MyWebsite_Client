@@ -61,9 +61,9 @@ export default function MyExperience() {
 			<div className={'expEnv'}>
 				{[
 					{
-						companyName: "University of Windsor",
-						dateFrom: "Sep 2023",
-						dateTo: "Jan 2024",
+						companyName: "University of Windsor (Master)",
+						dateFrom: "Sep 2022",
+						dateTo: "Dec 2023",
 						description: "At Cedar Valley, I spearheaded the digital transformation of manual, paper-based processes into sophisticated digital systems as a Backend Developer, leveraging .NET Core and C# for developing robust backend systems. My contributions range from enhancing ingredient and logistics tracking to implementing RabbitMQ for message queuing and occasionally supporting the frontend with React.js, all underpinned by Microsoft SQL Server. This work has been crucial in reducing manual labor, errors, and enhancing operational efficiency and accountability.",
 						country: "Canada, Windsor",
 						position: "In-Person",
@@ -72,9 +72,9 @@ export default function MyExperience() {
 						imageUrl: "UniversityOfWindsor"
 					},
 					{
-						companyName: "Azad University",
-						dateFrom: "Apr 2023",
-						dateTo: "Present",
+						companyName: "Azad University (Bachelor)",
+						dateFrom: "Sep 2015",
+						dateTo: "Jun 2019",
 						description: "In my role as a Full Stack Developer, I navigate the complexities of both backend and frontend development, leveraging .NET Core for backend solutions and ReactJS for creating engaging user interfaces. My expertise encompasses Object-Oriented Programming, Object-Relational Mapping, and rigorous testing practices to ensure high-quality software delivery. From architecting scalable backend functionalities with .NET Core to designing intuitive, responsive interfaces with ReactJS, my work is dedicated to enhancing user experience and application performance through modular code and comprehensive testing strategies.",
 						country: "Iran, Tehran",
 						position: "In-Person",
