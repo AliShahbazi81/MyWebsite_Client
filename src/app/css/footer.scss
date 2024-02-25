@@ -74,7 +74,7 @@
 @layer components {
   @media (min-width: 1800px) {
     .footerEnv {
-      @apply flex flex-col items-center justify-center flex-wrap p-5;
+      @apply flex flex-col items-center justify-center flex-wrap p-12;
       height: 70vh;
 
       .socialEnv {
@@ -111,7 +111,7 @@
         @apply flex flex-col-reverse items-center justify-center;
 
         .reference {
-          @apply flex flex-col items-center justify-center;
+          @apply flex flex-col justify-center;
 
           .referenceEnv {
             @apply flex flex-col justify-center items-center;
@@ -142,6 +142,7 @@
     @media (max-width: 1280px) {
       .footerEnv {
         @apply flex flex-col-reverse items-center justify-center;
+        padding-bottom: 8vw;
 
         .reference {
           @apply flex flex-col items-center justify-center pt-12;
@@ -176,6 +177,7 @@
     @media (max-width: 768px) {
       .footerEnv {
         @apply flex flex-col-reverse items-center justify-center;
+        padding-bottom: 8vw;
 
         .reference {
           @apply flex flex-col items-start justify-start pt-12;
@@ -205,7 +207,8 @@
   
   @media (max-width: 600px) {
     .footerEnv {
-      @apply flex flex-col-reverse items-center justify-center pb-12;
+      @apply flex flex-col-reverse items-center justify-center;
+      padding-bottom: 8vw;
       
       .referenceInfoEnv{
         @apply flex flex-col items-center justify-center pb-8;
