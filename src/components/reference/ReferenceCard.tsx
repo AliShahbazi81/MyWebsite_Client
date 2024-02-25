@@ -11,14 +11,15 @@ type Props = {
 	profLinkedInUrl: string;
 }
 
-export default function ReferenceCard({
-										  profName,
-										  profImageUrl,
-										  profRole,
-										  profText,
-										  profUniversity,
-										  profLinkedInUrl
-									  }: Props) {
+export default function ReferenceCard(
+	{
+		profName,
+		profImageUrl,
+		profRole,
+		profText,
+		profUniversity,
+		profLinkedInUrl
+	}: Props) {
 	return (
 		<>
 			{/* Profile picture and roles */}
@@ -44,6 +45,7 @@ export default function ReferenceCard({
 						<FaLinkedin
 							className={'cursor-pointer'}
 							color={"white"}
+							size={22}
 						/>
 					</Link>
 				</div>

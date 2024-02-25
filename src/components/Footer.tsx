@@ -1,12 +1,28 @@
 import "./../app/css/footer.scss"
 import ReferenceCard from "@/components/reference/ReferenceCard";
+import SocialLinks from "@/components/reference/SocialLinks";
+
 
 export default function Footer() {
 	return (
 		<div className={'footerEnv'}>
 			{/* Social links and icons */}
 			<div className={'socialEnv'}>
-				<p>Hey there</p>
+				<h2 className={'socialTitle'}>
+					Available for remote opportunities.
+				</h2>
+				<h3 className={'socialExplanation'}>
+					You think I can help you with a project?
+					You can contact me via links down below!  
+				</h3>
+				{/* Icons */}
+				<div className={'socialIconsEnv'}>
+					<SocialLinks imageName={"EmailLogo"}  socialLink={""} />
+					<SocialLinks imageName={"GitHubLogo"}  socialLink={"https://github.com/AliShahbazi81"}/>
+					<SocialLinks imageName={"InstagramLogo"}  socialLink={"https://www.instagram.com/ali_shahbazi81/"}/>
+					<SocialLinks imageName={"LinkedInLogo"}  socialLink={"https://www.linkedin.com/in/alishahbazi81/"}/>
+					<SocialLinks imageName={"TelegramLogo"}  socialLink={"https://t.me/AliShahbazi81"}/>
+				</div>
 			</div>
 			{/* References */}
 			<div className={'referenceEnv'}>

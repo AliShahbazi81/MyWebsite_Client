@@ -1,25 +1,44 @@
 @tailwind components;
 
 .footerEnv {
-  @apply flex items-start justify-end content-start flex-wrap pt-6;
+  @apply flex items-start justify-end content-start flex-wrap p-10;
   background: linear-gradient(to bottom, #1A191D, #171D26);
   max-width: 1920px;
   height: 60vh;
 
   .socialEnv
   {
-    width: 24%;
+    @apply flex flex-col items-center justify-between flex-wrap pl-12 ;
+    width: 30%;
+    
+    .socialTitle{
+      @apply font-bold;
+      font-size: min(3vw, 25px);
+    }
+    
+    .socialExplanation{
+      @apply mt-5 text-base font-normal whitespace-pre-wrap;
+      font-size: min(2vw, 18px);
+    }
+    
+    .socialIconsEnv{
+      @apply flex items-center justify-center mt-20 ;
+      
+      .socialIcon{
+        @apply mr-3 rounded-3xl size-10;
+      }
+    }
   }
 }
 
 .referenceEnv {
-  @apply flex items-center justify-start pr-12;
-  width: 76%;
+  @apply flex items-center justify-start pr-12 pl-12;
+  width: 70%;
   .referenceInfoEnv {
     @apply flex justify-center items-center m-5;
     
     .referenceText{
-      @apply self-start font-light leading-6;
+      @apply self-start font-light leading-6 text-base;
       font-size: 14px;
       width: 70%;
     }
