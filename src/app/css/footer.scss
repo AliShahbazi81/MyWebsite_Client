@@ -1,68 +1,232 @@
 @tailwind components;
 
 .footerEnv {
-  @apply flex items-start justify-end content-start flex-wrap p-10;
+  @apply transition-all duration-300;
   background: linear-gradient(to bottom, #1A191D, #171D26);
   max-width: 1920px;
-  height: 60vh;
 
-  .socialEnv
-  {
-    @apply flex flex-col items-center justify-between flex-wrap pl-12 ;
-    width: 30%;
-    
-    .socialTitle{
+  .socialEnv {
+    .socialTitle {
       @apply font-bold;
       font-size: min(3vw, 25px);
     }
-    
-    .socialExplanation{
+
+    .socialExplanation {
       @apply mt-5 text-base font-normal whitespace-pre-wrap;
       font-size: min(2vw, 18px);
     }
-    
-    .socialIconsEnv{
+
+    .socialIconsEnv {
       @apply flex items-center justify-center mt-20 ;
-      
-      .socialIcon{
-        @apply mr-3 rounded-3xl size-10;
+
+      .socialIcon {
+        @apply mr-3 rounded-3xl;
+        width: min(45%, 60%);
+        height: min(45%, 60%);
+        
+       
       }
     }
   }
 }
 
 .referenceEnv {
-  @apply flex items-center justify-start pr-12 pl-12;
-  width: 70%;
+
   .referenceInfoEnv {
-    @apply flex justify-center items-center m-5;
-    
-    .referenceText{
-      @apply self-start font-light leading-6 text-base;
-      font-size: 14px;
-      width: 70%;
+
+    .referenceText {
+      @apply font-light leading-6 text-base;
+      font-size: min(3vw, 14px);
+      
     }
 
     .referenceInfo {
-      @apply flex flex-col items-center justify-center mr-5 self-start;
-      width: 30%;
-      
-      .referenceUniversity{
+      @apply flex flex-col items-center justify-center mr-5;
+
+      .referenceUniversity {
         @apply font-extralight mb-2;
         font-size: min(14px, 16px);
       }
-      
-      .referenceName{
+
+      .referenceName {
         @apply font-normal;
+        font-size: min(3.2vw, 16px);
+      }
+
+      .referenceRole {
+        @apply font-extralight;
+        font-size: min(3vw, 14px);
       }
       
-      .referenceRole{
-        @apply font-extralight;
-        font-size: min(14px, 16px);
+      .referenceUniversity{
+        font-size: min(3vw, 14px);
       }
 
       .referenceImage {
         @apply rounded-3xl mb-2 border-none;
+        width: 43%;
+        height: 43%;
+      }
+    }
+  }
+}
+
+@layer components {
+  @media (min-width: 1800px) {
+    .footerEnv {
+      @apply flex flex-col items-center justify-center flex-wrap p-5;
+      height: 70vh;
+
+      .socialEnv {
+        @apply flex flex-col items-center justify-between flex-wrap pl-12 pr-8 mb-8;
+        width: 30%;
+      }
+
+      .reference {
+
+        .referenceEnv {
+          @apply flex items-start justify-start;
+          width: 70%;
+
+          .referenceInfoEnv {
+            @apply flex justify-center items-center pb-8 pr-6 ;
+            
+            .referenceText{
+              width: 70%;
+            }
+            
+            .referenceInfo{
+              width: 30%;
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1281px) {
+    @media (max-width: 1799px) {
+      .footerEnv {
+        @apply flex flex-col-reverse items-center justify-center;
+
+        .reference {
+          @apply flex flex-col items-center justify-center;
+
+          .referenceEnv {
+            @apply flex flex-col justify-center items-center;
+            
+            .referenceInfoEnv {
+              @apply pb-5 pr-6 flex justify-center items-center;
+              width: 55%;
+
+              .referenceText{
+                width: 70%;
+              }
+            }
+          }
+        }
+        .socialEnv {
+          @apply flex flex-col items-center justify-between flex-wrap pl-12 pr-8 mb-8;
+          width: 60%;
+
+          .socialIconsEnv{
+            @apply flex items-start justify-start;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 769px) {
+    @media (max-width: 1280px) {
+      .footerEnv {
+        @apply flex flex-col-reverse items-center justify-center;
+
+        .reference {
+          @apply flex flex-col items-center justify-center pt-12;
+          width: 100%;
+
+          .referenceEnv {
+            @apply flex flex-col justify-center items-center;
+            .referenceInfoEnv {
+              @apply pb-5 pr-6 flex justify-center items-center;
+              width: 75%;
+
+              .referenceText{
+                width: 70%;
+              }
+            }
+          }
+        }
+
+        .socialEnv {
+          @apply flex flex-col items-center justify-between flex-wrap pt-12 pb-12;
+          width: 100%;
+
+          .socialIconsEnv{
+            @apply flex items-start justify-start;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 601px) {
+    @media (max-width: 768px) {
+      .footerEnv {
+        @apply flex flex-col-reverse items-center justify-center;
+
+        .reference {
+          @apply flex flex-col items-start justify-start pt-12;
+
+          .referenceEnv {
+            @apply flex flex-col justify-center items-center;
+            .referenceInfoEnv {
+              @apply flex justify-center items-center pb-5 pr-6;
+              width: 100%;
+              .referenceText{
+                width: 70%;
+              }
+            }
+          }
+        }
+
+        .socialEnv {
+          @apply pt-12 pb-12;
+
+          .socialIconsEnv{
+            @apply flex items-start justify-start;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .footerEnv {
+      @apply flex flex-col-reverse items-center justify-center pb-12;
+      
+      .referenceInfoEnv{
+        @apply flex flex-col items-center justify-center pb-8;
+        width: 100%;
+        
+        .referenceText{
+          width: 80%;
+        }
+        
+        .referenceInfo{
+          @apply flex items-center justify-center pb-3;
+        }
+      }
+      
+      .socialEnv{
+        @apply flex flex-col items-center justify-center mt-6;
+        width: 80%;
+        
+        .socialIconsEnv{
+          @apply flex items-center justify-center self-center;
+        }
       }
     }
   }

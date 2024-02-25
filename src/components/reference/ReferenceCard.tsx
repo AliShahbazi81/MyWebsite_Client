@@ -43,7 +43,7 @@ export default function ReferenceCard(
 					</h4>
 					<Link href={`${profLinkedInUrl}`}>
 						<FaLinkedin
-							className={'cursor-pointer'}
+							className={'cursor-pointer w-[80%] h-[80%]'}
 							color={"white"}
 							size={22}
 						/>
