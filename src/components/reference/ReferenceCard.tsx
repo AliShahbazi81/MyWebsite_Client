@@ -1,4 +1,6 @@
 import Image from "next/image";
+import {FaLinkedin} from "react-icons/fa6";
+import Link from "next/link";
 
 type Props = {
 	profName: string;
@@ -6,9 +8,17 @@ type Props = {
 	profRole: string;
 	profText: string;
 	profUniversity: string;
+	profLinkedInUrl: string;
 }
 
-export default function ReferenceCard({profName, profImageUrl, profRole, profText, profUniversity}: Props) {
+export default function ReferenceCard({
+										  profName,
+										  profImageUrl,
+										  profRole,
+										  profText,
+										  profUniversity,
+										  profLinkedInUrl
+									  }: Props) {
 	return (
 		<>
 			{/* Profile picture and roles */}
@@ -18,8 +28,8 @@ export default function ReferenceCard({profName, profImageUrl, profRole, profTex
 						className={'referenceImage'}
 						src={`/images/reference/${profImageUrl}.jpg`}
 						alt={`Prof. + ${profName}`}
-						width={50}
-						height={50}
+						width={80}
+						height={80}
 					/>
 					<h3 className={'referenceName'}>
 						{profName}
@@ -30,6 +40,12 @@ export default function ReferenceCard({profName, profImageUrl, profRole, profTex
 					<h4 className={'referenceUniversity'}>
 						{profUniversity}
 					</h4>
+					<Link href={`${profLinkedInUrl}`}>
+						<FaLinkedin
+							className={'cursor-pointer'}
+							color={"white"}
+						/>
+					</Link>
 				</div>
 				{/* Reference text */}
 				<p className={'referenceText'}>

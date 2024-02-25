@@ -1,20 +1,50 @@
 @tailwind components;
 
 .footerEnv {
-  @apply flex items-center justify-between flex-wrap w-full overflow-hidden;
+  @apply flex items-start justify-end content-start flex-wrap pt-6;
   background: linear-gradient(to bottom, #1A191D, #171D26);
-  height: 45vh;
+  max-width: 1920px;
+  height: 60vh;
+
+  .socialEnv
+  {
+    width: 24%;
+  }
 }
 
-.referenceInfoEnv {
-  @apply flex justify-center items-center p-7;
-  width: 100%;
+.referenceEnv {
+  @apply flex items-center justify-start pr-12;
+  width: 76%;
+  .referenceInfoEnv {
+    @apply flex justify-center items-center m-5;
+    
+    .referenceText{
+      @apply self-start font-light leading-6;
+      font-size: 14px;
+      width: 70%;
+    }
 
-  .referenceInfo {
-    @apply flex flex-col items-center justify-center mr-5;
+    .referenceInfo {
+      @apply flex flex-col items-center justify-center mr-5 self-start;
+      width: 30%;
+      
+      .referenceUniversity{
+        @apply font-extralight mb-2;
+        font-size: min(14px, 16px);
+      }
+      
+      .referenceName{
+        @apply font-normal;
+      }
+      
+      .referenceRole{
+        @apply font-extralight;
+        font-size: min(14px, 16px);
+      }
 
-    .referenceImage {
-      @apply rounded-3xl mb-2 border-none;
+      .referenceImage {
+        @apply rounded-3xl mb-2 border-none;
+      }
     }
   }
 }
