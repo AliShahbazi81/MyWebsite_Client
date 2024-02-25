@@ -1,8 +1,20 @@
 @tailwind components;
 
-.footerEnv{
-  @apply flex items-start justify-between flex-wrap w-full p-16;
+.footerEnv {
+  @apply flex items-center justify-between flex-wrap w-full overflow-hidden;
   background: linear-gradient(to bottom, #1A191D, #171D26);
   height: 45vh;
-  
+}
+
+.referenceInfoEnv {
+  @apply flex justify-center items-center p-7;
+  width: 100%;
+
+  .referenceInfo {
+    @apply flex flex-col items-center justify-center mr-5;
+
+    .referenceImage {
+      @apply rounded-3xl mb-2 border-none;
+    }
+  }
 }
