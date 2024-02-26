@@ -46,7 +46,9 @@ export default function ProjectCard({imageName, projectName, projectDetail, tech
 				<div className={'break-line'}></div>
 				<ProjectTechnology techName={techName}/>
 				<div className={'projectViewMoreNav'}>
-					<span className={"projectIcon projectArrow"}></span>
+					<Link href={"/projects/1"} >
+						<span className={"projectIcon projectArrow"}></span>
+					</Link>
 				</div>
 			</div>
 

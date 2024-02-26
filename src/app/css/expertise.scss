@@ -89,7 +89,7 @@
 .slide-enter-active {
   transform: translateX(0);
   opacity: 1;
-  transition: transform 200ms, opacity 200ms;
+  transition: transform 400ms, opacity 400ms;
 }
 
 /* Exiting for the next card */
@@ -99,7 +99,7 @@
 .slide-exit-active {
   transform: translateX(-100%);
   opacity: 0;
-  transition: transform 200ms, opacity 200ms;
+  transition: transform 400ms, opacity 400ms;
 }
 
 /* Entering for the previous card */
@@ -110,7 +110,7 @@
 .slide-prev-enter-active {
   transform: translateX(0);
   opacity: 1;
-  transition: transform 200ms, opacity 200ms;
+  transition: transform 800ms, opacity 800ms;
 }
 
 /* Exiting for the previous card */
@@ -120,7 +120,7 @@
 .slide-prev-exit-active {
   transform: translateX(100%);
   opacity: 0;
-  transition: transform 200ms, opacity 200ms;
+  transition: transform 400ms, opacity 400ms;
 }
 
 

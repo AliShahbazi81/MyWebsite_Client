@@ -1,9 +1,13 @@
 @tailwind components;
 
 .footerEnv {
-  @apply transition-all duration-300;
+  @apply transition-all duration-300 overflow-hidden;
   background: linear-gradient(to bottom, #1A191D, #171D26);
-  max-width: 1920px;
+
+  .footer {
+    max-width: 1920px;
+    max-height: 1080px;
+  }
 
   .socialEnv {
     .socialTitle {
@@ -23,8 +27,8 @@
         @apply mr-3 rounded-3xl;
         width: min(45%, 60%);
         height: min(45%, 60%);
-        
-       
+
+
       }
     }
   }
@@ -37,7 +41,7 @@
     .referenceText {
       @apply font-light leading-6 text-base;
       font-size: min(3vw, 14px);
-      
+
     }
 
     .referenceInfo {
@@ -57,8 +61,8 @@
         @apply font-extralight;
         font-size: min(3vw, 14px);
       }
-      
-      .referenceUniversity{
+
+      .referenceUniversity {
         font-size: min(3vw, 14px);
       }
 
@@ -74,31 +78,35 @@
 @layer components {
   @media (min-width: 1800px) {
     .footerEnv {
-      @apply flex flex-col items-center justify-center flex-wrap p-12;
-      height: 70vh;
+      @apply flex justify-center items-center;
 
-      .socialEnv {
-        @apply flex flex-col items-center justify-between flex-wrap pl-12 pr-8 mb-8;
-        width: 30%;
-      }
+      .footer {
+        @apply flex flex-col flex-wrap p-12 self-center;
+        height: 70vh;
 
-      .reference {
+        .socialEnv {
+          @apply flex flex-col items-center justify-between flex-wrap pl-12 pr-8 mb-8;
+          width: 30%;
+        }
 
-        .referenceEnv {
-          @apply flex items-start justify-start;
-          width: 70%;
+        .reference {
 
-          .referenceInfoEnv {
-            @apply flex justify-center items-center pb-8 pr-6 ;
-            
-            .referenceText{
-              width: 70%;
+          .referenceEnv {
+            @apply flex items-start justify-start;
+            width: 70%;
+
+            .referenceInfoEnv {
+              @apply flex justify-center items-center pb-8 pr-6 ;
+
+              .referenceText {
+                width: 70%;
+              }
+
+              .referenceInfo {
+                width: 30%;
+              }
+
             }
-            
-            .referenceInfo{
-              width: 30%;
-            }
-
           }
         }
       }
@@ -107,7 +115,7 @@
 
   @media (min-width: 1281px) {
     @media (max-width: 1799px) {
-      .footerEnv {
+      .footer {
         @apply flex flex-col-reverse items-center justify-center;
 
         .reference {
@@ -115,22 +123,23 @@
 
           .referenceEnv {
             @apply flex flex-col justify-center items-center;
-            
+
             .referenceInfoEnv {
               @apply pb-5 pr-6 flex justify-center items-center;
               width: 55%;
 
-              .referenceText{
+              .referenceText {
                 width: 70%;
               }
             }
           }
         }
+
         .socialEnv {
           @apply flex flex-col items-center justify-between flex-wrap pl-12 pr-8 mb-8;
           width: 60%;
 
-          .socialIconsEnv{
+          .socialIconsEnv {
             @apply flex items-start justify-start;
           }
         }
@@ -140,7 +149,7 @@
 
   @media (min-width: 769px) {
     @media (max-width: 1280px) {
-      .footerEnv {
+      .footer {
         @apply flex flex-col-reverse items-center justify-center;
         padding-bottom: 8vw;
 
@@ -154,7 +163,7 @@
               @apply pb-5 pr-6 flex justify-center items-center;
               width: 75%;
 
-              .referenceText{
+              .referenceText {
                 width: 70%;
               }
             }
@@ -165,7 +174,7 @@
           @apply flex flex-col items-center justify-between flex-wrap pt-12 pb-12;
           width: 100%;
 
-          .socialIconsEnv{
+          .socialIconsEnv {
             @apply flex items-start justify-start;
           }
         }
@@ -175,7 +184,7 @@
 
   @media (min-width: 601px) {
     @media (max-width: 768px) {
-      .footerEnv {
+      .footer {
         @apply flex flex-col-reverse items-center justify-center;
         padding-bottom: 8vw;
 
@@ -187,7 +196,8 @@
             .referenceInfoEnv {
               @apply flex justify-center items-center pb-5 pr-6;
               width: 100%;
-              .referenceText{
+
+              .referenceText {
                 width: 70%;
               }
             }
@@ -197,37 +207,37 @@
         .socialEnv {
           @apply pt-12 pb-12;
 
-          .socialIconsEnv{
+          .socialIconsEnv {
             @apply flex items-start justify-start;
           }
         }
       }
     }
   }
-  
+
   @media (max-width: 600px) {
-    .footerEnv {
+    .footer {
       @apply flex flex-col-reverse items-center justify-center;
       padding-bottom: 8vw;
-      
-      .referenceInfoEnv{
+
+      .referenceInfoEnv {
         @apply flex flex-col items-center justify-center pb-8;
         width: 100%;
-        
-        .referenceText{
+
+        .referenceText {
           width: 80%;
         }
-        
-        .referenceInfo{
+
+        .referenceInfo {
           @apply flex items-center justify-center pb-3;
         }
       }
-      
-      .socialEnv{
+
+      .socialEnv {
         @apply flex flex-col items-center justify-center mt-6;
         width: 80%;
-        
-        .socialIconsEnv{
+
+        .socialIconsEnv {
           @apply flex items-center justify-center self-center;
         }
       }

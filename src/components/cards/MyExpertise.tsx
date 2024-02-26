@@ -98,7 +98,7 @@ export default function MyExpertise() {
 				{visibleCards.map((card) => (
 					<CSSTransition
 						key={card.id}
-						timeout={1000}
+						timeout={250}
 						classNames={direction === 'next' ? "slide" : "slide-prev"}
 					>
 						<div className={`cardExpertise ${card.id + "Card"}`}>

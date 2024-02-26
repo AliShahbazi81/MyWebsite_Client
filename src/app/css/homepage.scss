@@ -1,5 +1,20 @@
 @tailwind components;
 
+.homePageEnv{
+  @apply relative flex items-center justify-center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, #171D26, #1A191D);
+  
+  .homePage{
+    @apply flex items-center justify-center;
+    height: 100vh;
+    width: 100vw;
+    max-height: 1920px;
+    max-width: 1080px;
+  }
+}
+
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Scroll mouse -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .mouseMain {
   height: 60px;
