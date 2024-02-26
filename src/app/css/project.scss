@@ -73,6 +73,7 @@
 
   &.projectArrow {
     @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
+    @apply mb-5;
     left: -0.5rem;
     width: 1.125rem;
     height: 0.125rem;
@@ -114,8 +115,7 @@
       @apply mb-2 mt-2 opacity-100;
     }
   }
-  @media (min-width: 571px) {
-    @media (max-width: 978px) {
+  @media (min-width: 571px) and (max-width: 978px) {
       .projectEnv{
         @apply transition-all;
       }
@@ -145,10 +145,8 @@
       .projectViewMoreNav {
         @apply opacity-0 m-0;
       }
-    }
   }
-  @media (min-width: 979px) {
-    @media (max-width: 1280px) {
+  @media (min-width: 979px) and (max-width: 1280px) {
       .blurEnv {
         max-width: 45%;
         @apply flex-wrap transition-all duration-300;
@@ -182,7 +180,6 @@
       .break-line {
         @apply mb-2 mt-2 opacity-100;
       }
-    }
   }
   @media (min-width: 1281px) {
     .blurEnv {

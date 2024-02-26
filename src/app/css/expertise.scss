@@ -7,9 +7,10 @@
 }
 
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Expertise Card -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
-.cardTransition{
+.cardTransition {
   @apply flex justify-start items-start space-x-4 transition-all duration-300;
 }
+
 .cardEnv {
   @apply flex flex-col items-center justify-start transition-all duration-300;
 }
@@ -17,13 +18,6 @@
 
 .cardExpertise {
   @apply z-20 mb-4;
-
-  :hover .cardTitle {
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    background-size: auto 100%;
-    animation: slideBackground 5s linear infinite;
-  }
 }
 
 .cardHeader {
@@ -42,23 +36,6 @@
   -webkit-background-clip: text;
   background-clip: text;
   transition: color 2s ease;
-}
-
-/* Hover styles for each card type */
-.databaseCard:hover .cardTitle {
-  background-image: url('../../../public/images/PostgresSql.png');
-}
-
-.backendCard:hover .cardTitle {
-  background-image: url('../../../public/images/CSharp.png');
-}
-
-.frontendCard:hover .cardTitle {
-  background-image: url('../../../public/images/React.jpg');
-}
-
-.softwareDevelopmentCard:hover .cardTitle {
-  background-image: url('../../../public/images/CSharp.png');
 }
 
 .element {
@@ -82,7 +59,7 @@
   width: 2px;
 }
 
-.technologyEnv{
+.technologyEnv {
   @apply flex flex-col items-start justify-start;
 }
 
@@ -147,7 +124,7 @@
 
 
 @layer components {
- 
+
   @media (min-width: 50px) {
     @media (max-width: 768px) {
       .cardTransition {
@@ -157,7 +134,7 @@
       .cardExpertise {
         @apply w-full;
       }
-      .technologyEnv{
+      .technologyEnv {
         @apply mb-5
       }
       .technologyIcons {
@@ -167,55 +144,54 @@
         @apply opacity-100 w-full;
         opacity: 1 !important;
       }
-      .blurLogo{
+      .blurLogo {
         @apply hidden;
         height: 30%;
         width: 70%;
       }
-      .navigation{
+      .navigation {
         @apply opacity-0;
       }
     }
   }
- 
-  @media (min-width: 769px) {
-    @media (max-width: 1023px) {
-      .cardEnv{
-        .blurLogo {
-          @apply mb-44 pb-48;
-        }
-      }
-      .cardTransition {
-        width: 90%;
-      }
-      .cardExpertise .break-line {
-        @apply opacity-0;
-      }
-      .navigation{
-        @apply hidden;
-      }
-      .technologyIcons {
-        @apply w-9 h-9 mb-5;
+
+  @media (min-width: 769px) and (max-width: 1023px) {
+    .cardEnv {
+      .blurLogo {
+        @apply mb-44 pb-48;
       }
     }
+    .cardTransition {
+      width: 90%;
+    }
+    .cardExpertise .break-line {
+      @apply opacity-0;
+    }
+    .navigation {
+      @apply hidden;
+    }
+    .technologyIcons {
+      @apply w-9 h-9 mb-5;
+    }
   }
-  @media (min-width: 1024px) {
-    @media (max-width: 1280px) {
-      .cardEnv {
-        @apply p-16;
-      }
-      .cardTransition {
-        @apply w-full h-full;
-      }
-      .cardExpertise .break-line {
-        @apply hidden;
-      }
-      .technologyIcons {
-        @apply w-9 h-9 mb-5;
-      }
-      .navigation{
-        @apply opacity-100;
-      }
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    .cardEnv {
+      @apply p-16;
+    }
+    .cardTransition {
+      @apply w-full h-full;
+    }
+    .cardExpertise .break-line {
+      @apply hidden;
+    }
+    .technologyIcons {
+      @apply w-9 h-9 mb-5;
+    }
+    .navigation {
+      @apply opacity-100;
+    }
+    .blurLogo{
+      @apply mb-24 pb-44;
     }
   }
   @media (min-width: 1281px) {
@@ -228,6 +204,9 @@
     }
     .technologyIcons {
       @apply w-10 h-10;
+    }
+    .blurLogo{
+      @apply mb-20 pb-44;
     }
   }
 }
