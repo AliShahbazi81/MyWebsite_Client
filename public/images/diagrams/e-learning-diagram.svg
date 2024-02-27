@@ -1,0 +1,351 @@
+<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewBox="-8 -8 1407.890625 518" style="max-width: 1407.89px; background-color: transparent;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="100%" id="my-svg">
+    <style>#my-svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#ccc;}#my-svg .error-icon{fill:#a44141;}#my-svg .error-text{fill:#ddd;stroke:#ddd;}#my-svg .edge-thickness-normal{stroke-width:2px;}#my-svg .edge-thickness-thick{stroke-width:3.5px;}#my-svg .edge-pattern-solid{stroke-dasharray:0;}#my-svg .edge-pattern-dashed{stroke-dasharray:3;}#my-svg .edge-pattern-dotted{stroke-dasharray:2;}#my-svg .marker{fill:lightgrey;stroke:lightgrey;}#my-svg .marker.cross{stroke:lightgrey;}#my-svg svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#my-svg .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#ccc;}#my-svg .cluster-label text{fill:#FFFFFF;}#my-svg .cluster-label span,#my-svg p{color:#F9FFFE;}#my-svg .label text,#my-svg span,#my-svg p{fill:#ffffff;color:#ffffff;}#my-svg .node rect,#my-svg .node circle,#my-svg .node ellipse,#my-svg .node polygon,#my-svg .node path{fill:indigo;}#my-svg .flowchart-label
+        text{text-anchor:middle;}#my-svg .node .label{text-align:center;}#my-svg .node.clickable{cursor:pointer;}#my-svg .arrowheadPath{fill:lightgrey;}#my-svg .edgePath .path{stroke:lightgrey;stroke-width:2.0px;}#my-svg .flowchart-link{stroke:lightgrey;fill:none;}#my-svg .edgeLabel{background-color:transparent;text-align:center;}#my-svg .edgeLabel rect{opacity:0.5;background-color: transparent;fill: transparent;}#my-svg .labelBkg{background-color: transparent;}#my-svg .cluster rect{fill:hsl(180, 1.5873015873%, 28.3529411765%);stroke:rgba(255, 255, 255, 0.25);stroke-width:1px;}#my-svg .cluster text{fill:#F9FFFE;}#my-svg .cluster span,#my-svg p{color:#F9FFFE;}#my-svg div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(20, 1.5873015873%, 12.3529411765%);border:1px solid rgba(255, 255, 255,
+        0.25);border-radius:2px;pointer-events:none;z-index:100;}#my-svg .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#ccc;}#my-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}#my-svg .backend&gt;*{fill:#00758f!important;color:#ffffff!important;}#my-svg .backend span{fill:#00758f!important;}#my-svg .backend tspan{fill:#ffffff!important;}#my-svg .frontend&gt;*{fill:#f9a825!important}#my-svg .frontend span{fill:#f9a825!important}#my-svg .database&gt;*{fill:lightsalmon!important;}#my-svg .database span{fill:#8d6e63!important;stroke:#333!important;stroke-width:2px!important;color:#ffffff!important;}#my-svg .database tspan{fill:#ffffff!important;}#my-svg .external&gt;*{fill:#7cb342!important}#my-svg
+        .external span{fill:#7cb342!important;}
+    </style>
+    <g>
+        <marker orient="auto" markerHeight="12" markerWidth="12" markerUnits="userSpaceOnUse" refY="5" refX="6" viewBox="0 0 10 10" class="marker flowchart" id="my-svg_flowchart-pointEnd">
+            <path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"/>
+        </marker>
+        <marker orient="auto" markerHeight="12" markerWidth="12" markerUnits="userSpaceOnUse" refY="5" refX="4.5" viewBox="0 0 10 10" class="marker flowchart" id="my-svg_flowchart-pointStart">
+            <path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"/>
+        </marker>
+        <marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5" refX="11" viewBox="0 0 10 10" class="marker flowchart" id="my-svg_flowchart-circleEnd">
+            <circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"/>
+        </marker>
+        <marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5" refX="-1" viewBox="0 0 10 10" class="marker flowchart" id="my-svg_flowchart-circleStart">
+            <circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"/>
+        </marker>
+        <marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5.2" refX="12" viewBox="0 0 11 11" class="marker cross flowchart" id="my-svg_flowchart-crossEnd">
+            <path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"/>
+        </marker>
+        <marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5.2" refX="-1" viewBox="0 0 11 11" class="marker cross flowchart" id="my-svg_flowchart-crossStart">
+            <path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"/>
+        </marker>
+        <g class="root">
+            <g class="clusters"/>
+            <g class="edgePaths">
+                <path marker-end="url(#my-svg_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-InstructorInterface LE-DjangoAdmin" id="L-InstructorInterface-DjangoAdmin-0" d="M627.7109375,134L627.7109375,139.66666666666666C627.7109375,145.33333333333334,627.7109375,156.66666666666666,627.7109375,167.11666666666667C627.7109375,177.5666666666667,627.7109375,187.13333333333333,627.7109375,191.91666666666666L627.7109375,196.7"/>
+                <path marker-end="url(#my-svg_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-StudentEnrollment LE-CourseMaterials" id="L-StudentEnrollment-CourseMaterials-0" d="M438.27653155940595,33L462.08591171617167,38.666666666666664C485.8952918729373,44.333333333333336,533.5140521864687,55.666666666666664,536.899836055366,66.77266943010649C540.2856199242633,77.87867219354631,499.4384273485266,88.7573443870926,479.01483106065825,94.19668048386575L458.59123477278985,99.6360165806389"/>
+                <path marker-end="url(#my-svg_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-CourseMaterials LE-ContentDelivery" id="L-CourseMaterials-ContentDelivery-0" d="M391.515625,134L391.515625,139.66666666666666C391.515625,145.33333333333334,391.515625,156.66666666666666,391.515625,167.11666666666667C391.515625,177.5666666666667,391.515625,187.13333333333333,391.515625,191.91666666666666L391.515625,196.7"/>
+                <path marker-end="url(#my-svg_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-Payment LE-Stripe" id="L-Payment-Stripe-0" d="M851.891166460396,33L862.72831580033,38.666666666666664C873.5654651402641,44.333333333333336,895.239763820132,55.666666666666664,896.022543114449,66.59069039326435C896.8053224087663,77.51471411986203,876.6965823175327,88.02942823972406,866.6422122719159,93.28678529965505L856.587842226299,98.54414235958608"/>
+                <path marker-end="url(#my-svg_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-UserAuth LE-DjangoAuth" id="L-UserAuth-DjangoAuth-0" d="M121.43989789603961,235L115.42257116336634,240.66666666666666C109.40524443069307,246.33333333333334,97.37059096534654,257.6666666666667,91.35326423267327,268.1166666666667C85.3359375,278.56666666666666,85.3359375,288.1333333333333,85.3359375,292.9166666666667L85.3359375,297.7"/>
+                <path marker-end="url(#my-svg_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-Backend LE-ORM" id="L-Backend-ORM-0" d="M368.94921875,336L368.94921875,340.1666666666667C368.94921875,344.3333333333333,368.94921875,352.6666666666667,368.94921875,360.1166666666666C368.94921875,367.56666666666666,368.94921875,374.1333333333334,368.94921875,377.4166666666667L368.94921875,380.7"/>
+                <path marker-end="url(#my-svg_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-ORM LE-SQLite" id="L-ORM-SQLite-0" d="M362.47439759036143,419L360.83934174196787,423.1666666666667C359.20428589357425,427.3333333333333,355.9341741967871,435.6666666666667,354.2991183483935,443.1166666666666C352.6640625,450.56666666666666,352.6640625,457.1333333333334,352.6640625,460.4166666666667L352.6640625,463.7"/>
+                <path marker-end="url(#my-svg_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-ORM LE-MongoDB" id="L-ORM-MongoDB-0" d="M467.87932981927713,419L492.86168109939763,423.1666666666667C517.8440323795181,427.3333333333333,567.8087349397591,435.6666666666667,592.7910862198795,443.1166666666666C617.7734375,450.56666666666666,617.7734375,457.1333333333334,617.7734375,460.4166666666667L617.7734375,463.7"/>
+                <path marker-end="url(#my-svg_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-Frontend LE-UserExperience" id="L-Frontend-UserExperience-0" d="M1102.421875,33L1102.421875,38.666666666666664C1102.421875,44.333333333333336,1102.421875,55.666666666666664,1102.421875,66.11666666666666C1102.421875,76.56666666666666,1102.421875,86.13333333333333,1102.421875,90.91666666666667L1102.421875,95.7"/>
+                <path marker-end="url(#my-svg_flowchart-pointEnd)" style="fill:none;stroke-width:2px;stroke-dasharray:3;" class="edge-thickness-normal edge-pattern-dotted flowchart-link LS-DjangoAdmin LE-Backend" id="L-DjangoAdmin-Backend-0" d="M627.7109375,235L627.7109375,240.66666666666666C627.7109375,246.33333333333334,627.7109375,257.6666666666667,596.855909407209,269.35500812438454C566.0008813144178,281.0433495821024,504.2908251288356,293.08669916420473,473.4357970360445,299.10837395525596L442.5807689432534,305.1300487463071"/>
+                <path marker-end="url(#my-svg_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-ContentDelivery LE-Backend" id="L-ContentDelivery-Backend-0" d="M391.515625,235L391.515625,240.66666666666666C391.515625,246.33333333333334,391.515625,257.6666666666667,389.34380235133966,268.19352429782725C387.17197970267927,278.7203819289878,382.8283344053585,288.4407638579757,380.65651175669814,293.3009548224696L378.48468910803774,298.1611457869635"/>
+                <path marker-end="url(#my-svg_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-Stripe LE-Payment" id="L-Stripe-Payment-0" d="M804.0656714108911,101L798.4779032590759,95.33333333333333C792.8901351072608,89.66666666666667,781.7145988036303,78.33333333333333,781.0943818505316,67.6289743308488C780.4741648974328,56.92461532836427,790.4092672948658,46.84923065672853,795.3768184935822,41.811538320910664L800.3443696922986,36.77384598509279"/>
+                <path marker-end="url(#my-svg_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-UserAuth LE-Backend" id="L-UserAuth-Backend-0" d="M166.33245668316832,235L175.73277640264027,240.66666666666666C185.1330961221122,246.33333333333334,203.9337355610561,257.6666666666667,228.90606478097368,268.71162776366543C253.87839400089123,279.7565888606642,285.02241300178247,290.5131777213284,300.5944225022281,295.8914721516605L316.16643200267373,301.2697665819926"/>
+                <path marker-end="url(#my-svg_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-StudentEnrollment LE-CourseMaterials" id="L-StudentEnrollment-CourseMaterials-1" d="M368.94921875,33L368.94921875,38.666666666666664C368.94921875,44.333333333333336,368.94921875,55.666666666666664,371.12104139866034,66.19352429782725C373.29286404732073,76.72038192898783,377.6365093446415,86.44076385797568,379.80833199330186,91.30095482246958L381.98015464196226,96.1611457869635"/>
+                <path marker-end="url(#my-svg_flowchart-pointEnd)" style="fill:none;stroke-width:2px;stroke-dasharray:3;" class="edge-thickness-normal edge-pattern-dotted flowchart-link LS-CourseMaterials LE-StudentEnrollment" id="L-CourseMaterials-StudentEnrollment-0" d="M323.546875,103.1700207113619L294.9537760416667,97.14168392613492C266.3606770833333,91.11334714090793,209.17447916666666,79.05667357045397,204.0664966659281,67.5619224399786C198.95851416518954,56.067171309503244,245.92874708037914,45.134342619006496,269.4138635379739,39.667928273758115L292.8989799955687,34.20151392850973"/>
+            </g>
+            <g class="edgeLabels">
+                <g transform="translate(627.7109375, 168)" class="edgeLabel">
+                    <g transform="translate(10.15625, -9)" class="label">
+                        <foreignObject height="18" width="174.3125">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="edgeLabel">Create/Manage Courses</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(581.1328125, 67)" class="edgeLabel">
+                    <g transform="translate(-89.8125, -50)" class="label">
+                        <foreignObject height="18" width="179.625">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="edgeLabel">Browse/Enroll in Courses</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(391.515625, 168)" class="edgeLabel">
+                    <g transform="translate(10.8984375, -9)" class="label">
+                        <foreignObject height="18" width="89.796875">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="edgeLabel">Access Files</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g class="edgeLabel">
+                    <g transform="translate(0, 0)" class="label">
+                        <foreignObject height="0" width="0">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="edgeLabel"></span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(85.3359375, 269)" class="edgeLabel">
+                    <g transform="translate(-64.484375, -9)" class="label">
+                        <foreignObject height="18" width="128.96875">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="edgeLabel">Login/Registration</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g class="edgeLabel">
+                    <g transform="translate(0, 0)" class="label">
+                        <foreignObject height="0" width="0">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="edgeLabel"></span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g class="edgeLabel">
+                    <g transform="translate(0, 0)" class="label">
+                        <foreignObject height="0" width="0">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="edgeLabel"></span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g class="edgeLabel">
+                    <g transform="translate(0, 0)" class="label">
+                        <foreignObject height="0" width="0">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="edgeLabel"></span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(1102.421875, 67)" class="edgeLabel">
+                    <g transform="translate(10.9296875, -9)" class="label">
+                        <foreignObject height="18" width="137.859375">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="edgeLabel">Responsive Design</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(627.7109375, 269)" class="edgeLabel">
+                    <g transform="translate(-10.203125, -9)" class="label">
+                        <foreignObject height="18" width="90.40625">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="edgeLabel">Admin Tasks</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(391.515625, 269)" class="edgeLabel">
+                    <g transform="translate(-42.2421875, -9)" class="label">
+                        <foreignObject height="18" width="84.484375">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="edgeLabel">File Hosting</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(770.5390625, 67)" class="edgeLabel">
+                    <g transform="translate(-79.59375, -9)" class="label">
+                        <foreignObject height="18" width="159.1875">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="edgeLabel">Financial Transactions</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(222.734375, 269)" class="edgeLabel">
+                    <g transform="translate(-52.9140625, -9)" class="label">
+                        <foreignObject height="18" width="105.828125">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="edgeLabel">Secure Access</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(368.94921875, 67)" class="edgeLabel">
+                    <g transform="translate(-75.140625, -9)" class="label">
+                        <foreignObject height="18" width="160.28125">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="edgeLabel">Interact with Courses</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(151.98828125, 67)" class="edgeLabel">
+                    <g transform="translate(-121.8203125, -9)" class="label">
+                        <foreignObject height="18" width="243.640625">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="edgeLabel">Assessments &amp; Progress Tracking</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+            </g>
+            <g class="nodes">
+                <g transform="translate(627.7109375, 117.5)" id="flowchart-InstructorInterface-0" class="node default default flowchart-label">
+                    <rect height="33" width="165.390625" y="-16.5" x="-74.1953125" ry="0" rx="0" style="" class="basic label-container"/>
+                    <g transform="translate(-66.6953125, -9)" style="" class="label">
+                        <rect/>
+                        <foreignObject height="18" width="150.390625">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="nodeLabel">Instructor Interface</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(627.7109375, 218.5)" id="flowchart-DjangoAdmin-1" class="node default default flowchart-label">
+                    <rect height="33" width="188.328125" y="-16.5" x="-90.6640625" ry="0" rx="0" style="" class="basic label-container"/>
+                    <g transform="translate(-83.1640625, -9)" style="" class="label">
+                        <rect/>
+                        <foreignObject height="18" width="170.328125">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="nodeLabel">Django Admin Interface</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(368.94921875, 16.5)" id="flowchart-StudentEnrollment-2" class="node default default flowchart-label">
+                    <rect height="33" width="155.078125" y="-16.5" x="-75.5390625" ry="0" rx="0" style="" class="basic label-container"/>
+                    <g transform="translate(-68.0390625, -9)" style="" class="label">
+                        <rect/>
+                        <foreignObject height="18" width="145.078125">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="nodeLabel">Student Enrollment</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(391.515625, 117.5)" id="flowchart-CourseMaterials-3" class="node default default flowchart-label">
+                    <rect height="33" width="135.9375" y="-16.5" x="-67.96875" ry="0" rx="0" style="" class="basic label-container"/>
+                    <g transform="translate(-60.46875, -9)" style="" class="label">
+                        <rect/>
+                        <foreignObject height="18" width="120.9375">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="nodeLabel">Course Materials</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(391.515625, 218.5)" id="flowchart-ContentDelivery-5" class="node default default flowchart-label">
+                    <rect height="33" width="191.0625" y="-16.5" x="-95.53125" ry="0" rx="0" style="" class="basic label-container"/>
+                    <g transform="translate(-88.03125, -9)" style="" class="label">
+                        <rect/>
+                        <foreignObject height="18" width="176.0625">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="nodeLabel">Content Delivery System</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(820.3359375, 16.5)" id="flowchart-Payment-6" class="node default default flowchart-label">
+                    <rect height="33" width="161.734375" y="-16.5" x="-80.8671875" ry="0" rx="0" style="" class="basic label-container"/>
+                    <g transform="translate(-73.3671875, -9)" style="" class="label">
+                        <rect/>
+                        <foreignObject height="20" width="146.734375">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="nodeLabel">Payment Processing</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(820.3359375, 117.5)" id="flowchart-Stripe-7" class="node default external flowchart-label">
+                    <rect height="33" width="140.859375" y="-16.5" x="-68.4296875" ry="0" rx="0" style="" class="basic label-container"/>
+                    <g transform="translate(-60.9296875, -9)" style="" class="label">
+                        <rect/>
+                        <foreignObject height="18" width="125.859375">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="nodeLabel">Stripe Integration</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(138.9609375, 218.5)" id="flowchart-UserAuth-8" class="node default default flowchart-label">
+                    <rect height="33" width="158.75" y="-16.5" x="-76.875" ry="0" rx="0" style="" class="basic label-container"/>
+                    <g transform="translate(-69.375, -9)" style="" class="label">
+                        <rect/>
+                        <foreignObject height="18" width="145.75">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="nodeLabel">User Authentication</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(85.3359375, 319.5)" id="flowchart-DjangoAuth-9" class="node default default flowchart-label">
+                    <rect height="33" width="170.671875" y="-16.5" x="-85.3359375" ry="0" rx="0" style="" class="basic label-container"/>
+                    <g transform="translate(-77.8359375, -9)" style="" class="label">
+                        <rect/>
+                        <foreignObject height="18" width="155.671875">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="nodeLabel">Django Authentication</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(368.94921875, 319.5)" id="flowchart-Backend-10" class="node default backend flowchart-label">
+                    <rect height="33" width="136.859375" y="-16.5" x="-68.4296875" ry="0" rx="0" style="" class="basic label-container"/>
+                    <g transform="translate(-60.9296875, -9)" style="" class="label">
+                        <rect/>
+                        <foreignObject height="18" width="121.859375">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="nodeLabel">Backend: Django</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(368.94921875, 402.5)" id="flowchart-ORM-11" class="node default backend flowchart-label">
+                    <rect height="33" width="227.546875" y="-16.5" x="-113.7734375" ry="0" rx="0" style="" class="basic label-container"/>
+                    <g transform="translate(-106.2734375, -9)" style="" class="label">
+                        <rect/>
+                        <foreignObject height="18" width="212.546875">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="nodeLabel">ORM &amp; Database Interactions</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(352.6640625, 485.5)" id="flowchart-SQLite-13" class="node default database flowchart-label">
+                    <rect height="33" width="185.75" y="-16.5" x="-92.875" ry="0" rx="0" style="" class="basic label-container"/>
+                    <g transform="translate(-85.375, -9)" style="" class="label">
+                        <rect/>
+                        <foreignObject height="18" width="170.75">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="nodeLabel">SQLite for Development</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(617.7734375, 485.5)" id="flowchart-MongoDB-15" class="node default database flowchart-label">
+                    <rect height="33" width="244.46875" y="-16.5" x="-122.234375" ry="0" rx="0" style="" class="basic label-container"/>
+                    <g transform="translate(-114.734375, -9)" style="" class="label">
+                        <rect/>
+                        <foreignObject height="18" width="229.46875">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="nodeLabel">Djongo for MongoDB Integration</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(1102.421875, 16.5)" id="flowchart-Frontend-16" class="node default frontend flowchart-label">
+                    <rect height="36" width="308.4375" y="-16.5" x="-151.21875" ry="0" rx="0" style="" class="basic label-container"/>
+                    <g transform="translate(-143.71875, -9)" style="" class="label">
+                        <rect/>
+                        <foreignObject height="20" width="295.4375">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="nodeLabel">Frontend: Django Templates + Bootstrap</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g transform="translate(1102.421875, 117.5)" id="flowchart-UserExperience-17" class="node default frontend flowchart-label">
+                    <rect height="33" width="133.28125" y="-16.5" x="-66.640625" ry="0" rx="0" style="" class="basic label-container"/>
+                    <g transform="translate(-59.140625, -9)" style="" class="label">
+                        <rect/>
+                        <foreignObject height="18" width="118.28125">
+                            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                                <span class="nodeLabel">User Experience</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -328,6 +328,16 @@ const data = [
 					application's design facilitates easy deployment and scaling, catering to a growing user base.
 					Testing was conducted extensively to ensure reliability and performance under various scenarios.
 				</p>
+				<Image
+					className={'projectDetailDiagram'}
+					src={`/images/diagrams/e-learning-diagram.svg`}
+					alt={"e-learning-diagram"}
+					width={2000}
+					height={2000}
+					objectFit={"cover"}
+					title={"E-Learning Diagram"}
+					quality={100}
+				/>
 
 				<h2 className={'projectDetailHeading'}>Personal Contributions and Learning Outcomes</h2>
 				<p className={'projectDetailDescription'}>
