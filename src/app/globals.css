@@ -17,6 +17,10 @@
     }
 }
 
+.whitespace-pre-wrap {
+    white-space: pre-wrap;
+}
+
 body {
     @apply text-white;
     margin: 0;
