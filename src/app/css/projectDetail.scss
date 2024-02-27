@@ -3,7 +3,6 @@
 .projectDetailEnv{
   @apply flex items-center justify-center bg-background p-5 mt-36 mb-16;
   max-width: 1920px;
-  max-height: 1080px;
   
   .projectDetail{
     @apply flex flex-col justify-center items-start flex-wrap mr-16;
@@ -19,11 +18,14 @@
     }
     
     .projectDetailDiagram{
-      @apply mb-6 mt-2 h-60;
+      @apply mb-6 mt-2 h-60 border-white;
+      border-width: 1px;
+      border-radius: 30px;
     }
   }
   
   .projectDetailTechnology{
+    @apply self-start mt-16 top-16 sticky;
     .technologyEnv{
       .technologyIcon{
         @apply mr-2;

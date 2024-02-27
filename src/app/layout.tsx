@@ -22,7 +22,7 @@ export default function RootLayout({
 
 		<body className={inter.className} >
 		<Navbar/>
-		<main className={'relative overflow-hidden'}>
+		<main className={'relative'}>
 			{children}
 		</main>
 		<Footer/>

@@ -17,8 +17,20 @@
     }
 }
 
-.whitespace-pre-wrap {
-    white-space: pre-wrap;
+/* Customizes the whole scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width of the scrollbar */
+}
+
+/* Customizes the background of the scrollbar track */
+::-webkit-scrollbar-track {
+    background-color: #1A191D; /* Sets the track background to transparent */
+}
+
+/* Customizes the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: #171D26; /* Sets the thumb color */
+    border-radius: 12px; /* Rounds the corners of the scrollbar thumb */
 }
 
 body {
@@ -60,7 +72,7 @@ body {
 }
 
 .divBackground {
-    @apply relative flex flex-col justify-start items-center bg-background overflow-hidden;
+    @apply relative flex flex-col justify-start items-center bg-background;
 }
 
 .break-line {
