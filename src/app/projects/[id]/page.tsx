@@ -8,7 +8,7 @@ const data = [
 		name: "Car Auction",
 		explanation: "",
 		backend: ['DotNetCore'],
-		frontend: ['NextJs', 'Tailwind', 'Zustand'],
+		frontend: ['NextJs', 'Tailwind', 'MobX', "TypeScript"],
 		database: ['PostgresSql', 'MongoDb'],
 		messageBus: ['RabbitMq'],
 		container: ["Docker"],
@@ -20,7 +20,6 @@ const data = [
 		name: "E-Commerce",
 		explanation: "E-Commerce",
 		backend: ['DotNetCore'],
-		frontend: [],
 		database: ['Redis', 'SqlServer'],
 		tools: ['Stripe', 'Twilio'],
 		versionControl: ["Git"]
@@ -95,15 +94,19 @@ export default async function ProjectPage({params}: { params: { id: string } }) 
 												<h3 className={'projectTitle mb-3'}>
 													Backend :
 												</h3>
-												{project.backend.map((item, index) => (
-													<Image
-														key={index}
-														src={`/images/keywords/${item}.png`}
-														alt={item}
-														width={40}
-														height={40}
-													/>
-												))}
+												<div className={'flex items-center justify-start flex-wrap'}>
+													{project.backend.map((item, index) => (
+														<Image
+															key={index}
+															className={'technologyIcon'}
+															src={`/images/keywords/${item}.png`}
+															alt={item}
+															width={40}
+															height={40}
+															quality={100}
+														/>
+													))}
+												</div>
 											</div>
 										) : null
 									}
@@ -117,10 +120,12 @@ export default async function ProjectPage({params}: { params: { id: string } }) 
 													{project.frontend.map((item, index) => (
 														<Image
 															key={index}
+															className={'technologyIcon'}
 															src={`/images/keywords/${item}.png`}
 															alt={item}
 															width={40}
 															height={40}
+															quality={100}
 														/>
 													))}
 												</div>
@@ -137,10 +142,12 @@ export default async function ProjectPage({params}: { params: { id: string } }) 
 													{project.database.map((item, index) => (
 														<Image
 															key={index}
+															className={'technologyIcon'}
 															src={`/images/keywords/${item}.png`}
 															alt={item}
 															width={40}
 															height={40}
+															quality={100}
 														/>
 													))}
 												</div>
@@ -157,10 +164,12 @@ export default async function ProjectPage({params}: { params: { id: string } }) 
 													{project.messageBus.map((item, index) => (
 														<Image
 															key={index}
+															className={'technologyIcon'}
 															src={`/images/keywords/${item}.png`}
 															alt={item}
 															width={40}
 															height={40}
+															quality={100}
 														/>
 													))}
 												</div>
@@ -177,10 +186,34 @@ export default async function ProjectPage({params}: { params: { id: string } }) 
 													{project.container.map((item, index) => (
 														<Image
 															key={index}
+															className={'technologyIcon'}
 															src={`/images/keywords/${item}.png`}
 															alt={item}
 															width={40}
 															height={40}
+															quality={100}
+														/>
+													))}
+												</div>
+											</div>
+										) : null
+									}
+									{
+										project.tools ? (
+											<div className={'technologyEnv'}>
+												<h3 className={'projectTitle mb-3 mt-6'}>
+													Tools :
+												</h3>
+												<div className={'flex items-center justify-start flex-wrap'}>
+													{project.tools.map((item, index) => (
+														<Image
+															key={index}
+															className={'technologyIcon'}
+															src={`/images/keywords/${item}.png`}
+															alt={item}
+															width={40}
+															height={40}
+															quality={100}
 														/>
 													))}
 												</div>
@@ -191,17 +224,18 @@ export default async function ProjectPage({params}: { params: { id: string } }) 
 										project.versionControl ? (
 											<div className={'technologyEnv'}>
 												<h3 className={'projectTitle mb-3 mt-6'}>
-													Container :
+													Version Control :
 												</h3>
 												<div className={'flex items-center justify-start flex-wrap'}>
 													{project.versionControl.map((item, index) => (
 														<Image
 															key={index}
-															className={''}
+															className={'technologyIcon'}
 															src={`/images/keywords/${item}.png`}
 															alt={item}
 															width={40}
 															height={40}
+															quality={100}
 														/>
 													))}
 												</div>

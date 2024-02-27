@@ -11,4 +11,12 @@
     @apply flex flex-col justify-center items-start flex-wrap m-5;
     max-width: 70%;
   }
+  
+  .projectDetailTechnology{
+    .technologyEnv{
+      .technologyIcon{
+        @apply mr-2;
+      }
+    }
+  }
 }
