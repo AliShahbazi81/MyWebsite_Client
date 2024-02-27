@@ -4,11 +4,6 @@
   @apply transition-all duration-300 overflow-hidden;
   background: linear-gradient(to bottom, #1A191D, #171D26);
 
-  .footer {
-    max-width: 1920px;
-    max-height: 1080px;
-  }
-
   .socialEnv {
     .socialTitle {
       @apply font-bold;
@@ -81,8 +76,8 @@
       @apply flex justify-center items-center;
 
       .footer {
-        @apply flex flex-col flex-wrap p-12 self-center;
-        height: 70vh;
+        @apply flex flex-col flex-wrap pt-12 self-center;
+        height: 60vh;
 
         .socialEnv {
           @apply flex flex-col items-center justify-between flex-wrap pl-12 pr-8 mb-8;
@@ -151,10 +146,9 @@
     @media (max-width: 1280px) {
       .footer {
         @apply flex flex-col-reverse items-center justify-center;
-        padding-bottom: 8vw;
 
         .reference {
-          @apply flex flex-col items-center justify-center pt-12;
+          @apply flex flex-col items-center justify-center pt-16;
           width: 100%;
 
           .referenceEnv {
@@ -185,8 +179,7 @@
   @media (min-width: 601px) {
     @media (max-width: 768px) {
       .footer {
-        @apply flex flex-col-reverse items-center justify-center;
-        padding-bottom: 8vw;
+        @apply flex flex-col-reverse items-center justify-center mb-4;
 
         .reference {
           @apply flex flex-col items-start justify-start pt-12;
@@ -217,8 +210,13 @@
 
   @media (max-width: 600px) {
     .footer {
-      @apply flex flex-col-reverse items-center justify-center;
-      padding-bottom: 8vw;
+      @apply flex flex-col-reverse items-center justify-center mb-8;
+      height: 100%;
+      
+      .reference{
+        @apply flex flex-col items-start justify-start pt-12;
+        height: 100%;
+      }
 
       .referenceInfoEnv {
         @apply flex flex-col items-center justify-center pb-8;
