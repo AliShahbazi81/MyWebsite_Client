@@ -8,27 +8,40 @@ type Props = {
 	projectName: string
 	projectDetail: string
 	github?: string
-	techName: string[]
+	techName: string[],
+	projectDetailUrl: string;
 }
 
-export default function ProjectCard({imageName, projectName, projectDetail, techName, github}: Props) {
+export default function ProjectCard({
+										imageName,
+										projectName,
+										projectDetail,
+										techName,
+										github,
+										projectDetailUrl
+									}: Props) {
 	return (
 		<div className={'projectCardEnv'}>
-			<Image
-				className={'projectImage'}
-				src={`/images/project/${imageName}.png`}
-				alt={`${imageName}`}
-				width={500}
-				height={400}
-				quality={100}
-			/>
+			<Link href={`/projects/${projectDetailUrl}`} className={'flex items-center justify-center w-full h-full'}>
+				<Image
+					className={'projectImage w-full h-full'}
+					src={`/images/project/${imageName}.png`}
+					alt={`${imageName}`}
+					width={500}
+					height={400}
+					quality={100}
+				>
+				</Image>
+			</Link>
+
+
 			<div className={'projectCardBodyEnv'}>
 				<div className={'flex justify-between items-center'}>
 					<h2 className={'projectTitle'}>
 						{projectName}
 					</h2>
 					{github ? (
-						<Link href={github} >
+						<Link href={github}>
 							<Image
 								className={'w-[70%] h-[70%]'}
 								src="/images/keywords/GitHub.png"
@@ -46,7 +59,7 @@ export default function ProjectCard({imageName, projectName, projectDetail, tech
 				<div className={'break-line'}></div>
 				<ProjectTechnology techName={techName}/>
 				<div className={'projectViewMoreNav'}>
-					<Link href={"/projects/1"} >
+					<Link href={`/projects/${projectDetailUrl}`}>
 						<span className={"projectIcon projectArrow"}></span>
 					</Link>
 				</div>

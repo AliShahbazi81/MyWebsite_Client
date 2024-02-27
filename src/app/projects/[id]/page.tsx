@@ -522,7 +522,10 @@ export default function ProjectPage({params}: { params: { id: string } }) {
 							<>
 								{/* Project description */}
 								<div className={'projectDetail'}>
-									<h2 className={'title'}>
+									<Link href={"/"} title={"Back to homepage"}>
+										<p className={'back-button'}>{"<"}</p>
+									</Link>
+									<h2 className={'title self-center'}>
 										{project.name}
 									</h2>
 									{project.explanation}
@@ -532,10 +535,10 @@ export default function ProjectPage({params}: { params: { id: string } }) {
 									{
 										project.backend ? (
 											<div className={'technologyEnv'}>
-												<h3 className={'projectTitle mb-3'}>
+												<h3 className={'projectTitle'}>
 													Backend :
 												</h3>
-												<div className={'flex items-center justify-start flex-wrap'}>
+												<div className={'technologyIconEnv'}>
 													{project.backend.map((item, index) => (
 														<Image
 															key={index}
@@ -555,10 +558,10 @@ export default function ProjectPage({params}: { params: { id: string } }) {
 									{
 										project.frontend ? (
 											<div className={'technologyEnv'}>
-												<h3 className={'projectTitle mb-3 mt-6'}>
+												<h3 className={'projectTitle'}>
 													Frontend :
 												</h3>
-												<div className={'flex items-center justify-start flex-wrap'}>
+												<div className={'technologyIconEnv'}>
 													{project.frontend.map((item, index) => (
 														<Image
 															key={index}
@@ -578,10 +581,10 @@ export default function ProjectPage({params}: { params: { id: string } }) {
 									{
 										project.database ? (
 											<div className={'technologyEnv'}>
-												<h3 className={'projectTitle mb-3 mt-6'}>
+												<h3 className={'projectTitle'}>
 													Database :
 												</h3>
-												<div className={'flex items-center justify-start flex-wrap'}>
+												<div className={'technologyIconEnv'}>
 													{project.database.map((item, index) => (
 														<Image
 															key={index}
@@ -601,10 +604,10 @@ export default function ProjectPage({params}: { params: { id: string } }) {
 									{
 										project.messageBus ? (
 											<div className={'technologyEnv'}>
-												<h3 className={'projectTitle mb-3 mt-6'}>
+												<h3 className={'projectTitle'}>
 													Message Bus :
 												</h3>
-												<div className={'flex items-center justify-start flex-wrap'}>
+												<div className={'technologyIconEnv'}>
 													{project.messageBus.map((item, index) => (
 														<Image
 															key={index}
@@ -624,10 +627,10 @@ export default function ProjectPage({params}: { params: { id: string } }) {
 									{
 										project.container ? (
 											<div className={'technologyEnv'}>
-												<h3 className={'projectTitle mb-3 mt-6'}>
+												<h3 className={'projectTitle'}>
 													Container :
 												</h3>
-												<div className={'flex items-center justify-start flex-wrap'}>
+												<div className={'technologyIconEnv'}>
 													{project.container.map((item, index) => (
 														<Image
 															key={index}
@@ -647,10 +650,10 @@ export default function ProjectPage({params}: { params: { id: string } }) {
 									{
 										project.tools ? (
 											<div className={'technologyEnv'}>
-												<h3 className={'projectTitle mb-3 mt-6'}>
+												<h3 className={'projectTitle'}>
 													Tools :
 												</h3>
-												<div className={'flex items-center justify-start flex-wrap'}>
+												<div className={'technologyIconEnv'}>
 													{project.tools.map((item, index) => (
 														<Image
 															key={index}
@@ -670,10 +673,10 @@ export default function ProjectPage({params}: { params: { id: string } }) {
 									{
 										project.versionControl ? (
 											<div className={'technologyEnv'}>
-												<h3 className={'projectTitle mb-3 mt-6'}>
+												<h3 className={'projectTitle'}>
 													Version Control :
 												</h3>
-												<div className={'flex items-center justify-start flex-wrap'}>
+												<div className={'technologyIconEnv'}>
 													{project.versionControl.map((item, index) => (
 														<Image
 															key={index}
@@ -693,10 +696,10 @@ export default function ProjectPage({params}: { params: { id: string } }) {
 									{
 										project.sourceCode ? (
 											<div className={'technologyEnv'}>
-												<h3 className={'projectTitle mb-3 mt-6'}>
+												<h3 className={'projectTitle'}>
 													Source Code :
 												</h3>
-												<div className={'flex items-center justify-start flex-wrap'}>
+												<div className={'technologyIconEnv'}>
 													<Link href={project.sourceCode}>
 														<Image
 															className={'technologyIcon'}
