@@ -358,6 +358,14 @@ const data = [
 					className='text-primary font-normal'>React</span>, this application stands as a testament to modern
 					web development practices, offering an engaging and interactive user experience.
 				</p>
+				<Image
+					className={'projectDetailDiagram'}
+					src={`/images/diagrams/user-activity-diagram.svg`}
+					alt={"user-activity-diagram"}
+					width={1300}
+					height={1200}
+					title={"User Activity Diagram"}
+				/>
 
 				<h2 className={'projectDetailHeading'}>Core Features</h2>
 				<p className={'projectDetailDescription'}>
@@ -465,6 +473,14 @@ const data = [
 					ensure a bug-free and user-friendly platform. The application's design allows for easy deployment
 					and scalability, catering to a growing audience of movie enthusiasts.
 				</p>
+				<Image
+					className={'projectDetailDiagram'}
+					src={`/images/diagrams/cinema-ticket-diagram.svg`}
+					alt={"cinema-ticket-diagram"}
+					width={1300}
+					height={1200}
+					title={"Cinema Ticket Diagram"}
+				/>
 
 				<h2 className={'projectDetailHeading'}>Personal Contributions</h2>
 				<p className={'projectDetailDescription'}>
