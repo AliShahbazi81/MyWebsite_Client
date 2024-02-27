@@ -11,17 +11,17 @@ export default function HomePageImage() {
 	return (
 		<>
 			<div className={'homePageEnv'}>
+				<Image
+					className={'homePageImage'}
+					src="/images/BackgroundImage.png"
+					alt="BackgroundImage"
+					layout={"fill"}
+					objectFit={"cover"}
+					objectPosition={"center"}
+					quality={100}
+				/>
 				<div className={'homePage'}>
-
-
-					<Image
-						src="/images/BackgroundImage.png"
-						alt="BackgroundImage"
-						layout={"fill"}
-						objectFit={"cover"}
-						objectPosition={"center"}
-						quality={100}
-					/>
+					
 					<div className="absolute inset-0 z-10"
 						 style={{background: 'linear-gradient(to bottom, transparent, #1A191D)'}}></div>
 					<div className="flex items-center justify-center z-10">

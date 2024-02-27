@@ -5,13 +5,21 @@
   height: 100vh;
   width: 100vw;
   background: linear-gradient(to bottom, #171D26, #1A191D);
+
+  .homePageImage{
+    @apply block;
+    max-width: 1920px;
+    max-height: 1080px;
+    object-fit: cover; /* These are for illustrative purposes; */
+    object-position: center; /* Adjust based on actual implementation needs */
+  }
   
   .homePage{
-    @apply flex items-center justify-center;
+    @apply flex items-center justify-center flex-wrap;
     height: 100vh;
     width: 100vw;
-    max-height: 1920px;
-    max-width: 1080px;
+    max-width: 1920px;
+    max-height: 1080px;
   }
 }
 
