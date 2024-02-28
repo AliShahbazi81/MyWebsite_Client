@@ -56,7 +56,7 @@ export default function MyExperience() {
 				))}
 			</div>
 			<h1 className={'title mt-6'}>
-				My Education
+				Education
 			</h1>
 			<div className={'expEnv'}>
 				{[

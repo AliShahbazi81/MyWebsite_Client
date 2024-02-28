@@ -49,20 +49,20 @@ export default function HomePageImage() {
 			</div>
 			<div className={'divBackground'}>
 				<h1 className={'title'}>
-					My Expertise
+					Expertise
 				</h1>
 				{/* Expertise Card*/}
 				<MyExpertise/>
 			</div>
 			<div className={'divBackground'}>
 				<h1 className={'title'}>
-					My Projects
+					Projects
 				</h1>
 				<MyProjects/>
 			</div>
 			<div className={'divBackground'}>
 				<h1 className={'title'}>
-					My Experience
+					Experience
 				</h1>
 				<MyExperience/>
 			</div>

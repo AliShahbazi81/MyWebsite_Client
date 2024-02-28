@@ -718,7 +718,7 @@ export default function ProjectPage({params}: { params: { id: string } }) {
 								</div>
 							</>
 						) :
-						<p>projectId: {params.id}</p>
+						<p>NotFound</p>
 				}
 			</div>
 		</div>

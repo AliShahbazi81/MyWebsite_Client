@@ -9,28 +9,22 @@
   max-width: 1920px;
 }
 
-.projectCardEnv {
-  :hover .projectIcon {
-    &.projectArrow {
-      background: white;
-      transform: translate(1rem, 0);
-    }
-  }
+.projectViewMoreNav:hover .projectIcon.projectArrow {
+  background: white;
+  transform: translate(1rem, 0);
 }
 
 .projectCardBodyEnv {
   @apply flex flex-col;
+}
+.projectImage{
+  @apply rounded-2xl;
 }
 
 .blurEnv {
   :hover .projectImage {
     filter: none;
   }
-}
-
-.projectImage {
-  @apply cursor-pointer;
-  border-radius: 13px;
 }
 
 .projectTitle {
@@ -52,7 +46,7 @@
 }
 
 .projectViewMoreNav {
-  @apply flex items-end justify-end cursor-pointer;
+  @apply relative flex items-end justify-end cursor-pointer;
 }
 
 

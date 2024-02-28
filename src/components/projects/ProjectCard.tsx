@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import ProjectTechnology from "@/components/projects/ProjectTechnology";
 import "./../../app/css/project.scss"
@@ -33,8 +34,6 @@ export default function ProjectCard({
 				>
 				</Image>
 			</Link>
-
-
 			<div className={'projectCardBodyEnv'}>
 				<div className={'flex justify-between items-center'}>
 					<h2 className={'projectTitle'}>
@@ -58,14 +57,12 @@ export default function ProjectCard({
 				</h6>
 				<div className={'break-line'}></div>
 				<ProjectTechnology techName={techName}/>
-				<div className={'projectViewMoreNav'}>
-					<Link href={`/projects/${projectDetailUrl}`}>
-						<span className={"projectIcon projectArrow"}></span>
-					</Link>
-				</div>
+				<Link href={`/projects/${projectDetailUrl}`}>
+						<span className={'projectViewMoreNav'}>
+							<span className={"projectIcon projectArrow"}></span>
+						</span>
+				</Link>
 			</div>
-
-
 		</div>
 	)
 }
