@@ -24,6 +24,14 @@ export default function Footer() {
 						<SocialLinks imageName={"LinkedInLogo"}  socialLink={"https://www.linkedin.com/in/alishahbazi81/"}/>
 						<SocialLinks imageName={"TelegramLogo"}  socialLink={"https://t.me/AliShahbazi81"}/>
 					</div>
+					<div className={'copyRight'}>
+						<h3 className={'copyRightText'}>
+							© 2024. Made with passion by <span className={'text-primary'}>Ali Shahbazi</span>
+						</h3>
+						<h3 className={'copyRightText'}>
+							All rights reserved.
+						</h3>
+					</div>
 				</div>
 				{/* References */}
 				<div className={'reference'}>
@@ -61,6 +69,7 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
+			
 		</div>
 	)
 }

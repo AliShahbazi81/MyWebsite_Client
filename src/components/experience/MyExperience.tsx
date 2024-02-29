@@ -55,7 +55,7 @@ export default function MyExperience() {
 					/>
 				))}
 			</div>
-			<h1 id={"education"} className={'title mt-6'}>
+			<h1 id={"education"}  className={'title mt-6'}>
 				Education
 			</h1>
 			<div className={'expEnv'}>

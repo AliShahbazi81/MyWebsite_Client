@@ -3,6 +3,13 @@
 .footerEnv {
   @apply transition-all duration-300 overflow-hidden;
   background: linear-gradient(to bottom, #1A191D, #171D26);
+  
+  .copyRight{
+    @apply flex justify-between items-center mt-12;
+    .copyRightText{
+      font-size: min(3vw, 14px);
+    }
+  }
 
   .socialEnv {
     .socialTitle {
@@ -82,6 +89,10 @@
         .socialEnv {
           @apply flex flex-col items-center justify-between flex-wrap pl-12 pr-8 mb-8;
           width: 30%;
+          
+          .copyRight{
+            width: 100%;
+          }
         }
 
         .reference {
@@ -112,6 +123,10 @@
     @media (max-width: 1799px) {
       .footer {
         @apply flex flex-col-reverse items-center justify-center;
+        
+        .copyRight{
+          width: 100%;
+        }
 
         .reference {
           @apply flex flex-col justify-center;
@@ -147,6 +162,10 @@
       .footer {
         @apply flex flex-col-reverse items-center justify-center;
         padding-bottom: 8vw;
+        
+        .copyRight{
+          width: 55%;
+        }
 
         .reference {
           @apply flex flex-col items-center justify-center pt-12;
@@ -201,6 +220,14 @@
 
         .socialEnv {
           @apply pt-12 pb-12;
+          
+          .copyRight{
+            @apply flex flex-col justify-center items-center;
+            
+            .copyRightText{
+              @apply mt-2;
+            }
+          }
 
           .socialIconsEnv {
             @apply flex items-start justify-start;
@@ -231,6 +258,14 @@
       .socialEnv {
         @apply flex flex-col items-center justify-center mt-6;
         width: 80%;
+
+        .copyRight{
+          @apply flex flex-col justify-center items-center;
+
+          .copyRightText{
+            @apply mt-2;
+          }
+        }
 
         .socialIconsEnv {
           @apply flex items-center justify-center self-center;

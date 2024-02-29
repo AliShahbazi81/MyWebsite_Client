@@ -94,11 +94,12 @@
     
 
     @media (min-width: 1281px) {
+      #education .title{
+        @apply mt-12;
+      }
       .headerEnv {
         width: 50%;
 
-        .headerDetail {
-        }
       }
       .bodyEnv {
         width: 50%;

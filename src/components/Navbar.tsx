@@ -33,12 +33,12 @@ export default function Navbar() {
 						</Link>
 					</div>
 					<div className="hidden md:flex space-x-4">
-						<Link href="#home" className="navLink">Home</Link>
-						<Link href="#expertise" className="navLink">Expertise</Link>
-						<Link href="#projects" className="navLink">Projects</Link>
-						<Link href="#experience" className="navLink">Experience</Link>
-						<Link href="#education" className="navLink">Education</Link>
-						<Link href="#contact" className="navLink">Contact Me</Link>
+						<Link href="/#home" className="navLink">Home</Link>
+						<Link href="/#expertise" className="navLink">Expertise</Link>
+						<Link href="/#projects" className="navLink">Projects</Link>
+						<Link href="/#experience" className="navLink">Experience</Link>
+						<Link href="/#education" className="navLink">Education</Link>
+						<Link href="/#contact" className="navLink">Contact Me</Link>
 					</div>
 					<div className="-mr-2 flex md:hidden">
 						<Menu as="div" className="relative inline-block text-left">
@@ -58,35 +58,35 @@ export default function Navbar() {
 									<div className="menu-items">
 										<Menu.Item>
 											{({ active }) => (
-												<Link href="#home">
+												<Link href="/#home">
 													<span className={classNames(active ? 'menu-item-active' : '', 'menu-item')}>Home</span>
 												</Link>
 											)}
 										</Menu.Item>
 										<Menu.Item>
 											{({ active }) => (
-												<Link href="#expertise">
+												<Link href="/#expertise">
 													<span className={classNames(active ? 'menu-item-active' : '', 'menu-item')}>Expertise</span>
 												</Link>
 											)}
 										</Menu.Item>
 										<Menu.Item>
 											{({ active }) => (
-												<Link href="#experience">
+												<Link href="/#experience">
 													<span className={classNames(active ? 'menu-item-active' : '', 'menu-item')}>Experience</span>
 												</Link>
 											)}
 										</Menu.Item>
 										<Menu.Item>
 											{({ active }) => (
-												<Link href="#education">
+												<Link href="/#education">
 													<span className={classNames(active ? 'menu-item-active' : '', 'menu-item')}>Education</span>
 												</Link>
 											)}
 										</Menu.Item>
 										<Menu.Item>
 											{({ active }) => (
-												<Link href="#contact">
+												<Link href="/#contact">
 													<span className={classNames(active ? 'menu-item-active' : '', 'menu-item')}>Contact Me</span>
 												</Link>
 											)}
