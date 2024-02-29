@@ -1,15 +1,8 @@
 import {cookies, headers} from "next/headers";
 import {NextApiRequest} from "next";
 import {getToken} from "next-auth/jwt";
-import {getServerSession} from "next-auth";
-import {authOptions} from "@/app/api/auth/[...nextauth]/route";
+import {getSession} from "next-auth/react";
 
-export async function getSession()
-{
-	  return(
-			await getServerSession(authOptions)
-	  )
-}
 
 export async function getCurrentUser()
 {

@@ -1,15 +1,13 @@
-'use client'
-import "./../../css/projectDetail.scss"
-import "./../../css/project.scss"
 import Image from "next/image";
-import Link from "next/link";
+import React from "react";
+import {ProjectData} from "@/types/projectTypes";
 
-const data = [
+export const data: ProjectData[] = [
 	{
 		id: "car-auction",
 		name: "Car Auction",
-		explanation: (
-			<>
+		explanation: () => (
+			<React.Fragment>
 				<h2 className={'projectDetailHeading'}>Introduction to Carsties Auctions</h2>
 				<p className={'projectDetailDescription'}>
 					{/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -95,7 +93,7 @@ const data = [
 					boundaries of traditional web applications, and delivering a product that stands as a benchmark for
 					quality and innovation in the online car auction space.
 				</p>
-			</>
+			</React.Fragment>
 		),
 		backend: ['DotNetCore'],
 		frontend: ['NextJs', 'Tailwind', 'MobX', "TypeScript"],
@@ -109,8 +107,8 @@ const data = [
 	{
 		id: "e-commerce",
 		name: "E-Commerce",
-		explanation: (
-			<>
+		explanation: () => (
+			<React.Fragment>
 				<h2 className={'projectDetailHeading'}>Introduction to E-Commerce Application</h2>
 				<p className={'projectDetailDescription'}>
 					The <span className='text-primary font-normal'>E-Commerce Application</span> is a groundbreaking
@@ -175,7 +173,7 @@ const data = [
 					className='text-primary font-normal'>technology stacks</span> to deliver a comprehensive and robust
 					e-commerce solution.
 				</p>
-			</>
+			</React.Fragment>
 		),
 		backend: ['DotNetCore'],
 		database: ['Redis', 'SqlServer'],
@@ -186,8 +184,8 @@ const data = [
 	{
 		id: "ride-share",
 		name: "RideShare - (Startup)",
-		explanation: (
-			<>
+		explanation: () => (
+			<React.Fragment>
 				<h2 className={'projectDetailHeading'}>Comprehensive Overview of Revaal</h2>
 				<p className={'projectDetailDescription'}>
 					The inception of <span className='text-primary font-normal'>Revaal</span> was driven by the ambition
@@ -270,7 +268,7 @@ const data = [
 					This project was a profound learning journey, deepening my expertise in full-stack development and
 					reinforcing the importance of user-centric design in creating impactful digital solutions.
 				</p>
-			</>
+			</React.Fragment>
 		),
 		backend: ['DotNetCore', 'Python'],
 		frontend: ['React', 'Redux', 'Tailwind', 'TypeScript', 'SCSS'],
@@ -283,8 +281,8 @@ const data = [
 	{
 		id: "e-learning",
 		name: "E-Learning Website",
-		explanation: (
-			<>
+		explanation: () => (
+			<React.Fragment>
 				<h2 className={'projectDetailHeading'}>Introduction to E-Learning</h2>
 				<p className={'projectDetailDescription'}>
 					The <span className='text-primary font-normal'>E-Learning</span> is an innovative online education
@@ -347,7 +345,7 @@ const data = [
 					className='text-primary font-normal'>Django</span> and web application security. It underscored the
 					importance of thoughtful design and testing in creating effective educational tools.
 				</p>
-			</>
+			</React.Fragment>
 		),
 		backend: ['Python', 'Django'],
 		frontend: ['Html', 'Css', 'JavaScript'],
@@ -358,8 +356,8 @@ const data = [
 	{
 		id: "user-activity",
 		name: "User's Activity",
-		explanation: (
-			<>
+		explanation: () => (
+			<React.Fragment>
 				<h2 className={'projectDetailHeading'}>Introduction to Activity Application</h2>
 				<p className={'projectDetailDescription'}>
 					The <span className='text-primary font-normal'>Activity Application</span> emerges as a vibrant
@@ -425,7 +423,7 @@ const data = [
 					skills in full-stack development, particularly in creating applications that require immediate data
 					updates and user interactions.
 				</p>
-			</>
+			</React.Fragment>
 		),
 		backend: ['DotNetCore'],
 		frontend: ['React', 'MobX', 'Semantic-UI', 'TypeScript'],
@@ -437,8 +435,8 @@ const data = [
 	{
 		id: "cinema-ticket",
 		name: "Cinema Ticket",
-		explanation: (
-			<>
+		explanation: () => (
+			<React.Fragment>
 				<h2 className={'projectDetailHeading'}>Introduction to Cinema Ticket</h2>
 				<p className={'projectDetailDescription'}>
 					The <span className='text-primary font-normal'>Cinema Ticket</span> project is a full-stack web
@@ -499,7 +497,7 @@ const data = [
 					integrating payment processing. This project refined my full-stack development skills and deepened
 					my understanding of creating scalable, user-centric web applications.
 				</p>
-			</>
+			</React.Fragment>
 		),
 		backend: ['DotNetCore'],
 		frontend: ['React', 'Redux', 'MaterialUI', 'TypeScript'],
@@ -510,217 +508,3 @@ const data = [
 		sourceCode: "https://github.com/AliShahbazi81/Cinema-Ticket"
 	}
 ]
-
-export default function ProjectPage({params}: { params: { id: string } }) {
-	const project = data.find(project => project.id === params.id)
-
-	return (
-		<div className={'divBackground'}>
-			<div className={'projectDetailEnv'}>
-				{
-					project ? (
-							<>
-								{/* Project description */}
-								<div className={'projectDetail'}>
-									<Link href={"/"} title={"Back to homepage"}>
-										<p className={'back-button'}>{"<"}</p>
-									</Link>
-									<h2 className={'title self-center'}>
-										{project.name}
-									</h2>
-									{project.explanation}
-								</div>
-								{/* Technologies */}
-								<div className={'projectDetailTechnology'}>
-									{
-										project.backend ? (
-											<div className={'technologyEnv'}>
-												<h3 className={'projectTitle'}>
-													Backend :
-												</h3>
-												<div className={'technologyIconEnv'}>
-													{project.backend.map((item, index) => (
-														<Image
-															key={index}
-															className={'technologyIcon'}
-															src={`/images/keywords/${item}.png`}
-															alt={item}
-															width={40}
-															height={40}
-															quality={100}
-															title={`${item}`}
-														/>
-													))}
-												</div>
-											</div>
-										) : null
-									}
-									{
-										project.frontend ? (
-											<div className={'technologyEnv'}>
-												<h3 className={'projectTitle'}>
-													Frontend :
-												</h3>
-												<div className={'technologyIconEnv'}>
-													{project.frontend.map((item, index) => (
-														<Image
-															key={index}
-															className={'technologyIcon'}
-															src={`/images/keywords/${item}.png`}
-															alt={item}
-															width={40}
-															height={40}
-															quality={100}
-															title={`${item}`}
-														/>
-													))}
-												</div>
-											</div>
-										) : null
-									}
-									{
-										project.database ? (
-											<div className={'technologyEnv'}>
-												<h3 className={'projectTitle'}>
-													Database :
-												</h3>
-												<div className={'technologyIconEnv'}>
-													{project.database.map((item, index) => (
-														<Image
-															key={index}
-															className={'technologyIcon'}
-															src={`/images/keywords/${item}.png`}
-															alt={item}
-															width={40}
-															height={40}
-															quality={100}
-															title={`${item}`}
-														/>
-													))}
-												</div>
-											</div>
-										) : null
-									}
-									{
-										project.messageBus ? (
-											<div className={'technologyEnv'}>
-												<h3 className={'projectTitle'}>
-													Message Bus :
-												</h3>
-												<div className={'technologyIconEnv'}>
-													{project.messageBus.map((item, index) => (
-														<Image
-															key={index}
-															className={'technologyIcon'}
-															src={`/images/keywords/${item}.png`}
-															alt={item}
-															width={40}
-															height={40}
-															quality={100}
-															title={`${item}`}
-														/>
-													))}
-												</div>
-											</div>
-										) : null
-									}
-									{
-										project.container ? (
-											<div className={'technologyEnv'}>
-												<h3 className={'projectTitle'}>
-													Container :
-												</h3>
-												<div className={'technologyIconEnv'}>
-													{project.container.map((item, index) => (
-														<Image
-															key={index}
-															className={'technologyIcon'}
-															src={`/images/keywords/${item}.png`}
-															alt={item}
-															width={40}
-															height={40}
-															quality={100}
-															title={`${item}`}
-														/>
-													))}
-												</div>
-											</div>
-										) : null
-									}
-									{
-										project.tools ? (
-											<div className={'technologyEnv'}>
-												<h3 className={'projectTitle'}>
-													Tools :
-												</h3>
-												<div className={'technologyIconEnv'}>
-													{project.tools.map((item, index) => (
-														<Image
-															key={index}
-															className={'technologyIcon'}
-															src={`/images/keywords/${item}.png`}
-															alt={item}
-															width={40}
-															height={40}
-															quality={100}
-															title={`${item}`}
-														/>
-													))}
-												</div>
-											</div>
-										) : null
-									}
-									{
-										project.versionControl ? (
-											<div className={'technologyEnv'}>
-												<h3 className={'projectTitle'}>
-													Version Control :
-												</h3>
-												<div className={'technologyIconEnv'}>
-													{project.versionControl.map((item, index) => (
-														<Image
-															key={index}
-															className={'technologyIcon'}
-															src={`/images/keywords/${item}.png`}
-															alt={item}
-															width={40}
-															height={40}
-															quality={100}
-															title={`${item}`}
-														/>
-													))}
-												</div>
-											</div>
-										) : null
-									}
-									{
-										project.sourceCode ? (
-											<div className={'technologyEnv'}>
-												<h3 className={'projectTitle'}>
-													Source Code :
-												</h3>
-												<div className={'technologyIconEnv'}>
-													<Link href={project.sourceCode}>
-														<Image
-															className={'technologyIcon'}
-															src={`/images/social/GitHubLogo.png`}
-															alt={"GitHubLink"}
-															width={40}
-															height={40}
-															quality={100}
-															title={`Source Code for ${project.name}`}
-														/>
-													</Link>
-												</div>
-											</div>
-										) : null
-									}
-								</div>
-							</>
-						) :
-						<p>NotFound</p>
-				}
-			</div>
-		</div>
-	)
-}

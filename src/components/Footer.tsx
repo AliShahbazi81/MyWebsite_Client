@@ -18,7 +18,7 @@ export default function Footer() {
 					</h3>
 					{/* Icons */}
 					<div id={"contact"} className={'socialIconsEnv'}>
-						<SocialLinks imageName={"EmailLogo"}  socialLink={""} />
+						<SocialLinks imageName={"EmailLogo"}  socialLink={"mailto:alishahbazi799@gmail.com"} />
 						<SocialLinks imageName={"GitHubLogo"}  socialLink={"https://github.com/AliShahbazi81"}/>
 						<SocialLinks imageName={"InstagramLogo"}  socialLink={"https://www.instagram.com/ali_shahbazi81/"}/>
 						<SocialLinks imageName={"LinkedInLogo"}  socialLink={"https://www.linkedin.com/in/alishahbazi81/"}/>
