@@ -30,3 +30,35 @@ nav {
 .navLink {
   @apply text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium;
 }
+
+.navbar-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.navbar-flex-container {
+  @apply flex items-center justify-center h-16;
+}
+
+.navbar-logo-link {
+  @apply flex items-center justify-start;
+}
+
+.mobile-menu-button {
+  @apply flex justify-end items-end content-end w-full rounded-md shadow-sm px-4 py-2 bg-transparent text-sm font-medium;
+}
+
+.mobile-icon {
+  @apply ml-2 -mr-1 h-5 w-5 text-white font-extrabold;
+}
+
+.menu-items-container {
+  @apply origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none;
+}
+
+.menu-item {
+  @apply block px-4 py-2 text-sm text-gray-700;
+}
+
+.menu-item-active {
+  @apply bg-gray-100;
+}
