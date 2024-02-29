@@ -1,4 +1,4 @@
-
+@tailwind components;
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ NavBar -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 @keyframes slideDown {
   from {
@@ -36,7 +36,7 @@ nav {
 }
 
 .navbar-flex-container {
-  @apply flex items-center justify-center h-16;
+  @apply h-16;
 }
 
 .navbar-logo-link {
@@ -45,10 +45,11 @@ nav {
 
 .mobile-menu-button {
   @apply flex justify-end items-end content-end w-full rounded-md shadow-sm px-4 py-2 bg-transparent text-sm font-medium;
+  margin-left: auto; /* This pushes the button to the right */
 }
 
 .mobile-icon {
-  @apply ml-2 -mr-1 h-5 w-5 text-white font-extrabold;
+  @apply ml-2 -mr-1 font-light h-7 w-7 text-white rounded-2xl;
 }
 
 .menu-items-container {
@@ -61,4 +62,51 @@ nav {
 
 .menu-item-active {
   @apply bg-gray-100;
+}
+
+.menu-slide-container {
+  @apply fixed top-0 right-0 h-full bg-background/30 backdrop-blur-lg z-50;
+  @apply rounded-tl-lg rounded-tr-lg;
+  width: 50vw; // Adjust as needed to match your design
+  transform: translateX(0%); // Start off-screen to the right
+  transition: transform 1000ms ease-in-out; // Adjust the duration to your preference
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-items {
+  @apply text-center;
+  
+  .menu-item{
+    @apply text-white mb-10;
+  }
+}
+
+
+@layer components{
+  @media (max-width: 768px) {
+    .navbar-flex-container {
+      @apply flex items-center justify-between;
+    }
+    .navbar-logo-link{
+      @apply opacity-0;
+    }
+    .mobile-menu-button{
+      @apply mt-8 mr-5;
+    }
+  }
+  
+  @media (min-width: 769px) 
+  {
+    .nav-desktop{
+      @apply transition-all top-0 animate-slideDown ease-in-out duration-1000 bg-opacity-60 backdrop-filter backdrop-blur-sm;
+    }
+    .navbar-flex-container {
+      @apply flex items-center justify-center;
+    }
+    .navbar-logo-link{
+      @apply opacity-100;
+    }
+  }
 }

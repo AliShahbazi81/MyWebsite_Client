@@ -10,7 +10,7 @@ import MyExperience from "@/components/experience/MyExperience";
 export default function HomePageImage() {
 	return (
 		<>
-			<div className={'homePageEnv'}>
+			<div id={"home"} className={'homePageEnv'}>
 				<Image
 					className={'homePageImage'}
 					src="/images/BackgroundImage.png"
@@ -47,20 +47,20 @@ export default function HomePageImage() {
 					</div>
 				</div>
 			</div>
-			<div className={'divBackground'}>
+			<div id={"expertise"} className={'divBackground'}>
 				<h1 className={'title'}>
 					Expertise
 				</h1>
 				{/* Expertise Card*/}
 				<MyExpertise/>
 			</div>
-			<div className={'divBackground'}>
+			<div id={"projects"} className={'divBackground'}>
 				<h1 className={'title'}>
 					Projects
 				</h1>
 				<MyProjects/>
 			</div>
-			<div className={'divBackground'}>
+			<div id={"experience"} className={'divBackground'}>
 				<h1 className={'title'}>
 					Experience
 				</h1>
