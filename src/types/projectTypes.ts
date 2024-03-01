@@ -3,7 +3,7 @@ import React from "react";
 interface ProjectData {
 	id: string;
 	name: string;
-	explanation: React.FC;
+	explanationKey: string;
 	backend: string[];
 	frontend?: string[];
 	database: string[];
