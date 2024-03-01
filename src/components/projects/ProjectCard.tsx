@@ -42,7 +42,6 @@ export default function ProjectCard({
 					{github ? (
 						<Link href={github}>
 							<Image
-								className={'w-[70%] h-[70%]'}
 								src="/images/keywords/GitHub.png"
 								alt="GitHub"
 								width={25}

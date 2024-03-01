@@ -3,10 +3,10 @@
 .footerEnv {
   @apply transition-all duration-300 overflow-hidden;
   background: linear-gradient(to bottom, #1A191D, #171D26);
-  
-  .copyRight{
+
+  .copyRight {
     @apply flex justify-between items-center mt-12;
-    .copyRightText{
+    .copyRightText {
       font-size: min(3vw, 14px);
     }
   }
@@ -23,14 +23,11 @@
     }
 
     .socialIconsEnv {
-      @apply flex items-center justify-center mt-20 ;
+      @apply flex mt-20 justify-between items-center;
 
       .socialIcon {
         @apply mr-3 rounded-3xl;
-        width: min(45%, 60%);
-        height: min(45%, 60%);
-
-
+        width: min(6vw, 40px);
       }
     }
   }
@@ -70,8 +67,6 @@
 
       .referenceImage {
         @apply rounded-3xl mb-2 border-none;
-        width: 43%;
-        height: 43%;
       }
     }
   }
@@ -89,8 +84,17 @@
         .socialEnv {
           @apply flex flex-col items-center justify-between flex-wrap pl-12 pr-8 mb-8;
           width: 30%;
-          
-          .copyRight{
+
+          .socialIconsEnv {
+            width: 100%;
+          }
+
+          .socialIcon {
+            width: min(45%, 60%);
+            height: min(45%, 60%);
+          }
+
+          .copyRight {
             width: 100%;
           }
         }
@@ -123,8 +127,8 @@
     @media (max-width: 1799px) {
       .footer {
         @apply flex flex-col-reverse items-center justify-center;
-        
-        .copyRight{
+
+        .copyRight {
           width: 100%;
         }
 
@@ -150,7 +154,7 @@
           width: 60%;
 
           .socialIconsEnv {
-            @apply flex items-start justify-start;
+            width: 70%;
           }
         }
       }
@@ -162,8 +166,8 @@
       .footer {
         @apply flex flex-col-reverse items-center justify-center;
         padding-bottom: 8vw;
-        
-        .copyRight{
+
+        .copyRight {
           width: 55%;
         }
 
@@ -189,7 +193,7 @@
           width: 100%;
 
           .socialIconsEnv {
-            @apply flex items-start justify-start;
+            width: 60%;
           }
         }
       }
@@ -220,17 +224,13 @@
 
         .socialEnv {
           @apply pt-12 pb-12;
-          
-          .copyRight{
+
+          .copyRight {
             @apply flex flex-col justify-center items-center;
-            
-            .copyRightText{
+
+            .copyRightText {
               @apply mt-2;
             }
-          }
-
-          .socialIconsEnv {
-            @apply flex items-start justify-start;
           }
         }
       }
@@ -246,6 +246,10 @@
         @apply flex flex-col items-center justify-center pb-8;
         width: 100%;
 
+        .referenceImage {
+          width: 15%;
+        }
+
         .referenceText {
           width: 80%;
         }
@@ -259,16 +263,16 @@
         @apply flex flex-col items-center justify-center mt-6;
         width: 80%;
 
-        .copyRight{
+        .copyRight {
           @apply flex flex-col justify-center items-center;
 
-          .copyRightText{
+          .copyRightText {
             @apply mt-2;
           }
         }
 
         .socialIconsEnv {
-          @apply flex items-center justify-center self-center;
+          width: 80%;
         }
       }
     }
