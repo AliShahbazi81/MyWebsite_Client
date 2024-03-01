@@ -1,5 +1,6 @@
 import "./../../app/css/projectDetail.scss"
 import "./../../app/css/project.scss"
+import './../../app/globals.css';
 import Image from "next/image";
 import Link from "next/link";
 import {useRouter} from "next/router";
