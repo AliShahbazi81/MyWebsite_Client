@@ -38,7 +38,7 @@ export default function Navbar() {
 						<Link href="/#projects" className="navLink">Projects</Link>
 						<Link href="/#experience" className="navLink">Experience</Link>
 						<Link href="/#education" className="navLink">Education</Link>
-						<Link href="/#contact" className="navLink">Contact Me</Link>
+						<Link href="/#contact-me" className="navLink">Contact Me</Link>
 					</div>
 					<div className="-mr-2 flex md:hidden">
 						<Menu as="div" className="relative inline-block text-left">
@@ -86,7 +86,7 @@ export default function Navbar() {
 										</Menu.Item>
 										<Menu.Item>
 											{({ active }) => (
-												<Link href="/#contact">
+												<Link href="/#contact-me">
 													<span className={classNames(active ? 'menu-item-active' : '', 'menu-item')}>Contact Me</span>
 												</Link>
 											)}

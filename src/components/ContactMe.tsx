@@ -7,7 +7,7 @@ import './../app/css/contactMe.scss'
 const ContactSchema = Yup.object().shape({
 	name: Yup.string().min(3),
 	email: Yup.string().email('Invalid email').required('Email is required'),
-	subject: Yup.string().required('Subject is required'),
+	subject: Yup.string().required('Subject is required').min(5),
 	message: Yup.string().required('Message is required'),
 });
 
@@ -123,14 +123,14 @@ export default function ContactMe() {
 							className={'clearButton'}
 							variant="contained"
 						>
-							Clear Form
+							Clear
 						</Button>
 						<Button 
 							className={'sendButton'}
 							type="submit"
 							variant="contained"
 						>
-							Submit
+							Send
 						</Button>
 					</div>
 				</Form>
