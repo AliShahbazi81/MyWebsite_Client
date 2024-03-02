@@ -34,15 +34,11 @@
 }
 
 .referenceEnv {
-
   .referenceInfoEnv {
-
     .referenceText {
       @apply font-light leading-6 text-base;
       font-size: min(3vw, 14px);
-
     }
-
     .referenceInfo {
       @apply flex flex-col items-center justify-center mr-5;
 
@@ -79,7 +75,7 @@
 
       .footer {
         @apply flex flex-col flex-wrap p-12 self-center;
-        height: 70vh;
+        height: 55vh;
 
         .socialEnv {
           @apply flex flex-col items-center justify-between flex-wrap pl-12 pr-8 mb-8;
@@ -136,7 +132,7 @@
           @apply flex flex-col justify-center;
 
           .referenceEnv {
-            @apply flex flex-col justify-center items-center;
+            @apply flex flex-col justify-center items-center mt-12;
 
             .referenceInfoEnv {
               @apply pb-5 pr-6 flex justify-center items-center;
@@ -241,6 +237,10 @@
     .footer {
       @apply flex flex-col-reverse items-center justify-center;
       padding-bottom: 8vw;
+      
+      .referenceEnv{
+        @apply mt-12;
+      }
 
       .referenceInfoEnv {
         @apply flex flex-col items-center justify-center pb-8;

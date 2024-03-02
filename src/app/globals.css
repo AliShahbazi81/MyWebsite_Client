@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html, body, nav{
     scroll-behavior: smooth;
 }
 
@@ -82,7 +82,7 @@ body {
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ General -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .title {
     @apply text-white font-bold cursor-default mb-16 mt-16;
-    font-size: min(3vw, 40px);
+    font-size: min(6vw, 40px);
 }
 
 .icon {

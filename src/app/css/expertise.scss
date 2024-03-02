@@ -30,7 +30,7 @@
 
 .cardTitle {
   @apply text-white font-bold mt-2 whitespace-pre-wrap ml-4 cursor-default;
-  font-size: min(2vw, 24px);
+  font-size: min(5vw, 24px);
   color: white;
   display: block;
   -webkit-background-clip: text;
@@ -65,7 +65,7 @@
 
 .technologyTitle {
   @apply mt-5 mb-5;
-  font-size: min(2vw, 20px);
+  font-size: min(4vw, 20px);
 }
 
 .technologyIcons {

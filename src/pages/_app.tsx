@@ -1,10 +1,17 @@
+import type {AppProps} from 'next/app';
+import "./../app/globals.css";
+import {Inter} from "next/font/google";
 
+const roboto = Inter({
+	subsets: ['latin'],
+})
 
-import type { AppProps} from 'next/app';
-
-
-function MyApp({ Component, pageProps }: AppProps) {
-	return <Component {...pageProps} />;
+function MyApp({Component, pageProps}: AppProps) {
+	return (
+		<main className={roboto.className}>
+			<Component {...pageProps} />
+		</main>
+	)
 }
 
 export default MyApp;

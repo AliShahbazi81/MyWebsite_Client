@@ -35,7 +35,7 @@ export const data: ProjectData[] = [
 		messageBus: ['RabbitMq'],
 		container: ["Docker"],
 		database: ['SqlServer', 'Redis', 'MongoDb'],
-		tools: ['Stripe', 'twilio', 'Telegram', 'MailKit'],
+		tools: ['Stripe', 'Twilio', 'Telegram', 'MailKit'],
 		versionControl: ["Git"]
 	},
 	{
