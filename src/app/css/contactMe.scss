@@ -1,0 +1,32 @@
+@tailwind components;
+
+.contactEnv{
+  @apply flex flex-col items-center justify-center pt-12 pb-12;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.01);
+  border-radius: 13px;
+  margin: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  
+  .contactElement{
+    @apply mb-6 font-light;
+    width: 60%;
+  }
+  
+  .contactButtonEnv{
+    @apply flex justify-end items-end;
+    width: 60%;
+    
+    .sendButton{
+        @apply bg-primary ml-4 rounded-lg;
+      :hover{
+        /*A bit darker than #0AD3FF*/
+        background-color: yellow !important;
+      }
+    }
+    
+    .clearButton{
+        @apply bg-card rounded-lg;
+    }
+  }
+}

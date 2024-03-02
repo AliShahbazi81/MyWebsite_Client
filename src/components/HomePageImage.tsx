@@ -6,6 +6,7 @@ import MyExpertise from "@/components/cards/MyExpertise";
 import MyProjects from "@/components/projects/MyProjects";
 import "./../app/css/homepage.scss"
 import MyExperience from "@/components/experience/MyExperience";
+import ContactMe from "@/components/ContactMe";
 
 export default function HomePageImage() {
 	return (
@@ -65,6 +66,12 @@ export default function HomePageImage() {
 					Experience
 				</h1>
 				<MyExperience/>
+			</div>
+			<div id={"contact-me"} className={'divBackground'}>
+				<h1 className={'title'}>
+					Contact Me
+				</h1>
+				<ContactMe />
 			</div>
 		</>
 	);

@@ -8,6 +8,7 @@ const roboto = Inter({
 
 function MyApp({Component, pageProps}: AppProps) {
 	return (
+
 		<main className={roboto.className}>
 			<Component {...pageProps} />
 		</main>
