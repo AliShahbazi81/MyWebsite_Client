@@ -1,6 +1,4 @@
 import "./../../app/css/projectDetail.scss"
-import "./../../app/css/project.scss"
-import './../../app/globals.css';
 import Image from "next/image";
 import Link from "next/link";
 import {data} from "@/data/projects/projectData";
@@ -14,6 +12,7 @@ import ELearning from "@/components/projects/explanations/ELearning";
 import RideShare from "@/components/projects/explanations/RideShare";
 import UserActivity from "@/components/projects/explanations/UserActivity";
 import CinemaTicket from "@/components/projects/explanations/CinemaTicket";
+import NotFound from "@/app/not-found";
 
 interface ProjectPageProps {
 	project: Omit<ProjectData, 'explanation'>;
@@ -47,7 +46,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
 	const project = data.find((p) => p.id === id);
 
 	if (!project) {
-		return {notFound: true};
+		console.log("Project not found")
+		return <NotFound />;
 	}
 	return {
 		props: {project},
@@ -261,7 +261,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({project}: { project: ProjectDa
 									</div>
 								</>
 							) :
-							<p>NotFound</p>
+							<NotFound />
 					}
 				</div>
 			</div>

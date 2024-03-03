@@ -2,16 +2,12 @@ import "./../app/css/footer.scss"
 import ReferenceCard from "@/components/reference/ReferenceCard";
 import SocialLinks from "@/components/reference/SocialLinks";
 
-
 export default function Footer() {
 	return (
 		<div className={'footerEnv'}>
 			<div className={'footer'}>
 				{/* Social links and icons */}
 				<div className={'socialEnv'}>
-					<h2 className={'socialTitle'}>
-						Available for remote opportunities.
-					</h2>
 					<h3 className={'socialExplanation'}>
 						You think I can help you with a project?
 						You can contact me via links down below!

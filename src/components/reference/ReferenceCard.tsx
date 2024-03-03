@@ -1,5 +1,4 @@
 import Image from "next/image";
-import {FaLinkedin} from "react-icons/fa6";
 import Link from "next/link";
 
 type Props = {
@@ -42,11 +41,11 @@ export default function ReferenceCard(
 						{profUniversity}
 					</h4>
 					<Link href={`${profLinkedInUrl}`}>
-						<FaLinkedin
+						{/*<FaLinkedin
 							className={'cursor-pointer w-[80%] h-[80%]'}
 							color={"white"}
 							size={22}
-						/>
+						/>*/}
 					</Link>
 				</div>
 				{/* Reference text */}

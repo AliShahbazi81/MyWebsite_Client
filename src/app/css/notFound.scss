@@ -1,0 +1,117 @@
+@tailwind components;
+
+.notFoundBackground{
+  @apply flex justify-center items-center relative;
+  height: 100vh;
+  width: 80%;
+  max-width: 1920px;
+  max-height: 100vh;
+}
+.notFoundEnv {
+  max-width: 1920px;
+  width: 100%;
+  max-height: 100vh;
+
+  .title {
+    @apply mb-2 mt-2;
+    font-size: min(6vw, 36px);
+  }
+
+  .notFoundSvg {
+    @apply pr-5 pb-6 overflow-visible;
+    
+  }
+
+  .message-box {
+    @apply flex flex-col justify-center items-start;
+    width: auto;
+  }
+}
+
+.buttons-con .action-link-wrap {
+  margin-top: 40px;
+}
+
+.buttons-con .action-link-wrap a {
+  background: #68c950;
+  padding: 8px 25px;
+  border-radius: 4px;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 10px
+}
+
+.buttons-con .action-link-wrap a:hover {
+  background: #5A5C6C;
+  color: #fff;
+}
+
+#Polygon-1, #Polygon-2, #Polygon-3, #Polygon-4, #Polygon-4, #Polygon-5 {
+  animation: float 1s infinite ease-in-out alternate;
+}
+
+#Polygon-2 {
+  animation-delay: .2s;
+}
+
+#Polygon-3 {
+  animation-delay: .4s;
+}
+
+#Polygon-4 {
+  animation-delay: .6s;
+}
+
+#Polygon-5 {
+  animation-delay: .8s;
+}
+
+@keyframes float {
+  100% {
+    transform: translateY(30px);
+  }
+}
+
+@media (min-width: 1281px) {
+  .notFoundEnv {
+    @apply flex justify-center items-center relative self-center transition-all duration-300;
+    width: 40%;
+    
+    .notFoundSvg{
+      height: 50%;
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .notFoundEnv {
+    @apply flex justify-center items-center relative self-center transition-all duration-300;
+    width: 80%;
+
+    .notFoundSvg {
+      height: 60%;
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .notFoundEnv {
+    @apply flex flex-col justify-center items-center relative self-center transition-all duration-300;
+    width: 100%;
+
+    .notFoundSvg {
+      height: 60%;
+      width: 60%;
+    }
+    
+    .message-box{
+      @apply items-center justify-center;
+    }
+  }
+}
