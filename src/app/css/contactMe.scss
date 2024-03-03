@@ -20,7 +20,6 @@
     .sendButton {
       @apply bg-primary ml-4 rounded-lg;
       &:hover {
-        /*A much darker than #0AD3FF*/
         background-color: #57e1ff;
       }
     }
@@ -28,7 +27,6 @@
     .clearButton {
       @apply bg-card rounded-lg;
       &:hover {
-        /*A much darker than #0AD3FF*/
         background-color: #273F90;
       }
     }

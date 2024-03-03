@@ -1,138 +1,92 @@
+import React from 'react';
 import * as Yup from 'yup';
-import {Form, Formik} from "formik";
+import { Form, Formik } from "formik";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import './../app/css/contactMe.scss'
+import { Box } from '@mui/system';
+import './../app/css/contactMe.scss';
+import toast from "react-hot-toast";
 
+// Validation schema
 const ContactSchema = Yup.object().shape({
-	name: Yup.string().min(3),
+	name: Yup.string().min(3, 'Name is too short').required('Name is required'),
 	email: Yup.string().email('Invalid email').required('Email is required'),
-	subject: Yup.string().required('Subject is required').min(5),
-	message: Yup.string().required('Message is required'),
+	subject: Yup.string().required('Subject is required').min(5, 'Subject is too short'),
+	message: Yup.string().required('Message is required').min(10, 'Message is too short'),
 });
 
 export default function ContactMe() {
 	return (
 		<Formik
-			initialValues={{name: '', email: '', subject: '', message: ''}}
+			initialValues={{ name: '', email: '', subject: '', message: '' }}
 			validationSchema={ContactSchema}
-			onSubmit={(values, {setSubmitting}) => {
+			onSubmit={async (values, { setSubmitting, resetForm }) => {
 				// Handle form submission
-				console.log(values);
-				setSubmitting(false);
+				try {
+					console.log("Before going to fetch");
+					const response = await fetch('/api/email/route', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+						},
+						body: JSON.stringify(values),
+					});
+
+					if (!response.ok) toast.error('Failed to send message');
+
+					resetForm();
+					toast.success('Message sent successfully');
+				} catch (error) {
+					toast('Failed to send message', { icon: '❌' });
+				} finally {
+					setSubmitting(false);
+				}
 			}}
 		>
-			{formik => (
-				<Form className={'contactEnv'}>
+			{({ getFieldProps, touched, errors, resetForm }) => (
+				<Form className="contactEnv">
 					<TextField
-						className={'contactElement'}
-						label={"Name" + <sup color={"red"}>*</sup>}
-						sx={{
-							input: {color: 'white'},
-							'& label': {color: 'white'},
-							/*Set border color in every state to white*/
-							'& .MuiOutlinedInput-root': {borderColor: 'white'},
-							'& .MuiOutlinedInput-notchedOutline': {borderColor: 'white'},
-							'& .MuiInputLabel-root': {color: 'white'},
-							'& .MuiOutlinedInput-input': {color: 'white'},
-							/*Set hover border to white*/
-							'&:hover .MuiOutlinedInput-root': {borderColor: 'white'},
-							'&:hover .MuiOutlinedInput-notchedOutline': {borderColor: 'white'},
-							'&:hover .MuiInputLabel-root': {color: 'white'},
-							'&:hover .MuiOutlinedInput-input': {color: 'white'},
-						}}
-						{...formik.getFieldProps('name')}
-						error={formik.touched.name && Boolean(formik.errors.name)}
-						helperText={formik.touched.name && formik.errors.name}
+						label="Name"
+						{...getFieldProps('name')}
+						error={touched.name && Boolean(errors.name)}
+						helperText={touched.name && errors.name}
 						fullWidth
+						className="contactElement"
 					/>
 					<TextField
-						className={'contactElement'}
-						label="Subject"
-						sx={{
-							input: {color: 'white'},
-							'& label': {color: 'white'},
-							/*Set border color in every state to white*/
-							'& .MuiOutlinedInput-root': {borderColor: 'white'},
-							'& .MuiOutlinedInput-notchedOutline': {borderColor: 'white'},
-							'& .MuiInputLabel-root': {color: 'white'},
-							'& .MuiOutlinedInput-input': {color: 'white'},
-							/*Set hover border to white*/
-							'&:hover .MuiOutlinedInput-root': {borderColor: 'white'},
-							'&:hover .MuiInputLabel-root': {color: 'white'},
-							'&:hover .MuiOutlinedInput-input': {color: 'white'},
-						}}
-						{...formik.getFieldProps('subject')}
-						error={formik.touched.subject && Boolean(formik.errors.subject)}
-						helperText={formik.touched.subject && formik.errors.subject}
-						fullWidth
-					/>
-					<TextField
-						className={'contactElement'}
 						label="Email"
-						sx={{
-							input: {color: 'white'},
-							'& label': {color: 'white'},
-							/*Set border color in every state to white*/
-							'& .MuiOutlinedInput-root': {borderColor: 'white'},
-							'& .MuiOutlinedInput-notchedOutline': {borderColor: 'white'},
-							'& .MuiInputLabel-root': {color: 'white'},
-							'& .MuiOutlinedInput-input': {color: 'white'},
-							/*Set hover border to white*/
-							'&:hover .MuiOutlinedInput-root': {borderColor: 'white'},
-							'&:hover .MuiOutlinedInput-notchedOutline': {borderColor: 'white'},
-							'&:hover .MuiInputLabel-root': {color: 'white'},
-							'&:hover .MuiOutlinedInput-input': {color: 'white'},
-						}}
-						{...formik.getFieldProps('email')}
-						error={formik.touched.email && Boolean(formik.errors.email)}
-						helperText={formik.touched.email && formik.errors.email}
+						{...getFieldProps('email')}
+						error={touched.email && Boolean(errors.email)}
+						helperText={touched.email && errors.email}
 						fullWidth
+						className="contactElement"
 					/>
 					<TextField
-						className={'contactElement'}
+						label="Subject"
+						{...getFieldProps('subject')}
+						error={touched.subject && Boolean(errors.subject)}
+						helperText={touched.subject && errors.subject}
+						fullWidth
+						className="contactElement"
+					/>
+					<TextField
 						label="Your Message"
-						sx={{
-							input: {color: 'white'},
-							'& label': {color: 'white'},
-							/*Set border color to white*/
-							'& .MuiOutlinedInput-root': {borderColor: 'white'},
-							'& .MuiOutlinedInput-notchedOutline': {borderColor: 'white'},
-							'& .MuiInputLabel-root': {color: 'white'},
-							'& .MuiOutlinedInput-input': {color: 'white'},
-							/*Set hover border to white*/
-							'&:hover .MuiOutlinedInput-root': {borderColor: 'white'},
-							'&:hover .MuiOutlinedInput-notchedOutline': {borderColor: 'white'},
-							'&:hover .MuiInputLabel-root': {color: 'white'},
-							'&:hover .MuiOutlinedInput-input': {color: 'white'},
-							'&:hover': {borderColor: 'white'},
-							/*Set border color to white when it is not focused and hovered*/
-							'& .MuiOutlinedInput-root.Mui-focused': {borderColor: 'white'},
-						}}
-						{...formik.getFieldProps('message')}
-						error={formik.touched.message && Boolean(formik.errors.message)}
-						helperText={formik.touched.message && formik.errors.message}
+						{...getFieldProps('message')}
+						error={touched.message && Boolean(errors.message)}
+						helperText={touched.message && errors.message}
+						fullWidth
 						multiline
 						rows={4}
-						variant="outlined"
-						fullWidth
+						className="contactElement"
 					/>
-					{/* Add more fields as needed */}
-					<div className={'contactButtonEnv'}>
-						<Button
-							className={'clearButton'}
-							variant="contained"
-						>
-							Clear
-						</Button>
-						<Button 
-							className={'sendButton'}
-							type="submit"
-							variant="contained"
-						>
+					<Box display="flex" justifyContent="space-between" mt={2}>
+						<Button type="submit" variant="contained" color="primary" className="sendButton">
 							Send
 						</Button>
-					</div>
+						<Button type="button" variant="outlined" color="secondary" className="clearButton" onClick={() => resetForm()}>
+							Clear
+						</Button>
+					</Box>
 				</Form>
 			)}
 		</Formik>
