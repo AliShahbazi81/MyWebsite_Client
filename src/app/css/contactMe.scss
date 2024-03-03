@@ -1,34 +1,167 @@
 @tailwind components;
 
-.contactEnv {
-  @apply flex flex-col items-center justify-center pt-12 pb-12;
-  width: 50%;
-  background-color: rgba(255, 255, 255, 0.10);
-  border-radius: 13px;
-  margin: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 
-  .contactElement {
-    @apply mb-6 font-light;
-    width: 70%;
+@keyframes moveCircleBefore {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(160px, -60px) scale(1);
+  }
+}
+
+@keyframes moveCircleAfter {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-30px, -1px) scale(1.1);
+  }
+}
+
+.contactEnv {
+  @apply mb-8;
+  position: relative;
+  width: 50%;
+  border-radius: 13px;
+  box-shadow: 0 14px 16px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  backdrop-filter: blur(180px);
+  
+  .contactBorderTopAndLeft{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .contactBorderBottomAndRight{
+    @apply pt-12 pb-12;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.contactBorderTopAndLeft::before,
+.contactBorderTopAndLeft::after,
+.contactBorderBottomAndRight::before,
+.contactBorderBottomAndRight::after{
+  content: '';
+  position: absolute;
+  background: #0AD3FF;
+}
+
+.contactBorderTopAndLeft::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 1px;
+  background: #0AD3FF;
+  border-radius: 13px;
+  animation: drawAndFadeBottom 21s linear infinite;
+}
+
+.contactBorderTopAndLeft::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px; /* Thickness of the border */
+  background: #0AD3FF; /* Border color */
+  border-radius: 13px;
+  animation: drawAndFadeRight 21s linear infinite;
+}
+
+/* Bottom Border Animation */
+@keyframes drawAndFadeBottom {
+  0%, 100% { width: 0; right: 100%; } /* Starts and ends at 0 width, positioned at the right */
+  25% { width: 100%; right: 0; } /* Full width at 25% */
+  50% { width: 0; right: 0; } /* Shrink back to 0 width to the starting point at 50% */
+}
+
+.contactBorderBottomAndRight::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 1px; /* Thickness of the border */
+  background: #0AD3FF; /* Border color */
+  border-radius: 13px;
+  animation: drawAndFadeBottom 21s linear infinite;
+  animation-delay: 5.5s;
+}
+
+/* Right Border Animation */
+@keyframes drawAndFadeRight {
+  0%, 100% { height: 0; bottom: 100%; } /* Starts and ends at 0 height, positioned at the bottom */
+  25% { height: 100%; bottom: 0; } /* Full height at 25% */
+  50% { height: 0; bottom: 0; } /* Shrink back to 0 height to the starting point at 50% */
+}
+
+.contactBorderBottomAndRight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1px; /* Thickness of the border */
+  background: #0AD3FF; /* Border color */
+  border-radius: 13px;
+  animation: drawAndFadeRight 21s linear infinite;
+  animation-delay: 5.5s;
+}
+
+.contactEnv::before,
+.contactEnv::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 250px;
+  height: 250px;
+  border-radius: 70%;
+  opacity: 0.2;
+  filter: blur(60px);
+}
+
+.contactEnv::before {
+  top: -150px;
+  left: -150px;
+  background-color: #0AD3FF;
+  animation: moveCircleBefore 15s ease-in-out infinite;
+}
+
+.contactEnv::after {
+  bottom: -75px;
+  right: -100px;
+  background-color: #1B2C63;
+  animation: moveCircleAfter 10s ease-in-out infinite;
+}
+
+.contactElement {
+  @apply mb-6 font-light;
+  width: 70%;
+}
+
+.contactButtonEnv {
+  @apply flex justify-end items-end;
+  width: 70%;
+
+  .sendButton {
+    @apply bg-primary ml-4 rounded-lg border-0;
+    &:hover {
+      background-color: #57e1ff;
+    }
   }
 
-  .contactButtonEnv {
-    @apply flex justify-end items-end;
-    width: 70%;
-
-    .sendButton {
-      @apply bg-primary ml-4 rounded-lg border-0;
-      &:hover {
-        background-color: #57e1ff;
-      }
-    }
-
-    .clearButton {
-      @apply bg-card rounded-lg text-white border-0;
-      &:hover {
-        background-color: #273F90;
-      }
+  .clearButton {
+    @apply bg-card rounded-lg text-white border-0;
+    &:hover {
+      background-color: #273F90;
     }
   }
 }

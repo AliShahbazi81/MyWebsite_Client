@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import * as Yup from 'yup';
-import { Form, Formik } from "formik";
+import {Form, Formik} from "formik";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { Box } from '@mui/system';
 import './../app/css/contactMe.scss';
 import toast from "react-hot-toast";
+import useAnimationDelay from "@/utils/animationDelay";
 
 // Validation schema
 const ContactSchema = Yup.object().shape({
@@ -16,11 +16,12 @@ const ContactSchema = Yup.object().shape({
 });
 
 export default function ContactMe() {
+
 	return (
 		<Formik
-			initialValues={{ name: '', email: '', subject: '', message: '' }}
+			initialValues={{name: '', email: '', subject: '', message: ''}}
 			validationSchema={ContactSchema}
-			onSubmit={async (values, { setSubmitting, resetForm }) => {
+			onSubmit={async (values, {setSubmitting, resetForm}) => {
 				// Handle form submission
 				try {
 					console.log("Before going to fetch");
@@ -37,55 +38,173 @@ export default function ContactMe() {
 					resetForm();
 					toast.success('Message sent successfully');
 				} catch (error) {
-					toast('Failed to send message', { icon: '❌' });
+					toast('Failed to send message', {icon: '❌'});
 				} finally {
 					setSubmitting(false);
 				}
 			}}
 		>
-			{({ getFieldProps, touched, errors, resetForm }) => (
+			{({getFieldProps, touched, errors, resetForm}) => (
 				<Form className="contactEnv">
-					<TextField
-						label="Name"
-						{...getFieldProps('name')}
-						error={touched.name && Boolean(errors.name)}
-						helperText={touched.name && errors.name}
-						fullWidth
-						className="contactElement"
-					/>
-					<TextField
-						label="Email"
-						{...getFieldProps('email')}
-						error={touched.email && Boolean(errors.email)}
-						helperText={touched.email && errors.email}
-						fullWidth
-						className="contactElement"
-					/>
-					<TextField
-						label="Subject"
-						{...getFieldProps('subject')}
-						error={touched.subject && Boolean(errors.subject)}
-						helperText={touched.subject && errors.subject}
-						fullWidth
-						className="contactElement"
-					/>
-					<TextField
-						label="Your Message"
-						{...getFieldProps('message')}
-						error={touched.message && Boolean(errors.message)}
-						helperText={touched.message && errors.message}
-						fullWidth
-						multiline
-						rows={4}
-						className="contactElement"
-					/>
-					<div className={'contactButtonEnv'}>
-						<Button type="button" variant="outlined" className="clearButton" onClick={() => resetForm()}>
-							Clear
-						</Button>
-						<Button type="submit" variant="contained" className="sendButton">
-							Send
-						</Button>
+					<div id={"contactBorderTopAndLeft"} className={'contactBorderTopAndLeft'}>
+						<div id={"contactBorderBottomAndRight"} className={'contactBorderBottomAndRight'}>
+							<TextField
+								label="Name"
+								{...getFieldProps('name')}
+								error={touched.name && Boolean(errors.name)}
+								helperText={touched.name && errors.name}
+								fullWidth
+								className="contactElement"
+								variant="outlined"
+								sx={{
+									// Default styles
+									'& .MuiOutlinedInput-root': {
+										'& fieldset': {
+											borderColor: 'white', // Default border color
+										},
+										'&:hover fieldset': {
+											borderColor: '#0AD3FF', // Border color on hover
+										}
+									},
+									'& .MuiInputLabel-root': {
+										color: 'white', // Label color
+										'&.Mui-focused': {
+											color: 'white', // Label color when focused
+										},
+									},
+									'& .MuiInputBase-input': {
+										color: 'white', // Text color
+									},
+									'& .MuiOutlinedInput-notchedOutline': {
+										borderColor: 'white', // Ensuring default notched outline color
+									},
+									'& .Mui-error': {
+										'& .MuiOutlinedInput-notchedOutline': {
+											borderColor: 'red', // Error state border color
+										},
+									},
+								}}
+							/>
+							<TextField
+								label="Email"
+								{...getFieldProps('email')}
+								error={touched.email && Boolean(errors.email)}
+								helperText={touched.email && errors.email}
+								fullWidth
+								className="contactElement"
+								sx={{
+									// Default styles
+									'& .MuiOutlinedInput-root': {
+										'& fieldset': {
+											borderColor: 'white', // Default border color
+										},
+										'&:hover fieldset': {
+											borderColor: '#0AD3FF', // Border color on hover
+										}
+									},
+									'& .MuiInputLabel-root': {
+										color: 'white', // Label color
+										'&.Mui-focused': {
+											color: 'white', // Label color when focused
+										},
+									},
+									'& .MuiInputBase-input': {
+										color: 'white', // Text color
+									},
+									'& .MuiOutlinedInput-notchedOutline': {
+										borderColor: 'white', // Ensuring default notched outline color
+									},
+									'& .Mui-error': {
+										'& .MuiOutlinedInput-notchedOutline': {
+											borderColor: 'red', // Error state border color
+										},
+									},
+								}}
+							/>
+							<TextField
+								label="Subject"
+								{...getFieldProps('subject')}
+								error={touched.subject && Boolean(errors.subject)}
+								helperText={touched.subject && errors.subject}
+								fullWidth
+								className="contactElement"
+								sx={{
+									// Default styles
+									'& .MuiOutlinedInput-root': {
+										'& fieldset': {
+											borderColor: 'white', // Default border color
+										},
+										'&:hover fieldset': {
+											borderColor: '#0AD3FF', // Border color on hover
+										}
+									},
+									'& .MuiInputLabel-root': {
+										color: 'white', // Label color
+										'&.Mui-focused': {
+											color: 'white', // Label color when focused
+										},
+									},
+									'& .MuiInputBase-input': {
+										color: 'white', // Text color
+									},
+									'& .MuiOutlinedInput-notchedOutline': {
+										borderColor: 'white', // Ensuring default notched outline color
+									},
+									'& .Mui-error': {
+										'& .MuiOutlinedInput-notchedOutline': {
+											borderColor: 'red', // Error state border color
+										},
+									},
+								}}
+							/>
+							<TextField
+								label="Your Message"
+								{...getFieldProps('message')}
+								error={touched.message && Boolean(errors.message)}
+								helperText={touched.message && errors.message}
+								fullWidth
+								multiline
+								rows={4}
+								className="contactElement"
+								sx={{
+									// Default styles
+									'& .MuiOutlinedInput-root': {
+										'& fieldset': {
+											borderColor: 'white', // Default border color
+										},
+										'&:hover fieldset': {
+											borderColor: '#0AD3FF', // Border color on hover
+										}
+									},
+									'& .MuiInputLabel-root': {
+										color: 'white', // Label color
+										'&.Mui-focused': {
+											color: 'white', // Label color when focused
+										},
+									},
+									'& .MuiInputBase-input': {
+										color: 'white', // Text color
+									},
+									'& .MuiOutlinedInput-notchedOutline': {
+										borderColor: 'white', // Ensuring default notched outline color
+									},
+									'& .Mui-error': {
+										'& .MuiOutlinedInput-notchedOutline': {
+											borderColor: 'red', // Error state border color
+										},
+									},
+								}}
+							/>
+							<div className={'contactButtonEnv'}>
+								<Button type="button" variant="outlined" className="clearButton"
+										onClick={() => resetForm()}>
+									Clear
+								</Button>
+								<Button type="submit" variant="contained" className="sendButton">
+									Send
+								</Button>
+							</div>
+						</div>
 					</div>
 				</Form>
 			)}
