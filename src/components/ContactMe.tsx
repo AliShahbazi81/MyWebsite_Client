@@ -199,7 +199,11 @@ export default function ContactMe() {
 										onClick={() => resetForm()}>
 									Clear
 								</Button>
-								<Button type="submit" variant="contained" className="sendButton">
+								<Button 
+									type="submit" 
+									variant="contained" 
+									className="sendButton"
+								>
 									Send
 								</Button>
 							</div>

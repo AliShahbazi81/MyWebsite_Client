@@ -22,19 +22,23 @@
 .contactEnv {
   @apply mb-8;
   position: relative;
-  width: 50%;
   border-radius: 13px;
   box-shadow: 0 14px 16px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   backdrop-filter: blur(180px);
-  
-  .contactBorderTopAndLeft{
+
+  .contactBorderTopAndLeft {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    
+    .Mui-error{
+      font-weight: 600;
+      color: red;
+    }
   }
-  
-  .contactBorderBottomAndRight{
+
+  .contactBorderBottomAndRight {
     @apply pt-12 pb-12;
     position: relative;
     display: flex;
@@ -50,7 +54,7 @@
 .contactBorderTopAndLeft::before,
 .contactBorderTopAndLeft::after,
 .contactBorderBottomAndRight::before,
-.contactBorderBottomAndRight::after{
+.contactBorderBottomAndRight::after {
   content: '';
   position: absolute;
   background: #0AD3FF;
@@ -80,9 +84,21 @@
 
 /* Bottom Border Animation */
 @keyframes drawAndFadeBottom {
-  0%, 100% { width: 0; right: 100%; } /* Starts and ends at 0 width, positioned at the right */
-  25% { width: 100%; right: 0; } /* Full width at 25% */
-  50% { width: 0; right: 0; } /* Shrink back to 0 width to the starting point at 50% */
+  0%, 100% {
+    width: 0;
+    right: 100%;
+  }
+  /* Starts and ends at 0 width, positioned at the right */
+  25% {
+    width: 100%;
+    right: 0;
+  }
+  /* Full width at 25% */
+  50% {
+    width: 0;
+    right: 0;
+  }
+  /* Shrink back to 0 width to the starting point at 50% */
 }
 
 .contactBorderBottomAndRight::before {
@@ -99,9 +115,21 @@
 
 /* Right Border Animation */
 @keyframes drawAndFadeRight {
-  0%, 100% { height: 0; bottom: 100%; } /* Starts and ends at 0 height, positioned at the bottom */
-  25% { height: 100%; bottom: 0; } /* Full height at 25% */
-  50% { height: 0; bottom: 0; } /* Shrink back to 0 height to the starting point at 50% */
+  0%, 100% {
+    height: 0;
+    bottom: 100%;
+  }
+  /* Starts and ends at 0 height, positioned at the bottom */
+  25% {
+    height: 100%;
+    bottom: 0;
+  }
+  /* Full height at 25% */
+  50% {
+    height: 0;
+    bottom: 0;
+  }
+  /* Shrink back to 0 height to the starting point at 50% */
 }
 
 .contactBorderBottomAndRight::after {
@@ -162,6 +190,31 @@
     @apply bg-card rounded-lg text-white border-0;
     &:hover {
       background-color: #273F90;
+    }
+  }
+}
+
+@layer components {
+  @media (min-width: 1281px) {
+    .contactEnv {
+      width: 50%;
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1280px) {
+    .contactEnv {
+      width: 70%;
+    }
+  }
+  @media (max-width: 768px) {
+    .contactEnv {
+      width: 90%;
+
+      .contactBorderBottomAndRight {
+        
+        .contactElement {
+
+        }
+      }
     }
   }
 }
