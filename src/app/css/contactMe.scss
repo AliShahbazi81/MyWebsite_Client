@@ -19,6 +19,15 @@
   }
 }
 
+.myAutofillInput input:-webkit-autofill,
+.myAutofillInput input:-webkit-autofill:hover,
+.myAutofillInput input:-webkit-autofill:focus,
+.myAutofillInput input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+  background-color: transparent !important;
+  color: white !important;
+}
+
 .contactEnv {
   @apply mb-8;
   position: relative;

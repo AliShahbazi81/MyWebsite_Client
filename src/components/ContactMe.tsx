@@ -43,7 +43,7 @@ export default function ContactMe() {
 				}
 			}}
 		>
-			{({getFieldProps, touched, errors, resetForm}) => (
+			{({getFieldProps, touched, errors, resetForm, isSubmitting}) => (
 				<Form className="contactEnv">
 					<div id={"contactBorderTopAndLeft"} className={'contactBorderTopAndLeft'}>
 						<div id={"contactBorderBottomAndRight"} className={'contactBorderBottomAndRight'}>
@@ -53,7 +53,7 @@ export default function ContactMe() {
 								error={touched.name && Boolean(errors.name)}
 								helperText={touched.name && errors.name}
 								fullWidth
-								className="contactElement"
+								className="contactElement myAutofillInput"
 								variant="outlined"
 								sx={{
 									// Default styles
@@ -90,7 +90,7 @@ export default function ContactMe() {
 								error={touched.email && Boolean(errors.email)}
 								helperText={touched.email && errors.email}
 								fullWidth
-								className="contactElement"
+								className="contactElement myAutofillInput"
 								sx={{
 									// Default styles
 									'& .MuiOutlinedInput-root': {
@@ -126,7 +126,7 @@ export default function ContactMe() {
 								error={touched.subject && Boolean(errors.subject)}
 								helperText={touched.subject && errors.subject}
 								fullWidth
-								className="contactElement"
+								className="contactElement myAutofillInput"
 								sx={{
 									// Default styles
 									'& .MuiOutlinedInput-root': {
@@ -164,7 +164,7 @@ export default function ContactMe() {
 								fullWidth
 								multiline
 								rows={4}
-								className="contactElement"
+								className="contactElement myAutofillInput"
 								sx={{
 									// Default styles
 									'& .MuiOutlinedInput-root': {
@@ -195,16 +195,22 @@ export default function ContactMe() {
 								}}
 							/>
 							<div className={'contactButtonEnv'}>
-								<Button type="button" variant="outlined" className="clearButton"
-										onClick={() => resetForm()}>
+								<Button
+									type="button"
+									variant="outlined"
+									className="clearButton"
+									onClick={() => resetForm()}
+									disabled={isSubmitting}
+								>
 									Clear
 								</Button>
-								<Button 
-									type="submit" 
-									variant="contained" 
-									className="sendButton"
+								<Button
+									type="submit"
+									variant="contained"
+									className="sendButton "
+									disabled={isSubmitting}
 								>
-									Send
+									{isSubmitting ? 'Sending...' : 'Send'}
 								</Button>
 							</div>
 						</div>
