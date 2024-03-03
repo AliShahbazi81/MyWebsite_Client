@@ -1,8 +1,8 @@
 'use client'
 import Link from 'next/link';
-import { Fragment, useEffect, useState } from 'react';
-import { Menu, Transition } from '@headlessui/react';
-import { Bars3Icon } from '@heroicons/react/24/outline';
+import {Fragment, useEffect, useState} from 'react';
+import {Menu, Transition} from '@headlessui/react';
+import {Bars3Icon} from '@heroicons/react/24/outline';
 import Image from "next/image";
 import "../app/css/navbar.scss"
 

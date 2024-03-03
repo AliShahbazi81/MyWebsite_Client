@@ -1,5 +1,3 @@
-import React from "react";
-
 interface ProjectData {
 	id: string;
 	name: string;

@@ -1,5 +1,3 @@
-import Image from "next/image";
-import React from "react";
 import {ProjectData} from "@/types/projectTypes";
 
 export const data: ProjectData[] = [

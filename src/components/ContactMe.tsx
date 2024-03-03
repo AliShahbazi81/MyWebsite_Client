@@ -1,11 +1,10 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import * as Yup from 'yup';
 import {Form, Formik} from "formik";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import './../app/css/contactMe.scss';
 import toast from "react-hot-toast";
-import useAnimationDelay from "@/utils/animationDelay";
 
 // Validation schema
 const ContactSchema = Yup.object().shape({
