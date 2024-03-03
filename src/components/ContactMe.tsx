@@ -79,14 +79,14 @@ export default function ContactMe() {
 						rows={4}
 						className="contactElement"
 					/>
-					<Box display="flex" justifyContent="space-between" mt={2}>
-						<Button type="submit" variant="contained" color="primary" className="sendButton">
-							Send
-						</Button>
-						<Button type="button" variant="outlined" color="secondary" className="clearButton" onClick={() => resetForm()}>
+					<div className={'contactButtonEnv'}>
+						<Button type="button" variant="outlined" className="clearButton" onClick={() => resetForm()}>
 							Clear
 						</Button>
-					</Box>
+						<Button type="submit" variant="contained" className="sendButton">
+							Send
+						</Button>
+					</div>
 				</Form>
 			)}
 		</Formik>

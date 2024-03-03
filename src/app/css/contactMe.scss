@@ -18,14 +18,14 @@
     width: 70%;
 
     .sendButton {
-      @apply bg-primary ml-4 rounded-lg;
+      @apply bg-primary ml-4 rounded-lg border-0;
       &:hover {
         background-color: #57e1ff;
       }
     }
 
     .clearButton {
-      @apply bg-card rounded-lg;
+      @apply bg-card rounded-lg text-white border-0;
       &:hover {
         background-color: #273F90;
       }
