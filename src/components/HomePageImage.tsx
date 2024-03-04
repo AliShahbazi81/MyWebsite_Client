@@ -9,6 +9,7 @@ import MyExperience from "@/components/experience/MyExperience";
 import ContactMe from "@/components/ContactMe";
 
 export default function HomePageImage() {
+	
 	return (
 		<>
 			<div id={"home"} className={'homePageEnv'}>
@@ -50,26 +51,26 @@ export default function HomePageImage() {
 			</div>
 			<div id={"expertise"} className={'divBackground'}>
 				<h1 className={'title'}>
-					Expertise
+					{('titleExpertise')}
 				</h1>
 				{/* Expertise Card*/}
 				<MyExpertise/>
 			</div>
 			<div id={"projects"} className={'divBackground'}>
 				<h1 className={'title'}>
-					Projects
+					{('titleProjects')}
 				</h1>
 				<MyProjects/>
 			</div>
 			<div id={"experience"} className={'divBackground'}>
 				<h1 className={'title'}>
-					Experience
+					{('titleExperience')}
 				</h1>
 				<MyExperience/>
 			</div>
 			<div id={"contact-me"} className={'divBackground'}>
 				<h1 className={'title'}>
-					Contact Me
+					{('titleContactMe')}
 				</h1>
 				<ContactMe />
 			</div>
