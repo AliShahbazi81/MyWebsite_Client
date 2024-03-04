@@ -33,7 +33,7 @@ export default function Navbar() {
 						</Link>
 					</div>
 					<div className="hidden md:flex space-x-4">
-						<Link href="/#home" className="navLink">Home</Link>
+						<Link href="/" className="navLink">Home</Link>
 						<Link href="/#expertise" className="navLink">Expertise</Link>
 						<Link href="/#projects" className="navLink">Projects</Link>
 						<Link href="/#experience" className="navLink">Experience</Link>
@@ -58,7 +58,7 @@ export default function Navbar() {
 									<div className="menu-items">
 										<Menu.Item>
 											{({ active }) => (
-												<Link href="/#home">
+												<Link href="/">
 													<span className={classNames(active ? 'menu-item-active' : '', 'menu-item')}>Home</span>
 												</Link>
 											)}

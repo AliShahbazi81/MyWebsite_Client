@@ -19,7 +19,7 @@
 
     .socialExplanation {
       @apply mt-5 text-base font-normal whitespace-pre-wrap;
-      font-size: min(2vw, 18px);
+      font-size: min(3vw, 20px);
     }
 
     .socialIconsEnv {
@@ -247,7 +247,7 @@
         width: 100%;
 
         .referenceImage {
-          width: 15%;
+          width: 55%;
         }
 
         .referenceText {
