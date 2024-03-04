@@ -1,0 +1,57 @@
+.languageSelector {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 24px; // Adjust size as needed
+    height: auto;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+.languageList {
+  @apply flex flex-col justify-center items-center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: -10px;
+  background: transparent; // Adjust to match your theme
+  border: 0 solid #ddd; // Minimal border, adjust as needed
+  border-radius: 4px;
+  width: max-content;
+  z-index: 10; // Ensure it's above other content
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Optional shadow for depth
+
+  li {
+    @apply flex justify-start items-center;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: transparent; // Highlight on hover
+    }
+
+    img {
+      margin-right: 8px; // Space between flag and text
+      width: 20px; // Adjust flag size as needed
+      height: auto;
+    }
+
+    span {
+      font-size: 14px; // Adjust text size as needed
+    }
+  }
+}
