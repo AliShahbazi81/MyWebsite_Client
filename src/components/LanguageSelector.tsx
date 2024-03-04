@@ -16,10 +16,6 @@ export default function LanguageSelector() {
 			{code: 'de', name: 'German', flagUrl: '/images/lang/Germany.png'},
 	  ]);
 	  const [isOpen, setIsOpen] = useState(false);
-
-	  // Note: This example assumes you might manage locale switching via paths or query parameters
-	  // as a workaround, given the constraints with direct `locale` handling in `router.push`.
-
 	  return (
 			<div className={'languageSelector'} onClick={() => setIsOpen(!isOpen)}>
 				  <img src={languages.find(l => l.code === router.locale)?.flagUrl || '/images/lang/English.png'} alt="Current Language"/>

@@ -7,73 +7,75 @@ import MyProjects from "@/components/projects/MyProjects";
 import "./../app/css/homepage.scss"
 import MyExperience from "@/components/experience/MyExperience";
 import ContactMe from "@/components/ContactMe";
+import {useTranslation} from "next-i18next";
 
 export default function HomePageImage() {
-	
-	return (
-		<>
-			<div id={"home"} className={'homePageEnv'}>
-				<Image
-					className={'homePageImage'}
-					src="/images/BackgroundImage.png"
-					alt="BackgroundImage"
-					layout={"fill"}
-					objectFit={"cover"}
-					objectPosition={"center"}
-					quality={100}
-				/>
-				<div className={'homePage'}>
-					
-					<div className="absolute inset-0 z-10"
-						 style={{background: 'linear-gradient(to bottom, transparent, #1A191D)'}}></div>
-					<div className="flex items-center justify-center z-10">
-						<h1 className="nameInitial">
-							A
+	  const {t} = useTranslation('common');
+
+	  return (
+			<>
+				  <div id={"home"} className={'homePageEnv'}>
+						<Image
+							  className={'homePageImage'}
+							  src="/images/BackgroundImage.png"
+							  alt="BackgroundImage"
+							  layout={"fill"}
+							  objectFit={"cover"}
+							  objectPosition={"center"}
+							  quality={100}
+						/>
+						<div className={'homePage'}>
+
+							  <div className="absolute inset-0 z-10"
+								   style={{background: 'linear-gradient(to bottom, transparent, #1A191D)'}}></div>
+							  <div className="flex items-center justify-center z-10">
+									<h1 className="nameInitial">
+										  A
+									</h1>
+									<h1 className="name">
+										  li
+									</h1>
+									<div className="nameSpace"/>
+									<h1 className="nameInitial">
+										  S
+									</h1>
+									<h1 className="name">
+										  hahbazi
+									</h1>
+							  </div>
+							  <h2 className="profession">
+									Web, Full Stack & App Developer
+							  </h2>
+							  <div className="absolute bottom-0 mb-5">
+									<MouseScroll/>
+							  </div>
+						</div>
+				  </div>
+				  <div id={"expertise"} className={'divBackground'}>
+						<h1 className={'title'}>
+							  {t('titleExpertise')}
 						</h1>
-						<h1 className="name">
-							li
+						{/* Expertise Card*/}
+						<MyExpertise/>
+				  </div>
+				  <div id={"projects"} className={'divBackground'}>
+						<h1 className={'title'}>
+							  {t('titleProjects')}
 						</h1>
-						<div className="nameSpace"/>
-						<h1 className="nameInitial">
-							S
+						<MyProjects/>
+				  </div>
+				  <div id={"experience"} className={'divBackground'}>
+						<h1 className={'title'}>
+							  {t('titleExperience')}
 						</h1>
-						<h1 className="name">
-							hahbazi
+						<MyExperience/>
+				  </div>
+				  <div id={"contact-me"} className={'divBackground'}>
+						<h1 className={'title'}>
+							  {t('titleContactMe')}
 						</h1>
-					</div>
-					<h2 className="profession">
-						Web, Full Stack & App Developer
-					</h2>
-					<div className="absolute bottom-0 mb-5">
-						<MouseScroll/>
-					</div>
-				</div>
-			</div>
-			<div id={"expertise"} className={'divBackground'}>
-				<h1 className={'title'}>
-					{('titleExpertise')}
-				</h1>
-				{/* Expertise Card*/}
-				<MyExpertise/>
-			</div>
-			<div id={"projects"} className={'divBackground'}>
-				<h1 className={'title'}>
-					{('titleProjects')}
-				</h1>
-				<MyProjects/>
-			</div>
-			<div id={"experience"} className={'divBackground'}>
-				<h1 className={'title'}>
-					{('titleExperience')}
-				</h1>
-				<MyExperience/>
-			</div>
-			<div id={"contact-me"} className={'divBackground'}>
-				<h1 className={'title'}>
-					{('titleContactMe')}
-				</h1>
-				<ContactMe />
-			</div>
-		</>
-	);
+						<ContactMe/>
+				  </div>
+			</>
+	  );
 }
