@@ -1,7 +1,9 @@
+'use client'
 import './globals.css';
 import './css/notFound.scss';
 
 import React from 'react';
+import Button from "@mui/material/Button";
 
 export default function NotFound() {
 	const goBack = () => {
@@ -40,12 +42,15 @@ export default function NotFound() {
 					<div className="message-box">
 						<h1 className={'title'}>404</h1>
 						<p className={'title text-nowrap'}>Page not found</p>
-						<div className="buttons-con">
-							<div className="action-link-wrap">
-								{/*<button onClick={goBack} className="link-button link-back-button">Go Back</button>
-						 Replace "#" with the path to your home page 
-						<a href="/public" className="link-button">Go to Home Page</a>*/}
-							</div>
+						<div className={'notFoundButtonEnv'}>
+							<Button
+								onClick={() => goBack()}
+								className="backButton">Go Back
+							</Button>
+							<Button
+								onClick={() => window.location.href = '/'}
+								className="homeButton">Home
+							</Button>
 						</div>
 					</div>
 				</div>

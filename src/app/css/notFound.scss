@@ -1,12 +1,25 @@
 @tailwind components;
 
-.notFoundBackground{
+.notFoundBackground {
   @apply flex justify-center items-center relative;
   height: 100vh;
   width: 80%;
   max-width: 1920px;
   max-height: 100vh;
+
+  .notFoundButtonEnv {
+    @apply flex justify-start items-center;
+    .backButton {
+      @apply bg-primary text-white rounded-lg px-4 py-2 mt-6 transition-colors duration-500
+      hover:bg-primary_dark;
+    }
+    .homeButton{
+      @apply bg-cardActive text-white rounded-lg px-4 py-2 mt-6 transition-colors duration-500
+      hover:bg-card;
+    }
+  }
 }
+
 .notFoundEnv {
   max-width: 1920px;
   width: 100%;
@@ -19,7 +32,7 @@
 
   .notFoundSvg {
     @apply pr-5 pb-6 overflow-visible;
-    
+
   }
 
   .message-box {
@@ -28,27 +41,6 @@
   }
 }
 
-.buttons-con .action-link-wrap {
-  margin-top: 40px;
-}
-
-.buttons-con .action-link-wrap a {
-  background: #68c950;
-  padding: 8px 25px;
-  border-radius: 4px;
-  color: #FFF;
-  font-weight: bold;
-  font-size: 14px;
-  transition: all 0.3s linear;
-  cursor: pointer;
-  text-decoration: none;
-  margin-right: 10px
-}
-
-.buttons-con .action-link-wrap a:hover {
-  background: #5A5C6C;
-  color: #fff;
-}
 
 #Polygon-1, #Polygon-2, #Polygon-3, #Polygon-4, #Polygon-4, #Polygon-5 {
   animation: float 1s infinite ease-in-out alternate;
@@ -80,10 +72,18 @@
   .notFoundEnv {
     @apply flex justify-center items-center relative self-center transition-all duration-300;
     width: 40%;
-    
-    .notFoundSvg{
+
+    .notFoundSvg {
       height: 50%;
       width: 50%;
+    }
+
+    .notFoundButtonEnv {
+      @apply flex justify-end items-center w-full;
+      
+      .homeButton{
+        @apply ml-5;
+      }
     }
   }
 }
@@ -97,6 +97,14 @@
       height: 60%;
       width: 60%;
     }
+
+    .notFoundButtonEnv {
+      @apply flex justify-end items-center w-full;
+
+      .homeButton{
+        @apply ml-5;
+      }
+    }
   }
 }
 
@@ -105,13 +113,26 @@
     @apply flex flex-col justify-center items-center relative self-center transition-all duration-300;
     width: 100%;
 
+
     .notFoundSvg {
       height: 60%;
       width: 60%;
     }
-    
-    .message-box{
+
+    .message-box {
       @apply items-center justify-center;
+
+      .notFoundButtonEnv {
+        @apply flex justify-center flex-col-reverse w-full;
+
+        .backButton {
+          width: 100%;
+        }
+
+        .homeButton {
+          @apply mt-5 w-full;
+        }
+      }
     }
   }
 }
