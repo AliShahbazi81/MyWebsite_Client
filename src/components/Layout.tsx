@@ -10,6 +10,7 @@ interface LayoutProps {
 	description?: string;
 }
 
+
 const Layout: React.FC<LayoutProps> = ({ children, title = 'Default Title', description = 'Default Description' }) => (
 	<>
 		<Head>

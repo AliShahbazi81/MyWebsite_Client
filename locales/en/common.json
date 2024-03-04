@@ -4,8 +4,22 @@
   "titleExperience": "Experience",
   "titleEducation": "Education",
   "titleContactMe": "Contact Me",
+  
   "expertiseSoftwareDevelopmentTitle": "Software Development",
   "expertiseBackendTitle": "Backend",
   "expertiseFrontendTitle": "Frontend",
-  "expertiseDatabaseTitle": "Database"
+  "expertiseDatabaseTitle": "Database",
+  
+  "projectTitleCarAuction": "Car Auction",
+  "projectDescriptionCarAuction": "Carsties Auctions offers an online platform for car auctions with microservices architecture, enabling listings, bidding, and auction management in a user-friendly interface.",
+  "projectTitleECommerce": "E-Commerce",
+  "projectDescriptionECommerce": "The e-commerce application is a scalable, backend-focused online shopping platform for product auctioning, featuring clean architecture for efficient maintenance.",
+  "projectTitleRideShare": "RideShare",
+  "projectDescriptionRideShare": "The RideShare app is a backend-driven platform, utilizing SOLID principles and n-tier architecture, to automatically connect applicants with drivers, including payment functionality.",
+  "projectTitleELearning": "E-Learning",
+  "projectDescriptionELearning": "The Online Learning app offers a platform where users can purchase packages to access and complete online tutorials and courses, earning certifications upon completion.",
+  "projectTitleUserActivity": "User's Activity",
+  "projectDescriptionUserActivity": "The Activity Application is a .NET Core and React-based platform for creating, sharing, and joining activities, featuring user interaction and participation management.",
+  "projectTitleCinemaTicket": "Cinema Ticket",
+  "projectDescriptionCinemaTicket": "Cinema Ticket is a full-stack web application using React and ASP.NET Core, enabling users to buy tickets and administrators to manage listings and sales."
 }

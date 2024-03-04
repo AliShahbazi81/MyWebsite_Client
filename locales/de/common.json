@@ -4,8 +4,24 @@
   "titleExperience": "Erfahrung",
   "titleEducation": "Bildung",
   "titleContactMe": "Fähigkeiten",
+  
   "expertiseSoftwareDevelopmentTitle": "Softwareentwicklung",
   "expertiseBackendTitle": "Backend",
   "expertiseFrontendTitle": "Frontend",
-  "expertiseDatabaseTitle": "Datenbanken"
+  "expertiseDatabaseTitle": "Datenbanken",
+
+  "projectTitleCarAuction": "Autoauktion",
+  "projectDescriptionCarAuction": "Carsties Auktionen bietet Ihnen eine Online-Plattform für Autoauktionen, realisiert durch eine Mikroservice-Architektur, die das Einstellen, Bieten und Verwalten von Auktionen über eine benutzerfreundliche Schnittstelle ermöglicht.",
+  "projectTitleECommerce": "E-Commerce",
+  "projectDescriptionECommerce": "Unsere E-Commerce-Anwendung ist eine skalierbare, auf das Backend fokussierte Online-Shopping-Plattform für Produktversteigerungen, gestaltet mit einer klaren Architektur für effiziente Wartung und Nutzung.",
+  "projectTitleRideShare": "Fahrgemeinschaft",
+  "projectDescriptionRideShare": "Die RideShare-App ist eine vom Backend angetriebene Plattform, die unter Nutzung der SOLID-Prinzipien und einer n-Schichten-Architektur automatisch Fahranwärter mit Fahrern verbindet, einschließlich Zahlungsfunktionen.",
+  "projectTitleELearning": "E-Learning",
+  "projectDescriptionELearning": "Die Online-Lern-App bietet eine Plattform, auf der Nutzer Pakete erwerben können, um Zugang zu Online-Tutorials und Kursen zu erhalten und nach Abschluss Zertifizierungen zu verdienen.",
+  "projectTitleUserActivity": "Nutzeraktivitäten",
+  "projectDescriptionUserActivity": "Die Aktivitäten-App ist eine auf .NET Core und React basierende Plattform zum Erstellen, Teilen und Teilnehmen an Aktivitäten, mit Funktionen zur Verwaltung von Nutzerinteraktionen und -beteiligungen.",
+  "projectTitleCinemaTicket": " Kinoticket",
+  "projectDescriptionCinemaTicket": "Kinoticket ist eine Full-Stack-Webanwendung, die mit React und ASP.NET Core entwickelt wurde, und ermöglicht es den Nutzern, Tickets zu kaufen, während Administratoren Anzeigen und Verkäufe verwalten können."
+  
+  
 }
