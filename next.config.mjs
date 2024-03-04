@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = ({
+    // Add german language support using i18n
+    i18n: {
+        locales: ['en', 'de'],
+        defaultLocale: 'en',
+    },
     async headers() {
         return [
             {

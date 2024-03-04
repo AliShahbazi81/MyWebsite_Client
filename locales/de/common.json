@@ -1,0 +1,13 @@
+{
+  
+  "titleExpertise": "Fachwissen",
+  "titleProjects": "Projekte",
+  "titleExperience": "Erfahrung",
+  "titleEducation": "Bildung",
+  "titleSkills": "Fähigkeiten",
+
+  "expertiseSoftwareDevelopmentTitle": "Softwareentwicklung",
+  "expertiseBackendTitle": "Backend",
+  "expertiseFrontendTitle": "Frontend",
+  "expertiseDatabaseTitle": "Datenbanken"
+}

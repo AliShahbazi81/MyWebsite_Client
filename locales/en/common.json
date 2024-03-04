@@ -1,0 +1,12 @@
+{
+  "titleExpertise": "Expertise",
+  "titleProjects": "Projects",
+  "titleExperience": "Experience",
+  "titleEducation": "Education",
+  "titleSkills": "Contact Me",
+  
+  "expertiseSoftwareDevelopmentTitle": "Software Development",
+  "expertiseBackendTitle": "Backend",
+  "expertiseFrontendTitle": "Frontend",
+  "expertiseDatabaseTitle": "Database"
+}
