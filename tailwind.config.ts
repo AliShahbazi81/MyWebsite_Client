@@ -19,6 +19,7 @@ const config: Config = {
         primary: "#0AD3FF",
         primary_dark: "#18778c",
         secondary: "",
+        alternate: "#FFA500",
         background: "#1A191D",
         background_darkBlue: "#171D26",
         card: "#172554",
