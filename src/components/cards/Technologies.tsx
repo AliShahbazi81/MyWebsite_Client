@@ -15,6 +15,7 @@ export default function Technologies({ keyword }: Props) {
 							  width={40}
 							  height={40}
 							  objectFit="cover"
+							  title={`${keyword}`}
 						/>
 				  </div>
 			</div>

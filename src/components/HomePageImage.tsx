@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import MouseScroll from "@/components/MouseScroll";
-import MyExpertise from "@/components/cards/MyExpertise";
+import MyExpertise from "@/pages/projects/MyExpertise";
 import MyProjects from "@/pages/projects/MyProjects";
 import "./../app/css/homepage.scss"
 import MyExperience from "@/components/experience/MyExperience";

@@ -9,6 +9,11 @@
   "expertiseBackendTitle": "Backend",
   "expertiseFrontendTitle": "Frontend",
   "expertiseDatabaseTitle": "Database",
+  "expertiseTitleTechnologies": "Technologies",
+  "expertiseDescriptionSoftwareDevelopment": "Seasoned in .NET with <1>6+ years</1> crafting scalable solutions, adept in <3>OOP</3>, <5>SOLID principles</5>, and best coding practices.",
+  "expertiseDescriptionBackend": "Expert in <1>.NET</1> with a strong focus on robust, scalable backends, complemented by proficiency in <3>Django</3> and <5>Spring Boot</5>.",
+  "expertiseDescriptionFrontend": "Skilled in <1>React</1>, <3>Next.js</3>, and <5>TypeScript</5> creating responsive, user-focused interfaces that seamlessly integrate with dynamic backends.",
+  "expertiseDescriptionDatabase": "Proficient with <1>SQL Server</1>, <3>PostgreSQL</3>, <5>MongoDB</5>, optimizing data storage and retrieval for high-performance, scalable applications.",
   
   "projectTitleCarAuction": "Car Auction",
   "projectDescriptionCarAuction": "Carsties Auctions offers an online platform for car auctions with microservices architecture, enabling listings, bidding, and auction management in a user-friendly interface.",
@@ -22,4 +27,6 @@
   "projectDescriptionUserActivity": "The Activity Application is a .NET Core and React-based platform for creating, sharing, and joining activities, featuring user interaction and participation management.",
   "projectTitleCinemaTicket": "Cinema Ticket",
   "projectDescriptionCinemaTicket": "Cinema Ticket is a full-stack web application using React and ASP.NET Core, enabling users to buy tickets and administrators to manage listings and sales."
+  
+  
 }

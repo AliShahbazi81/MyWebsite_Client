@@ -9,6 +9,11 @@
   "expertiseBackendTitle": "Backend",
   "expertiseFrontendTitle": "Frontend",
   "expertiseDatabaseTitle": "Datenbanken",
+  "expertiseTitleTechnologies": "Technologien",
+  "expertiseDescriptionSoftwareDevelopment": "Erfahren in .NET mit <1>über 6 Jahren</1> Erfahrung in der Entwicklung skalierbarer Lösungen, versiert in <3>OOP</3>, <5>SOLID-Prinzipien</5> und bewährten Programmierpraktiken.",
+  "expertiseDescriptionBackend": "Experte in <1>.NET</1> mit einem starken Fokus auf robuste, skalierbare Backends, ergänzt durch Kompetenz in <3>Django</3> und <5>Spring Boot</5>.",
+  "expertiseDescriptionFrontend": "Geschickt in <1>React</1>, <3>Next.js</3> und <5>TypeScript</5>, um responsive, benutzerzentrierte Schnittstellen zu erstellen, die nahtlos mit dynamischen Backends integrieren.",
+  "expertiseDescriptionDatabase": "Versiert im Umgang mit <1>SQL Server</1>, <3>PostgreSQL</3>, <5>MongoDB</5>, Optimierung der Datenspeicherung und -abfrage für leistungsstarke, skalierbare Anwendungen.",
 
   "projectTitleCarAuction": "Autoauktion",
   "projectDescriptionCarAuction": "Carsties Auktionen bietet Ihnen eine Online-Plattform für Autoauktionen, realisiert durch eine Mikroservice-Architektur, die das Einstellen, Bieten und Verwalten von Auktionen über eine benutzerfreundliche Schnittstelle ermöglicht.",

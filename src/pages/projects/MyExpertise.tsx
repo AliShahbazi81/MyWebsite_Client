@@ -6,60 +6,32 @@ import Technologies from "@/components/cards/Technologies";
 import {CSSTransition, TransitionGroup} from 'react-transition-group'
 import Image from "next/image";
 import "../../app/css/expertise.scss"
+import {Trans, useTranslation} from "next-i18next";
 
 const cardData = [
 	{
 		id: 'softwareDevelopment',
-		nextLine: true,
-		expertise: 'Software',
-		secondExpertise: 'Development',
-		description: (
-			<p className={'descriptionText'}>
-				Seasoned in .NET with <span className="text-primary"><b>6+ years</b></span> crafting scalable solutions,
-				adept in <span className="text-primary"><b>OOP</b></span>, <span className="text-primary"><b>SOLID principles</b></span>,
-				and best coding practices.
-			</p>
-		),
+		expertise: 'expertiseSoftwareDevelopmentTitle',
+		description:'expertiseDescriptionSoftwareDevelopment',
 		technologies: [],
 	},
 	{
 		id: 'backend',
 		nextLine: false,
-		expertise: 'Backend',
-		description: (
-			<p className={'descriptionText'}>
-				Expert in <span className="text-primary"><b>.NET</b></span> with a strong focus on robust, scalable
-				backends, complemented by proficiency in <span className="text-primary"><b>Django</b></span> and <span
-				className="text-primary"><b>Spring Boot</b></span>.
-			</p>
-		),
+		expertise: 'expertiseBackendTitle',
+		description: 'expertiseDescriptionBackend',
 		technologies: ['DotNetCore', 'Django', 'SpringBoot'],
 	},
 	{
 		id: 'frontend',
-		nextLine: false,
-		expertise: 'Frontend',
-		description: (
-			<p className={'descriptionText'}>
-				Skilled in <span className="text-primary"><b>React</b></span>, <span
-				className="text-primary"><b>Next.js</b></span>, and <span
-				className="text-primary"><b>TypeScript</b></span> creating responsive, user-focused interfaces that
-				seamlessly integrate with dynamic backends.
-			</p>
-		),
+		expertise: 'expertiseFrontendTitle',
+		description: 'expertiseDescriptionFrontend',
 		technologies: ['React', 'Redux', 'NextJs', 'MaterialUI', 'Tailwind', 'JavaScript', 'TypeScript'],
 	},
 	{
 		id: 'database',
-		nextLine: false,
-		expertise: 'Database',
-		description: (
-			<p className={'descriptionText'}>
-				Proficient with <span className="text-primary"><b>SQL Server</b></span>, <span className="text-primary"><b>PostgreSQL</b></span>,<span
-				className="text-primary"><b> MongoDB</b></span>, optimizing data storage and retrieval for
-				high-performance, scalable applications.
-			</p>
-		),
+		expertise: 'expertiseDatabaseTitle',
+		description:'expertiseDescriptionDatabase',
 		technologies: ['MongoDb', 'PostgresSql', 'Redis', 'SqlServer', 'MySql'],
 	},
 ];
@@ -67,6 +39,7 @@ const cardData = [
 export default function MyExpertise() {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [direction, setDirection] = useState('prev');
+	const {t} = useTranslation('common');
 
 	const totalCards = cardData.length;
 
@@ -103,19 +76,28 @@ export default function MyExpertise() {
 					>
 						<div className={`cardExpertise ${card.id + "Card"}`}>
 							<CardHeader
-								expertise={card.expertise}
-								nextLine={card.nextLine} secondExpertise={card.secondExpertise}
+								expertise={t(card.expertise)}
+								id={card.id}
 							/>
 							<div className={'mt-4'}>
 								<TagElement {...{[card.id]: true}} />
 								<div className={'cardBody'}>
 									<DescriptionLine>
-										{card.description}
+										<p className={'descriptionText'}>
+											<Trans
+												i18nKey={card.description}
+												components={{
+													1: <span className="text-primary"><b/></span>,
+													3: <span className="text-primary"><b/></span>,
+													5: <span className="text-primary"><b/></span>,
+												}}
+											/>
+										</p>
 									</DescriptionLine>
 								</div>
 								<TagElement {...{[card.id]: true}} />
 								<div className={'technologyEnv'}>
-									<h1 className={'technologyTitle'}>Technologies: </h1>
+									<h1 className={'technologyTitle'}>{t('expertiseTitleTechnologies')} :</h1>
 									<div className={'flex items-center justify-center flex-wrap'}>
 										{card.technologies.map((tech) => (
 											<Technologies key={tech} keyword={tech}/>
