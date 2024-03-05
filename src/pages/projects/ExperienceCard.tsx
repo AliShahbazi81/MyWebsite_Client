@@ -1,8 +1,9 @@
 import Image from "next/image";
-import "./../../app/css/experience.scss";
+import "../../app/css/experience.scss";
 import {DateTime} from "next-auth/providers/kakao";
 import ExperienceDescription from "@/components/experience/ExperienceDescription";
 import {CiLocationOn} from "react-icons/ci";
+import {useTranslation} from "next-i18next";
 
 type Props = {
 	companyName: string;
@@ -31,6 +32,7 @@ export default function ExperienceCard(
 		imageUrl,
 		image
 	}: Props) {
+	const {t} = useTranslation('common');
 	return (
 		<>
 			<div
@@ -39,17 +41,17 @@ export default function ExperienceCard(
 			>
 				<div className={'headerDetail'}>
 					<h2 className={'expHeader'}>{companyName}</h2>
-					<h3 className={'headerCountry'}><CiLocationOn color={"white"} className={'mr-1'}/> {country} -
-						({position})</h3>
+					<h3 className={'headerCountry'}><CiLocationOn color={"white"} className={'mr-1'}/> {t(country)} -
+						({t(position)})</h3>
 				</div>
-				<h2 className={'expDate'}>{dateFrom} - {dateTo}</h2>
+				<h2 className={'expDate'}>{t(dateFrom)} - {t(dateTo)}</h2>
 			</div>
 			<div
 				className={`bodyEnv ${isActive ? 'visible max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}
 			>
 				<ExperienceDescription
-					description={description}
-					role={role}
+					description={t(description)}
+					role={t(role)}
 				/>
 				{image &&
                     <Image

@@ -5,7 +5,7 @@ import MouseScroll from "@/components/MouseScroll";
 import MyExpertise from "@/pages/projects/MyExpertise";
 import MyProjects from "@/pages/projects/MyProjects";
 import "./../app/css/homepage.scss"
-import MyExperience from "@/components/experience/MyExperience";
+import MyExperience from "@/pages/projects/MyExperience";
 import ContactMe from "@/components/ContactMe";
 import {useTranslation} from "next-i18next";
 

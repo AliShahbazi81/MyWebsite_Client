@@ -26,7 +26,26 @@
   "projectTitleUserActivity": "User's Activity",
   "projectDescriptionUserActivity": "The Activity Application is a .NET Core and React-based platform for creating, sharing, and joining activities, featuring user interaction and participation management.",
   "projectTitleCinemaTicket": "Cinema Ticket",
-  "projectDescriptionCinemaTicket": "Cinema Ticket is a full-stack web application using React and ASP.NET Core, enabling users to buy tickets and administrators to manage listings and sales."
+  "projectDescriptionCinemaTicket": "Cinema Ticket is a full-stack web application using React and ASP.NET Core, enabling users to buy tickets and administrators to manage listings and sales.",
   
+  "experienceCedarValleyDateFrom": "Sep 2023",
+  "experienceCedarValleyDateTo": "Jan 2024",
+  "experienceCedarValleyDescription": "At Cedar Valley, I spearheaded the digital transformation of manual, paper-based processes into sophisticated digital systems as a Backend Developer, leveraging .NET Core and C# for developing robust backend systems. My contributions range from enhancing ingredient and logistics tracking to implementing RabbitMQ for message queuing and occasionally supporting the frontend with React.js, all underpinned by Microsoft SQL Server. This work has been crucial in reducing manual labor, errors, and enhancing operational efficiency and accountability.",
+  "experienceCedarValleyCountry": "Canada, Windsor",
+  "experienceCedarValleyPosition": "In-site",
+  "experienceCedarValleyRole": "Backend Developer",
   
+  "experienceOrispotDateFrom": "Apr 2023",
+  "experienceOrispotDateTo": "Present",
+  "experienceOrispotDescription": "In my role as a Full Stack Developer, I navigate the complexities of both backend and frontend development, leveraging .NET Core for backend solutions and ReactJS for creating engaging user interfaces. My expertise encompasses Object-Oriented Programming, Object-Relational Mapping, and rigorous testing practices to ensure high-quality software delivery. From architecting scalable backend functionalities with .NET Core to designing intuitive, responsive interfaces with ReactJS, my work is dedicated to enhancing user experience and application performance through modular code and comprehensive testing strategies.",
+  "experienceOrispotCountry": "Australia, Sydney",
+  "experienceOrispotPosition": "Remote",
+  "experienceOrispotRole": "Fullstack Developer",
+  
+  "experienceParisaShafaqDateFrom": "Apr 2017",
+  "experienceParisaShafaqDateTo": "Mar 2022",
+  "experienceParisaShafaqDescription": "At Parisa Shafaq, I significantly enhanced my expertise in SQL Server integration, database design, and Windows Forms applications, alongside deepening my understanding of software development fundamentals, teamwork, code optimization, and Git version control, all contributing to my comprehensive skill set in software development and system maintenance.",
+  "experienceParisaShafaqCountry": "Iran, Tehran",
+  "experienceParisaShafaqPosition": "In-site",
+  "experienceParisaShafaqRole": "Windows (WinForms, WPF) and Web Developer"
 }

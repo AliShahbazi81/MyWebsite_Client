@@ -26,7 +26,26 @@
   "projectTitleUserActivity": "Nutzeraktivitäten",
   "projectDescriptionUserActivity": "Die Aktivitäten-App ist eine auf .NET Core und React basierende Plattform zum Erstellen, Teilen und Teilnehmen an Aktivitäten, mit Funktionen zur Verwaltung von Nutzerinteraktionen und -beteiligungen.",
   "projectTitleCinemaTicket": " Kinoticket",
-  "projectDescriptionCinemaTicket": "Kinoticket ist eine Full-Stack-Webanwendung, die mit React und ASP.NET Core entwickelt wurde, und ermöglicht es den Nutzern, Tickets zu kaufen, während Administratoren Anzeigen und Verkäufe verwalten können."
-  
-  
+  "projectDescriptionCinemaTicket": "Kinoticket ist eine Full-Stack-Webanwendung, die mit React und ASP.NET Core entwickelt wurde, und ermöglicht es den Nutzern, Tickets zu kaufen, während Administratoren Anzeigen und Verkäufe verwalten können.",
+
+  "experienceCedarValleyDateFrom": "Sep 2023",
+  "experienceCedarValleyDateTo": "Jan 2024",
+  "experienceCedarValleyDescription": "Bei Cedar Valley leitete ich als Backend-Entwickler die digitale Transformation von manuellen, papierbasierten Prozessen zu ausgefeilten digitalen Systemen. Dabei setzte ich .NET Core und C# ein, um robuste Backend-Systeme zu entwickeln. Meine Beiträge reichen von der Verbesserung der Nachverfolgung von Zutaten und Logistik bis hin zur Implementierung von RabbitMQ für Message Queuing und gelegentlicher Unterstützung des Frontends mit React.js, alles gestützt auf Microsoft SQL Server. Diese Arbeit war entscheidend, um manuelle Arbeit, Fehler zu reduzieren und die betriebliche Effizienz und Verantwortlichkeit zu erhöhen.",
+  "experienceCedarValleyCountry": "Kanada, Windsor",
+  "experienceCedarValleyPosition": "Vor Ort",
+  "experienceCedarValleyRole": "Backend-Entwickler",
+
+  "experienceOrispotDateFrom": "Apr 2023",
+  "experienceOrispotDateTo": "Gegenwärtig",
+  "experienceOrispotDescription": "In meiner Rolle als Full Stack-Entwickler navigiere ich durch die Komplexitäten der Backend- und Frontend-Entwicklung, wobei ich .NET Core für Backend-Lösungen und ReactJS für die Erstellung ansprechender Benutzeroberflächen nutze. Meine Expertise umfasst objektorientierte Programmierung, objektrelationales Mapping und strenge Testpraktiken, um eine hochwertige Softwareauslieferung zu gewährleisten. Von der Architektur skalierbarer Backend-Funktionalitäten mit .NET Core bis zum Design intuitiver, responsiver Schnittstellen mit ReactJS ist meine Arbeit der Verbesserung der Benutzererfahrung und der Anwendungsleistung durch modularen Code und umfassende Teststrategien gewidmet.",
+  "experienceOrispotCountry": "Australien, Sydney",
+  "experienceOrispotPosition": "Remote",
+  "experienceOrispotRole": "Fullstack-Entwickler",
+
+  "experienceParisaShafaqDateFrom": "Apr 2017",
+  "experienceParisaShafaqDateTo": "Mär 2022",
+  "experienceParisaShafaqDescription": "Bei Parisa Shafaq konnte ich meine Expertise in der Integration von SQL Server, Datenbankdesign und Windows Forms-Anwendungen erheblich erweitern und gleichzeitig mein Verständnis für die Grundlagen der Softwareentwicklung, Teamarbeit, Codeoptimierung und Git-Versionierung vertiefen, was alles zu meinem umfassenden Fähigkeitsset in der Softwareentwicklung und Systemwartung beitrug.",
+  "experienceParisaShafaqCountry": "Iran, Teheran",
+  "experienceParisaShafaqPosition": "Vor Ort",
+  "experienceParisaShafaqRole": "Windows (WinForms, WPF) und Web-Entwickler"
 }
