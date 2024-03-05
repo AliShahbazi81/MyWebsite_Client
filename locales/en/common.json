@@ -46,6 +46,17 @@
   "projectCarAuctionImpact": "Project Impact and Personal Contributions",
   "projectCarAuctionImpactDescription": "This project not only showcases the application of cutting-edge technologies in real-world scenarios but also highlights my comprehensive skill set in <1>architecting</1>, <2>developing</2>, and <3>deploying</3> complex web applications. My contributions spanned across all phases of the project - from initial design and <4>architecture</4> to <5>development</5>, and <6>deployment</6>, ensuring a robust, scalable, and user-centric platform. Through Carsties Auctions, I have demonstrated an adeptness in navigating the complexities of <7>software engineering</7>, pushing the boundaries of traditional web applications, and delivering a product that stands as a benchmark for quality and innovation in the online car auction space.",
   
+  "projectCinemaTicketIntro": "Introduction to Cinema Ticket",
+  "projectCinemaTicketIntroDescription": "The <1>Cinema Ticket</1> project is a full-stack web application designed to enhance the movie-going experience for cinema enthusiasts. It allows users to browse and purchase cinema tickets for upcoming movies seamlessly, while administrators can manage showtimes, movie listings, and ticket sales efficiently. Built using <2>React</2> for the frontend and <3>ASP.NET Core</3> for the backend, the application ensures a responsive, scalable, and secure platform for all users.",
+  "projectCinemaTicketFeatures": "Core Features",
+  "projectCinemaTicketFeaturesDescription": "Cinema Ticket boasts a range of features including a <1>user-friendly interface</1> for easy navigation, a <2>comprehensive movie catalog</2> with detailed pages for each movie, <3>basket functionality</3> for ticket selections, and <4>secure user authentication</4> for user management. Additionally, the platform offers <5>admin management tools</5> for movie and showtime management, enhancing the overall administrative workflow.",
+  "projectCinemaTicketTechnology": "Technology Stack",
+  "projectCinemaTicketTechnologyDescription": "The frontend is developed with <1>React</1> using <2>TypeScript</2>, and styled with <3>Material UI</3>. The backend is powered by <4>ASP.NET Core</4>, utilizing <5>Entity Framework Core</5> for data access and <6>SQL Server</6> for the database. <7>Stripe</7> is integrated for secure payment processing, with <8>Docker</8> supporting containerization and deployment, and <9>GitHub Actions</9> for CI/CD pipelines.",
+  "projectCinemaTicketDevelopment": "Development and Deployment",
+  "projectCinemaTicketDevelopmentDescription": "Emphasizing clean code and best practices, the development process included thorough testing to ensure a bug-free and user-friendly platform. The application's design allows for easy deployment and scalability, catering to a growing audience of movie enthusiasts.",
+  "projectCinemaTicketPersonalContributions": "Personal Contributions",
+  "projectCinemaTicketPersonalContributionsDescription": "My contributions to the Cinema Ticket project spanned across the full development lifecycle, from designing the database schema and implementing backend services to developing the React frontend and integrating payment processing. This project refined my full-stack development skills and deepened my understanding of creating scalable, user-centric web applications.",
+  
   
   "experienceCedarValleyDateFrom": "Sep 2023",
   "experienceCedarValleyDateTo": "Jan 2024",
