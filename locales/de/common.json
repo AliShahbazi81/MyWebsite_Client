@@ -61,5 +61,14 @@
   "educationAzadUniversityDescription": "In meinem Bachelor-Studium der Softwaretechnik entwickelte ich eine solide Grundlage in den Prinzipien des Engineerings von Softwaresystemen, von der Konzeption bis zur Implementierung. Dieses umfassende Programm deckte eine breite Palette von Themen ab, einschließlich Softwareentwicklungslebenszyklen, Qualitätssicherung und Datenbankmanagement. Durch praktische Projekte und Teamarbeit erwarb ich praktische Erfahrungen in der Entwicklung robuster, skalierbarer und effizienter Softwarelösungen. Meine Ausbildung betonte nicht nur technische Kompetenz, sondern auch die Bedeutung ethischer Überlegungen und effektiver Kommunikation im Bereich der Softwaretechnik.",
   "educationAzadUniversityCountry": "Iran, Teheran",
   "educationAzadUniversityPosition": "Präsenz",
-  "educationAzadUniversityRole": "Softwaretechnik"
+  "educationAzadUniversityRole": "Softwaretechnik",
+
+  "contactMeNameLabel": "Name",
+  "contactMeEmailLabel": "E-Mail-Adresse",
+  "contactMeSubjectLabel": "Betreff",
+  "contactMeMessageLabel": "Nachricht",
+
+  "contactMeClearButtonLabel": "Löschen",
+  "contactMeSendButtonLabel": "Senden",
+  "contactMeSendingButtonLabel": "Senden..."
 }

@@ -61,5 +61,14 @@
   "educationAzadUniversityDescription": "In my Bachelor's degree in Software Engineering, I developed a solid foundation in the principles of engineering software systems, from design to implementation. This comprehensive program covered a wide range of topics, including software development life cycles, quality assurance, and database management. Through hands-on projects and collaborative teamwork, I acquired practical experience in developing robust, scalable, and efficient software solutions. My education emphasized not only technical proficiency but also the importance of ethical considerations and effective communication in the field of software engineering.",
   "educationAzadUniversityCountry": "Iran, Tehran",
   "educationAzadUniversityPosition": "In-Person",
-  "educationAzadUniversityRole": "Software Engineering"
+  "educationAzadUniversityRole": "Software Engineering",
+  
+  "contactMeNameLabel": "Name",
+  "contactMeEmailLabel": "Email",
+  "contactMeSubjectLabel": "Subject",
+  "contactMeMessageLabel": "Your Message",
+
+  "contactMeClearButtonLabel": "Name",
+  "contactMeSendButtonLabel": "Send",
+  "contactMeSendingButtonLabel": "Sending..."
 }

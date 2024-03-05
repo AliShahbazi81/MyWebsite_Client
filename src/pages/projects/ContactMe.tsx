@@ -3,8 +3,9 @@ import * as Yup from 'yup';
 import {Form, Formik} from "formik";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import './../app/css/contactMe.scss';
+import '../../app/css/contactMe.scss';
 import toast from "react-hot-toast";
+import {useTranslation} from "next-i18next";
 
 // Validation schema
 const ContactSchema = Yup.object().shape({
@@ -15,6 +16,7 @@ const ContactSchema = Yup.object().shape({
 });
 
 export default function ContactMe() {
+	const {t} = useTranslation('common');
 
 	return (
 		<Formik
@@ -48,7 +50,7 @@ export default function ContactMe() {
 					<div id={"contactBorderTopAndLeft"} className={'contactBorderTopAndLeft'}>
 						<div id={"contactBorderBottomAndRight"} className={'contactBorderBottomAndRight'}>
 							<TextField
-								label="Name"
+								label={t("contactMeNameLabel")}
 								{...getFieldProps('name')}
 								error={touched.name && Boolean(errors.name)}
 								helperText={touched.name && errors.name}
@@ -85,7 +87,7 @@ export default function ContactMe() {
 								}}
 							/>
 							<TextField
-								label="Email"
+								label={t("contactMeEmailLabel")}
 								{...getFieldProps('email')}
 								error={touched.email && Boolean(errors.email)}
 								helperText={touched.email && errors.email}
@@ -121,7 +123,7 @@ export default function ContactMe() {
 								}}
 							/>
 							<TextField
-								label="Subject"
+								label={t("contactMeSubjectLabel")}
 								{...getFieldProps('subject')}
 								error={touched.subject && Boolean(errors.subject)}
 								helperText={touched.subject && errors.subject}
@@ -157,7 +159,7 @@ export default function ContactMe() {
 								}}
 							/>
 							<TextField
-								label="Your Message"
+								label={t("contactMeMessageLabel")}
 								{...getFieldProps('message')}
 								error={touched.message && Boolean(errors.message)}
 								helperText={touched.message && errors.message}
@@ -202,7 +204,7 @@ export default function ContactMe() {
 									onClick={() => resetForm()}
 									disabled={isSubmitting}
 								>
-									Clear
+									{t('contactMeClearButtonLabel')}
 								</Button>
 								<Button
 									type="submit"
@@ -210,7 +212,7 @@ export default function ContactMe() {
 									className="sendButton "
 									disabled={isSubmitting}
 								>
-									{isSubmitting ? 'Sending...' : 'Send'}
+									{isSubmitting ? t('contactMeSendingButtonLabel') : t('contactMeSendButtonLabel')}
 								</Button>
 							</div>
 						</div>

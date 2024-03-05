@@ -6,7 +6,7 @@ import MyExpertise from "@/pages/projects/MyExpertise";
 import MyProjects from "@/pages/projects/MyProjects";
 import "./../app/css/homepage.scss"
 import MyExperience from "@/pages/projects/MyExperience";
-import ContactMe from "@/components/ContactMe";
+import ContactMe from "@/pages/projects/ContactMe";
 import {useTranslation} from "next-i18next";
 
 export default function HomePageImage() {

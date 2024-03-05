@@ -1,14 +1,13 @@
 import Image from "next/image";
 import "../../app/css/experience.scss";
-import {DateTime} from "next-auth/providers/kakao";
 import ExperienceDescription from "@/components/experience/ExperienceDescription";
 import {CiLocationOn} from "react-icons/ci";
 import {useTranslation} from "next-i18next";
 
 type Props = {
 	companyName: string;
-	dateFrom: DateTime;
-	dateTo: DateTime;
+	dateFrom: string;
+	dateTo: string;
 	description: string;
 	country: string;
 	position: string;
