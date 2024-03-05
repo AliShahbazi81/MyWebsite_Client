@@ -3,6 +3,7 @@ import Image from "next/image";
 import ProjectTechnology from "@/components/projects/ProjectTechnology";
 import "./../../app/css/project.scss"
 import Link from "next/link";
+import {useRouter} from "next/router";
 
 type Props = {
 	imageName: string
@@ -13,17 +14,24 @@ type Props = {
 	projectDetailUrl: string;
 }
 
-export default function ProjectCard({
-										imageName,
-										projectName,
-										projectDetail,
-										techName,
-										github,
-										projectDetailUrl
-									}: Props) {
+export default function ProjectCard(
+	{
+		imageName,
+		projectName,
+		projectDetail,
+		techName,
+		github,
+		projectDetailUrl,
+	}: Props) {
+	const router = useRouter(); 
+	const { locale } = router;
 	return (
 		<div className={'projectCardEnv'}>
-			<Link href={`/projects/${projectDetailUrl}`} className={'flex items-center justify-center w-full h-full'}>
+			<Link
+				href={`/projects/${projectDetailUrl}`}
+				className={'flex items-center justify-center w-full h-full'}
+				locale={locale}
+			>
 				<Image
 					className={'projectImage w-full h-full'}
 					src={`/images/project/${imageName}.png`}
@@ -56,7 +64,7 @@ export default function ProjectCard({
 				</h6>
 				<div className={'break-line'}></div>
 				<ProjectTechnology techName={techName}/>
-				<Link href={`/projects/${projectDetailUrl}`}>
+				<Link href={`/projects/${projectDetailUrl}`} locale={locale}>
 						<span className={'projectViewMoreNav'}>
 							<span className={"projectIcon projectArrow"}></span>
 						</span>

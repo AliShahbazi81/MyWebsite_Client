@@ -4,7 +4,7 @@ import Link from "next/link";
 import {data} from "@/data/projects/projectData";
 import Layout from "@/components/Layout";
 import {ProjectData} from "@/types/projectTypes";
-import {GetStaticProps} from "next";
+import {GetStaticPaths, GetStaticProps} from "next";
 import React from "react";
 import CarAuction from "@/components/projects/explanations/CarAuction";
 import ECommerce from "@/components/projects/explanations/ECommerce";
@@ -13,6 +13,7 @@ import RideShare from "@/components/projects/explanations/RideShare";
 import UserActivity from "@/components/projects/explanations/UserActivity";
 import CinemaTicket from "@/components/projects/explanations/CinemaTicket";
 import NotFound from "@/app/not-found";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
 interface ProjectPageProps {
 	project: Omit<ProjectData, 'explanation'>;
@@ -22,6 +23,7 @@ interface ProjectPageProps {
 type ExplanationComponentsMap = {
 	[key: string]: React.FC | undefined;
 };
+
 
 // Define the actual mapping
 const ExplanationComponents: ExplanationComponentsMap = {
@@ -33,24 +35,37 @@ const ExplanationComponents: ExplanationComponentsMap = {
 	"cinema-ticket": CinemaTicket,
 };
 
-export const getStaticPaths = async () => {
-	const paths = data.map((project) => ({
-		params: {id: project.id},
-	}));
+export const getStaticPaths: GetStaticPaths = async (context) => {
+	const locales = context.locales || ['en'];
 
-	return {paths, fallback: false};
+	const paths = locales.flatMap((locale) =>
+		data.map((project) => ({
+			params: { id: project.id.toString() },
+			locale,
+		}))
+	);
+
+	return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
 	const id = context.params?.id;
 	const project = data.find((p) => p.id === id);
+	const locale = context.locale || 'en';
 
 	if (!project) {
-		console.log("Project not found")
-		return <NotFound />;
+		return {
+			notFound: true,
+		};
 	}
+
+	const translationProps = await serverSideTranslations(locale, ['common']);
+
 	return {
-		props: {project},
+		props: {
+			...translationProps,
+			project,
+		},
 	};
 };
 const ProjectPage: React.FC<ProjectPageProps> = ({project}: { project: ProjectData }) => {

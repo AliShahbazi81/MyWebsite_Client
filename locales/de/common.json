@@ -1,4 +1,11 @@
 {
+  "navbarHome": "Startseite",
+  "navbarExpertise": "Fachwissen",
+  "navbarProjects": "Projekte",
+  "navbarExperience": "Erfahrung",
+  "navbarEducation": "Bildung",
+  "navbarContactMe": "Fähigkeiten",
+  
   "titleExpertise": "Fachwissen",
   "titleProjects": "Projekte",
   "titleExperience": "Erfahrung",
@@ -70,5 +77,18 @@
 
   "contactMeClearButtonLabel": "Löschen",
   "contactMeSendButtonLabel": "Senden",
-  "contactMeSendingButtonLabel": "Senden..."
+  "contactMeSendingButtonLabel": "Senden...",
+
+  "footerSocialDescription": "Wenn Sie an einer Zusammenarbeit an einem Projekt interessiert sind oder meine Expertise benötigen, zögern Sie bitte nicht, über die untenstehenden Kontaktmöglichkeiten Kontakt aufzunehmen.",
+  "footerCopyRightYear": "© 2024. Mit Leidenschaft erstellt von <1>Ali Shahbazi</1>.",
+  "footerCopyRightText": "Alle Rechte vorbehalten.",
+
+  "footerReferenceMahdiFiroozjaei": "Ali Shahbazi war einer meiner Studenten an der Universität Windsor. Er hat zwei Kurse bei mir absolviert, nämlich Advanced Computing Concept und Internship Project. Ich kenne ihn seit Sep. 2022. Ali hat sich als talentierter Student erwiesen. Ich fand ihn als einen fleißigen Studenten, der durch die Beitragung und Präsentation eines beachtlichen Projekts in der Aktienmarktanalyse auffiel. Ich habe Ali als eine gut organisierte und hart arbeitende Person gefunden und empfehle ihn daher zur Berücksichtigung.",
+  "footerReferenceMahdiFiroozjaeiPosition": "Professor",
+  "footerReferenceUsamaMir": "Es bereitet mir große Freude, Ali Shahbazi zu empfehlen. Ali war mein Student im Master of Applied Computing (MAC) Programm an der University of Windsor (UoW). Ich fand ihn als einen der besten Studenten in der Klasse. Er ist sehr aufmerksam während seines Unterrichts und stellt relevante Fragen. Er hat gute Noten in meinem Kurs erreicht. Er verfügt über ausgezeichnete schriftliche und mündliche Kommunikationsfähigkeiten, ist extrem organisiert, zuverlässig und computerversiert. Daher empfehle ich Ali nachdrücklich für jegliche Praktika und Jobmöglichkeiten.",
+  "footerReferenceUsamaMirPosition": "Professor",
+  "footerReferenceAtefehGilvari": "Ali war ein außergewöhnlicher Student in unserem Kurs für fortgeschrittene Softwaretechnik. Seine starken Problemlösungs- und Teamfähigkeiten machen ihn zu einem herausragenden Performer.",
+  "footerReferenceAtefehGilvariPosition": "Doktorandin",
+  "footerReferenceArashShabbeh": "Ali ist einer der talentiertesten, fleißigsten, schnell lernenden und vertrauenswürdigsten Kollegen, die ich je hatte. Ich glaube, die Zusammenarbeit mit Ali an jedem Projekt könnte zweifellos viele Vorteile haben.",
+  "footerReferenceArashShabbehPosition": "Senior .NET-Entwickler"
 }

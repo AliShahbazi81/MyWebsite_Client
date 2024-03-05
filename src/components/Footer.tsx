@@ -1,15 +1,18 @@
 import "./../app/css/footer.scss"
 import ReferenceCard from "@/components/reference/ReferenceCard";
 import SocialLinks from "@/components/reference/SocialLinks";
+import {Trans, useTranslation} from "next-i18next";
+import React from "react";
 
 export default function Footer() {
+	const {t} = useTranslation('common');
 	return (
 		<div className={'footerEnv'}>
 			<div className={'footer'}>
 				{/* Social links and icons */}
 				<div className={'socialEnv'}>
 					<h3 className={'socialExplanation'}>
-						If you're interested in collaborating on a project or require my expertise, please don't hesitate to reach out using the contact options below.
+						{t('footerSocialDescription')}
 					</h3>
 					{/* Icons */}
 					<div id={"contact"} className={'socialIconsEnv'}>
@@ -21,10 +24,14 @@ export default function Footer() {
 					</div>
 					<div className={'copyRight'}>
 						<h3 className={'copyRightText'}>
-							© 2024. Made with passion by <span className={'text-primary'}>Ali Shahbazi</span>
+							<Trans
+								i18nKey={'footerCopyRightYear'}
+								components={{
+									1: <span className="text-primary"><b/></span>,
+								}} />
 						</h3>
 						<h3 className={'copyRightText'}>
-							All rights reserved.
+							{t('footerCopyRightText')}
 						</h3>
 					</div>
 				</div>
@@ -34,15 +41,15 @@ export default function Footer() {
 						<ReferenceCard
 							profImageUrl={"ProfMahdiFiroozjaei"}
 							profName={"Prof. Mahdi Firoozjaei"}
-							profRole={"Professor"}
-							profText={"Ali Shahbazi was one of my students at the University of Windsor. He has passed two courses with me, namely Advanced Computing Concept and Internship Project. I know him since Sep. 2022.Ali showed himself as a talent student. I found him a hard working student by contributing and presenting a considerable project in Stock Market Analysis.I have found Ali a well organized and hardworking person and do recommend him for consideration."}
+							profRole={t('footerReferenceMahdiFiroozjaeiPosition')}
+							profText={t('footerReferenceMahdiFiroozjaei')}
 							profUniversity={"University of Windsor"}
 							profLinkedInUrl={"https://www.linkedin.com/in/mahdi-d-firoozjaei-85b58a42/"}/>
 						<ReferenceCard
 							profImageUrl={"ProfUsamaMir"}
 							profName={"Prof. Usama Mir"}
-							profRole={"Professor"}
-							profText={"It gives me immense pleasure to recommend Ali Shahbazi. Ali was my student in Master of Applied Computing (MAC) program at University of Windsor (UoW). I found him to be a top student in the class. He is very attentive during his classes and asks relevant questions. He achieved good scores in my course. He has excellent written and verbal communication skills, is extremely organized, reliable, and computer literate. Therefore, I strongly recommend Ali for any related Internship and Job opportunities."}
+							profRole={t('footerReferenceUsamaMirPosition')}
+							profText={t('footerReferenceUsamaMir')}
 							profUniversity={"University of Windsor"}
 							profLinkedInUrl={"https://www.linkedin.com/in/usama-mir-phd-0892932b/"}/>
 					</div>
@@ -50,15 +57,15 @@ export default function Footer() {
 						<ReferenceCard
 							profImageUrl={"AtefehGilvari"}
 							profName={"Atefeh Gilvari"}
-							profRole={"PhD Student"}
-							profText={"Ali was an exceptional student in our advanced software engineering course. His strong problem-solving and teamwork skills make him a standout performer."}
+							profRole={t('footerReferenceAtefehGilvariPosition')}
+							profText={t('footerReferenceAtefehGilvari')}
 							profUniversity={"University of Windsor"}
 							profLinkedInUrl={"https://www.linkedin.com/in/atefeh-gilvari-122a76256/"}/>
 						<ReferenceCard
 							profImageUrl={"ArashShabbeh"}
 							profName={"Arash Shabbeh"}
-							profRole={"Senior .NET Developer"}
-							profText={"Ali is one of the most talented, hard-working, fast learners and trustworthy colleagues I've ever had. I believe cooperating with Ali on any project could undoubtedly have many benefits."}
+							profRole={t('footerReferenceArashShabbehPosition')}
+							profText={t('footerReferenceArashShabbeh')}
 							profUniversity={""}
 							profLinkedInUrl={"https://www.linkedin.com/in/arash-shabbeh/"}/>
 					</div>

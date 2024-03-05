@@ -7,21 +7,21 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export async function getStaticProps({locale}: { locale: string }) {
-	  return {
-			props: {
-				  ...(await serverSideTranslations(locale, ['common'])),
-			},
-	  };
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ['common'])),
+		},
+	};
 }
 
 function Home() {
-	  return (
-			<>
-				  <Navbar/>
-				  <HomePageImage/>
-				  <Footer/>
-			</>
-	  );
+	return (
+		<>
+			<Navbar/>
+			<HomePageImage/>
+			<Footer/>
+		</>
+	);
 }
 
 export default Home;
