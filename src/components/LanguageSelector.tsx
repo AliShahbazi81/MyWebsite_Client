@@ -15,6 +15,7 @@ export default function LanguageSelector() {
 	const [languages] = useState<Language[]>([
 		{code: 'en', name: 'English', flagUrl: '/images/lang/English.png'},
 		{code: 'de', name: 'German', flagUrl: '/images/lang/Germany.png'},
+		{code: 'fr', name: 'France', flagUrl: '/images/lang/France.png'},
 	]);
 	const [isOpen, setIsOpen] = useState(false);
 
