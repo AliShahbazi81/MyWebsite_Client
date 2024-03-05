@@ -16,7 +16,7 @@ export const data: ProjectData[] = [
 	},
 	{
 		id: "e-commerce",
-		name: "projectECommerceTitle",
+		name: "projectTitleECommerce",
 		explanationKey: 'e-commerce',
 		backend: ['DotNetCore'],
 		database: ['Redis', 'SqlServer'],

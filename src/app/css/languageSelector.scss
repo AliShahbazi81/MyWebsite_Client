@@ -7,6 +7,75 @@
   align-items: center;
   justify-content: center;
 
+  .arrow {
+    display: inline-block;
+    transition: transform 300ms ease;
+  }
+
+  .arrow.open {
+    transform: rotate(180deg);
+  }
+
+  .languageList {
+    @apply flex flex-col justify-center items-center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 5s 300ms, opacity 300ms, max-height 300ms ease-in-out;
+    top: 100%;
+    left: -10px;
+    background: transparent;
+    border: 0 solid #ddd; // Minimal border, adjust as needed
+    border-radius: 4px;
+    width: max-content;
+    z-index: 10; // Ensure it's above other content
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Optional shadow for depth
+
+    li {
+      @apply flex justify-start items-center;
+      align-items: center;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: transparent; // Highlight on hover
+      }
+
+      img {
+        margin-right: 8px; // Space between flag and text
+        width: 20px; // Adjust flag size as needed
+        height: auto;
+      }
+
+      span {
+        font-size: 14px; // Adjust text size as needed
+      }
+    }
+  }
+
+
+  .languageList.open {
+    visibility: visible;
+    opacity: 1;
+    max-height: 500px; // Use an estimated max height that accommodates your list
+    transition-delay: 0s; // Reset the delay for visibility when opening
+  }
+
+  .arrow {
+    margin-left: 8px;
+    display: inline-block;
+    transition: transform 500ms ease;
+  }
+
+  .arrow.open {
+    transform: rotate(180deg);
+  }
+
   img {
     width: 24px; // Adjust size as needed
     height: auto;
@@ -18,40 +87,3 @@
   }
 }
 
-.languageList {
-  @apply flex flex-col justify-center items-center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 100%;
-  left: -10px;
-  background: transparent; // Adjust to match your theme
-  border: 0 solid #ddd; // Minimal border, adjust as needed
-  border-radius: 4px;
-  width: max-content;
-  z-index: 10; // Ensure it's above other content
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Optional shadow for depth
-
-  li {
-    @apply flex justify-start items-center;
-    align-items: center;
-    padding: 8px 12px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-
-    &:hover {
-      background-color: transparent; // Highlight on hover
-    }
-
-    img {
-      margin-right: 8px; // Space between flag and text
-      width: 20px; // Adjust flag size as needed
-      height: auto;
-    }
-
-    span {
-      font-size: 14px; // Adjust text size as needed
-    }
-  }
-}

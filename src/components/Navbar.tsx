@@ -101,6 +101,9 @@ export default function Navbar() {
 												</Link>
 											)}
 										</Menu.Item>
+										<Menu.Item>
+											<LanguageSelector />
+										</Menu.Item>
 									</div>
 								</Menu.Items>
 							</Transition>
