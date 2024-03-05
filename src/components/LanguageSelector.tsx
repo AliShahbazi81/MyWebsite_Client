@@ -22,7 +22,7 @@ export default function LanguageSelector() {
 	useEffect(() => {
 		// Update the state based on window width
 		const handleResize = () => {
-			setIsMobile(window.innerWidth < 768); // Example breakpoint
+			setIsMobile(window.innerWidth < 1281); // Example breakpoint
 		};
 
 		// Set initial value
