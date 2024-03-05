@@ -3,7 +3,7 @@ import {ProjectData} from "@/types/projectTypes";
 export const data: ProjectData[] = [
 	{
 		id: "car-auction",
-		name: "projectCarAuctionTitle",
+		name: "projectTitleCarAuction",
 		explanationKey: "car-auction",
 		backend: ['DotNetCore'],
 		frontend: ['NextJs', 'Tailwind', 'MobX', "TypeScript"],

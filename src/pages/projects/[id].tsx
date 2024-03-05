@@ -96,7 +96,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({project}: { project: ProjectDa
 											project.backend ? (
 												<div className={'technologyEnv'}>
 													<h3 className={'projectTitle'}>
-														Backend :
+														{t('expertiseBackendTitle')}:
 													</h3>
 													<div className={'technologyIconEnv'}>
 														{project.backend.map((item, index) => (
@@ -119,7 +119,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({project}: { project: ProjectDa
 											project.frontend ? (
 												<div className={'technologyEnv'}>
 													<h3 className={'projectTitle'}>
-														Frontend :
+														{t('expertiseFrontendTitle')}:
 													</h3>
 													<div className={'technologyIconEnv'}>
 														{project.frontend.map((item, index) => (
@@ -142,7 +142,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({project}: { project: ProjectDa
 											project.database ? (
 												<div className={'technologyEnv'}>
 													<h3 className={'projectTitle'}>
-														Database :
+														{t('expertiseDatabaseTitle')}:
 													</h3>
 													<div className={'technologyIconEnv'}>
 														{project.database.map((item, index) => (
@@ -165,7 +165,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({project}: { project: ProjectDa
 											project.messageBus ? (
 												<div className={'technologyEnv'}>
 													<h3 className={'projectTitle'}>
-														Message Bus :
+														{t('expertiseMessageBusTitle')}:
 													</h3>
 													<div className={'technologyIconEnv'}>
 														{project.messageBus.map((item, index) => (
@@ -188,7 +188,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({project}: { project: ProjectDa
 											project.container ? (
 												<div className={'technologyEnv'}>
 													<h3 className={'projectTitle'}>
-														Container :
+														{t('expertiseContainerTitle')}:
 													</h3>
 													<div className={'technologyIconEnv'}>
 														{project.container.map((item, index) => (
@@ -211,7 +211,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({project}: { project: ProjectDa
 											project.tools ? (
 												<div className={'technologyEnv'}>
 													<h3 className={'projectTitle'}>
-														Tools :
+														{t('expertiseToolsTitle')}:
 													</h3>
 													<div className={'technologyIconEnv'}>
 														{project.tools.map((item, index) => (
@@ -234,7 +234,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({project}: { project: ProjectDa
 											project.versionControl ? (
 												<div className={'technologyEnv'}>
 													<h3 className={'projectTitle'}>
-														Version Control :
+														{t('expertiseVersionControlTitle')}:
 													</h3>
 													<div className={'technologyIconEnv'}>
 														{project.versionControl.map((item, index) => (
@@ -257,7 +257,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({project}: { project: ProjectDa
 											project.sourceCode ? (
 												<div className={'technologyEnv'}>
 													<h3 className={'projectTitle'}>
-														Source Code :
+														{t('expertiseSourceCodeTitle')}:
 													</h3>
 													<div className={'technologyIconEnv'}>
 														<Link href={project.sourceCode}>
