@@ -47,5 +47,19 @@
   "experienceParisaShafaqDescription": "Bei Parisa Shafaq konnte ich meine Expertise in der Integration von SQL Server, Datenbankdesign und Windows Forms-Anwendungen erheblich erweitern und gleichzeitig mein Verständnis für die Grundlagen der Softwareentwicklung, Teamarbeit, Codeoptimierung und Git-Versionierung vertiefen, was alles zu meinem umfassenden Fähigkeitsset in der Softwareentwicklung und Systemwartung beitrug.",
   "experienceParisaShafaqCountry": "Iran, Teheran",
   "experienceParisaShafaqPosition": "Vor Ort",
-  "experienceParisaShafaqRole": "Windows (WinForms, WPF) und Web-Entwickler"
+  "experienceParisaShafaqRole": "Windows (WinForms, WPF) und Web-Entwickler",
+
+  "educationWindsorDateFrom": "Sep 2022",
+  "educationWindsorDateTo": "Dez 2023",
+  "educationWindsorDescription": "Während meines Masterstudiums in Angewandter Informatik (MAC) verfeinerte ich fortgeschrittene Fähigkeiten in der Softwareentwicklung, wobei ich mich sowohl auf theoretische Konzepte als auch auf praktische Anwendungen konzentrierte. Dieses Programm stattete mich mit einem tiefen Verständnis der Prinzipien der Informatik aus, einschließlich Algorithmusdesign, Systemarchitektur und Datenanalyse. Ich nahm an anspruchsvollen Projekten teil, die das Problemlösen in realen Szenarien betonten und modernste Technologien nutzten. Meine Studien gipfelten in einem umfassenden Projekt, das meine Fähigkeit zur Innovation und Anwendung meines Wissens auf komplexe Herausforderungen demonstrierte.",
+  "educationWindsorCountry": "Kanada, Windsor",
+  "educationWindsorPosition": "Präsenz",
+  "educationWindsorRole": "Master of Applied Computing (MAC) - Informatik",
+
+  "educationAzadUniversityDateFrom": "Sep 2015",
+  "educationAzadUniversityDateTo": "Jun 2019",
+  "educationAzadUniversityDescription": "In meinem Bachelor-Studium der Softwaretechnik entwickelte ich eine solide Grundlage in den Prinzipien des Engineerings von Softwaresystemen, von der Konzeption bis zur Implementierung. Dieses umfassende Programm deckte eine breite Palette von Themen ab, einschließlich Softwareentwicklungslebenszyklen, Qualitätssicherung und Datenbankmanagement. Durch praktische Projekte und Teamarbeit erwarb ich praktische Erfahrungen in der Entwicklung robuster, skalierbarer und effizienter Softwarelösungen. Meine Ausbildung betonte nicht nur technische Kompetenz, sondern auch die Bedeutung ethischer Überlegungen und effektiver Kommunikation im Bereich der Softwaretechnik.",
+  "educationAzadUniversityCountry": "Iran, Teheran",
+  "educationAzadUniversityPosition": "Präsenz",
+  "educationAzadUniversityRole": "Softwaretechnik"
 }

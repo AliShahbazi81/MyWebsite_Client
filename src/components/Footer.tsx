@@ -9,8 +9,7 @@ export default function Footer() {
 				{/* Social links and icons */}
 				<div className={'socialEnv'}>
 					<h3 className={'socialExplanation'}>
-						You think I can help you with a project?
-						You can contact me via links down below!
+						If you're interested in collaborating on a project or require my expertise, please don't hesitate to reach out using the contact options below.
 					</h3>
 					{/* Icons */}
 					<div id={"contact"} className={'socialIconsEnv'}>

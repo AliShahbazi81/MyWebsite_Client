@@ -64,23 +64,23 @@ export default function MyExperience() {
 						{[
 							  {
 									companyName: "University of Windsor (Master)",
-									dateFrom: "Sep 2022",
-									dateTo: "Dec 2023",
-									description: "During my Master of Applied Computing (MAC), I honed advanced skills in software development, focusing on both theoretical concepts and practical applications. This program equipped me with a deep understanding of computer science principles, including algorithm design, system architecture, and data analysis. I engaged in rigorous projects that emphasized problem-solving in real-world scenarios, leveraging cutting-edge technologies. My studies culminated in a comprehensive project that demonstrated my ability to innovate and apply my knowledge to complex challenges.",
-									country: "Canada, Windsor",
-									position: "In-Person",
-									role: "Master of Applied Computing (MAC) - Computer Science",
+									dateFrom: "educationWindsorDateFrom",
+									dateTo: "educationWindsorDateTo",
+									description: "educationWindsorDescription",
+									country: "educationWindsorCountry",
+									position: "educationWindsorPosition",
+									role: "educationWindsorRole",
 									image: true,
 									imageUrl: "UniversityOfWindsor"
 							  },
 							  {
 									companyName: "Azad University (Bachelor)",
-									dateFrom: "Sep 2015",
-									dateTo: "Jun 2019",
-									description: "In my Bachelor's degree in Software Engineering, I developed a solid foundation in the principles of engineering software systems, from design to implementation. This comprehensive program covered a wide range of topics, including software development life cycles, quality assurance, and database management. Through hands-on projects and collaborative teamwork, I acquired practical experience in developing robust, scalable, and efficient software solutions. My education emphasized not only technical proficiency but also the importance of ethical considerations and effective communication in the field of software engineering.",
-									country: "Iran, Tehran",
-									position: "In-Person",
-									role: "Software Engineering",
+									dateFrom: "educationAzadUniversityDateFrom",
+									dateTo: "educationAzadUniversityDateTo",
+									description: "educationAzadUniversityDescription",
+									country: "educationAzadUniversityCountry",
+									position: "educationAzadUniversityPosition",
+									role: "educationAzadUniversityRole",
 									image: true,
 									imageUrl: "AzadUniversity"
 							  }
