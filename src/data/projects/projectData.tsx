@@ -3,7 +3,7 @@ import {ProjectData} from "@/types/projectTypes";
 export const data: ProjectData[] = [
 	{
 		id: "car-auction",
-		name: "Car Auction",
+		name: "projectCarAuctionTitle",
 		explanationKey: "car-auction",
 		backend: ['DotNetCore'],
 		frontend: ['NextJs', 'Tailwind', 'MobX', "TypeScript"],
@@ -16,7 +16,7 @@ export const data: ProjectData[] = [
 	},
 	{
 		id: "e-commerce",
-		name: "E-Commerce",
+		name: "projectECommerceTitle",
 		explanationKey: 'e-commerce',
 		backend: ['DotNetCore'],
 		database: ['Redis', 'SqlServer'],
@@ -26,7 +26,7 @@ export const data: ProjectData[] = [
 	},
 	{
 		id: "ride-share",
-		name: "RideShare - (Startup)",
+		name: "projectTitleRideShare",
 		explanationKey: 'ride-share',
 		backend: ['DotNetCore', 'Python'],
 		frontend: ['React', 'Redux', 'Tailwind', 'TypeScript', 'SCSS'],
@@ -38,7 +38,7 @@ export const data: ProjectData[] = [
 	},
 	{
 		id: "e-learning",
-		name: "E-Learning Website",
+		name: "projectTitleELearning",
 		explanationKey:'e-learning',
 		backend: ['Python', 'Django'],
 		frontend: ['Html', 'Css', 'JavaScript'],
@@ -48,7 +48,7 @@ export const data: ProjectData[] = [
 	},
 	{
 		id: "user-activity",
-		name: "User's Activity",
+		name: "projectTitleUserActivity",
 		explanationKey: 'user-activity',
 		backend: ['DotNetCore'],
 		frontend: ['React', 'MobX', 'Semantic-UI', 'TypeScript'],
@@ -59,7 +59,7 @@ export const data: ProjectData[] = [
 	},
 	{
 		id: "cinema-ticket",
-		name: "Cinema Ticket",
+		name: "projectTitleCinemaTicket",
 		explanationKey: 'cinema-ticket',
 		backend: ['DotNetCore'],
 		frontend: ['React', 'Redux', 'MaterialUI', 'TypeScript'],

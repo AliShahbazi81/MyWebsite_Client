@@ -21,12 +21,12 @@
   "expertiseDescriptionBackend": "Expert in <1>.NET</1> with a strong focus on robust, scalable backends, complemented by proficiency in <3>Django</3> and <5>Spring Boot</5>.",
   "expertiseDescriptionFrontend": "Skilled in <1>React</1>, <3>Next.js</3>, and <5>TypeScript</5> creating responsive, user-focused interfaces that seamlessly integrate with dynamic backends.",
   "expertiseDescriptionDatabase": "Proficient with <1>SQL Server</1>, <3>PostgreSQL</3>, <5>MongoDB</5>, optimizing data storage and retrieval for high-performance, scalable applications.",
-  
-  "projectTitleCarAuction": "Car Auction",
+
+  "projectCarAuctionTitle": "Car Auction",
   "projectDescriptionCarAuction": "Carsties Auctions offers an online platform for car auctions with microservices architecture, enabling listings, bidding, and auction management in a user-friendly interface.",
   "projectTitleECommerce": "E-Commerce",
   "projectDescriptionECommerce": "The e-commerce application is a scalable, backend-focused online shopping platform for product auctioning, featuring clean architecture for efficient maintenance.",
-  "projectTitleRideShare": "RideShare",
+  "projectTitleRideShare": "RideShare - (Startup)",
   "projectDescriptionRideShare": "The RideShare app is a backend-driven platform, utilizing SOLID principles and n-tier architecture, to automatically connect applicants with drivers, including payment functionality.",
   "projectTitleELearning": "E-Learning",
   "projectDescriptionELearning": "The Online Learning app offers a platform where users can purchase packages to access and complete online tutorials and courses, earning certifications upon completion.",
@@ -34,6 +34,7 @@
   "projectDescriptionUserActivity": "The Activity Application is a .NET Core and React-based platform for creating, sharing, and joining activities, featuring user interaction and participation management.",
   "projectTitleCinemaTicket": "Cinema Ticket",
   "projectDescriptionCinemaTicket": "Cinema Ticket is a full-stack web application using React and ASP.NET Core, enabling users to buy tickets and administrators to manage listings and sales.",
+  
   
   "projectCarAuctionIntro": "Introduction to Carsties Auctions",
   "projectCarAuctionIntroDescription": "The <1>Carsties Auctions</1> platform is an innovative online car auction system that transforms the dynamics of vehicle trading. With a focus on creating a seamless, efficient, and transparent buying and selling experience, the project is rooted in a <3>microservices architecture</3>. This approach harnesses a variety of advanced technologies and methodologies to ensure the platform's scalability, performance, and user satisfaction.",
@@ -45,7 +46,8 @@
   "projectCarAuctionTechnologicalDescription": "On the technological front, the project leverages <1>React</1> and <2>Next.js</2> to craft a dynamic and responsive frontend experience. The backend architecture is powered by <3>.NET 7</3>, with <4>Entity Framework Core<4> for ORM, <5>MassTransit</5> coupled with <6>RabbitMQ</6> for efficient messaging, and <7>gRPC</7> for seamless inter-service communication. Data storage solutions include <8>PostgreSQL</8> and <9>MongoDB</9>, addressing both structured and bid management data needs. The entire infrastructure is containerized using <10>Docker</10>, with <11>Docker Compose</11> handling orchestration to simplify deployment and scaling operations.",
   "projectCarAuctionImpact": "Project Impact and Personal Contributions",
   "projectCarAuctionImpactDescription": "This project not only showcases the application of cutting-edge technologies in real-world scenarios but also highlights my comprehensive skill set in <1>architecting</1>, <2>developing</2>, and <3>deploying</3> complex web applications. My contributions spanned across all phases of the project - from initial design and <4>architecture</4> to <5>development</5>, and <6>deployment</6>, ensuring a robust, scalable, and user-centric platform. Through Carsties Auctions, I have demonstrated an adeptness in navigating the complexities of <7>software engineering</7>, pushing the boundaries of traditional web applications, and delivering a product that stands as a benchmark for quality and innovation in the online car auction space.",
-  
+
+  "projectCinemaTicketTitle": "Cinema Ticket",
   "projectCinemaTicketIntro": "Introduction to Cinema Ticket",
   "projectCinemaTicketIntroDescription": "The <1>Cinema Ticket</1> project is a full-stack web application designed to enhance the movie-going experience for cinema enthusiasts. It allows users to browse and purchase cinema tickets for upcoming movies seamlessly, while administrators can manage showtimes, movie listings, and ticket sales efficiently. Built using <2>React</2> for the frontend and <3>ASP.NET Core</3> for the backend, the application ensures a responsive, scalable, and secure platform for all users.",
   "projectCinemaTicketFeatures": "Core Features",

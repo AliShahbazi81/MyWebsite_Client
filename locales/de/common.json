@@ -30,7 +30,7 @@
   "projectDescriptionRideShare": "Die RideShare-App ist eine vom Backend angetriebene Plattform, die unter Nutzung der SOLID-Prinzipien und einer n-Schichten-Architektur automatisch Fahranwärter mit Fahrern verbindet, einschließlich Zahlungsfunktionen.",
   "projectTitleELearning": "E-Learning",
   "projectDescriptionELearning": "Die Online-Lern-App bietet eine Plattform, auf der Nutzer Pakete erwerben können, um Zugang zu Online-Tutorials und Kursen zu erhalten und nach Abschluss Zertifizierungen zu verdienen.",
-  "projectTitleUserActivity": "Nutzeraktivitäten",
+  "projectTitleUserActivity": "Aktivitätsanwendung",
   "projectDescriptionUserActivity": "Die Aktivitäten-App ist eine auf .NET Core und React basierende Plattform zum Erstellen, Teilen und Teilnehmen an Aktivitäten, mit Funktionen zur Verwaltung von Nutzerinteraktionen und -beteiligungen.",
   "projectTitleCinemaTicket": " Kinoticket",
   "projectDescriptionCinemaTicket": "Kinoticket ist eine Full-Stack-Webanwendung, die mit React und ASP.NET Core entwickelt wurde, und ermöglicht es den Nutzern, Tickets zu kaufen, während Administratoren Anzeigen und Verkäufe verwalten können.",

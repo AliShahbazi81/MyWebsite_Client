@@ -14,6 +14,7 @@ import UserActivity from "@/components/projects/explanations/UserActivity";
 import CinemaTicket from "@/components/projects/explanations/CinemaTicket";
 import NotFound from "@/app/not-found";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
 
 interface ProjectPageProps {
 	project: Omit<ProjectData, 'explanation'>;
@@ -70,6 +71,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 const ProjectPage: React.FC<ProjectPageProps> = ({project}: { project: ProjectData }) => {
 	const ExplanationComponent = ExplanationComponents[project.explanationKey];
+	const {t} = useTranslation('common');
 
 	return (
 		<Layout title={project?.name} description={"Project Detail"}>
@@ -84,7 +86,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({project}: { project: ProjectDa
 											<p className={'back-button'}>{"<"}</p>
 										</Link>
 										<h2 className={'title self-center'}>
-											{project.name}
+											{t(project.name)}
 										</h2>
 										{ExplanationComponent ? <ExplanationComponent/> : null}
 									</div>
