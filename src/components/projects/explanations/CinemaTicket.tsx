@@ -65,7 +65,7 @@ export default function CinemaTicket() {
 				title={"Cinema Ticket Diagram"}
 			/>
 
-			<h2 className={'projectDetailHeading'}>{t('personalCinemaTicketPersonalContributions')}</h2>
+			<h2 className={'projectDetailHeading'}>{t('projectCinemaTicketPersonalContributions')}</h2>
 			<p className={'projectDetailDescription'}>
 				<Trans
 					i18nKey={'projectCinemaTicketPersonalContributionsDescription'}
