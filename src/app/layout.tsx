@@ -11,11 +11,12 @@ export const metadata: Metadata = {
 	description: "Ali Shahbazi's portfolio",
 };
 
-export default function RootLayout({
-									   children,
-								   }: Readonly<{
-	children: React.ReactNode;
-}>) {
+export default function RootLayout(
+	{
+		children,
+	}: Readonly<{
+		children: React.ReactNode;
+	}>) {
 	return (
 		<html lang="en">
 		<body className={inter.className}>

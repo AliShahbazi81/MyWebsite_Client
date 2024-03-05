@@ -62,18 +62,18 @@ export default function LanguageSelector() {
 							locale={language.code}
 							scroll={false}
 						>
-								<span
-									onClick={(e) => {
-										e.stopPropagation(); // Prevent the dropdown from toggling when a language is selected
-										setIsOpen(false);
-									}}>
+							<span
+								onClick={(e) => {
+									e.stopPropagation(); // Prevent the dropdown from toggling when a language is selected
+									setIsOpen(false);
+								}}>
 									  <Image
 										  src={language.flagUrl}
 										  alt={language.name}
 										  width={30}
 										  height={30}
 									  />
-									</span>
+							</span>
 						</Link>
 					</li>
 				))}

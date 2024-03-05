@@ -9,6 +9,7 @@ import MyExperience from "@/pages/projects/MyExperience";
 import ContactMe from "@/pages/projects/ContactMe";
 import {useTranslation} from "next-i18next";
 
+
 export default function HomePageImage() {
 	  const {t} = useTranslation('common');
 
