@@ -87,9 +87,9 @@ export default function MyExpertise() {
 											<Trans
 												i18nKey={card.description}
 												components={{
-													1: <span className="text-primary"><b/></span>,
-													3: <span className="text-primary"><b/></span>,
-													5: <span className="text-primary"><b/></span>,
+													1: <span className="text-primary font-normal"><b/></span>,
+													3: <span className="text-primary font-normal"><b/></span>,
+													5: <span className="text-primary font-normal"><b/></span>,
 												}}
 											/>
 										</p>

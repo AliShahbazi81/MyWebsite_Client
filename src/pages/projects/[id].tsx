@@ -74,7 +74,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({project}: { project: ProjectDa
 	const {t} = useTranslation('common');
 
 	return (
-		<Layout title={project?.name} description={"Project Detail"}>
+		<Layout title={t(project?.name)} description={"Project Detail"}>
 			<div className={'divBackground'}>
 				<div className={'projectDetailEnv'}>
 					{

@@ -7,6 +7,7 @@ const roboto = Inter({
 	subsets: ['latin'],
 })
 
+
 function MyApp({Component, pageProps}: AppProps) {
 	return (
 		<main className={roboto.className}>

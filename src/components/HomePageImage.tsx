@@ -16,11 +16,10 @@ export default function HomePageImage() {
 			<>
 				  <div id={"home"} className={'homePageEnv'}>
 						<Image
-							  className={'homePageImage'}
+							  className={'homePageImage object-cover'}
 							  src="/images/BackgroundImage.png"
 							  alt="BackgroundImage"
 							  layout={"fill"}
-							  objectFit={"cover"}
 							  objectPosition={"center"}
 							  quality={100}
 						/>
