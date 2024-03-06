@@ -23,8 +23,8 @@ export default function ProjectCard(
 		github,
 		projectDetailUrl,
 	}: Props) {
-	const router = useRouter(); 
-	const { locale } = router;
+	const router = useRouter();
+	const {locale} = router;
 	return (
 		<div className={'projectCardEnv'}>
 			<Link
@@ -44,9 +44,16 @@ export default function ProjectCard(
 			</Link>
 			<div className={'projectCardBodyEnv'}>
 				<div className={'projectCardBodyHeader'}>
-					<h2 className={'projectTitle'}>
-						{projectName}
-					</h2>
+					<Link href={`/projects/${projectDetailUrl}`} locale={locale}>
+						<span>
+							<h2 className={'projectTitle'}>
+								{projectName}
+							</h2>
+							<span className={'projectArrow'}>
+									➜
+							</span>
+						</span>
+					</Link>
 					{github ? (
 						<Link href={github}>
 							<Image
@@ -64,11 +71,6 @@ export default function ProjectCard(
 				</h6>
 				<div className={'break-line'}></div>
 				<ProjectTechnology techName={techName}/>
-				<Link href={`/projects/${projectDetailUrl}`} locale={locale}>
-						<span className={'projectViewMoreNav'}>
-							<span className={"projectIcon projectArrow"}></span>
-						</span>
-				</Link>
 			</div>
 		</div>
 	)

@@ -97,19 +97,21 @@ body {
     height: 1px;
     width: 100%;
     background-image: linear-gradient(to right,
-    rgba(var(--text-secondary-rgb), 0.2), /* Start with 20% opacity */
-    rgba(var(--text-secondary-rgb), 1) 25%, /* Transition to 100% opacity */
-    rgba(var(--text-secondary-rgb), 1) 75%, /* Keep 100% opacity to the middle */
-    rgba(var(--text-secondary-rgb), 0.2)); /* End with 20% opacity */
+    rgba(var(--text-secondary-rgb), 0.01), /* Start with 20% opacity */
+    rgba(var(--text-secondary-rgb), 0.5) 10%, /* Transition to 100% opacity */
+    rgba(var(--text-secondary-rgb), 0.7) 30%, /* Transition to 100% opacity */
+    rgba(var(--text-secondary-rgb), 1) 50%, /* Transition to 100% opacity */
+    rgba(var(--text-secondary-rgb), 0.7) 70%, /* Transition to 100% opacity */
+    rgba(var(--text-secondary-rgb), 0.01)); /* End with 20% opacity */
 }
 
 
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Blur card -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .blurEnv {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(10px);
     border-radius: 13px;
     margin: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
 }
 

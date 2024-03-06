@@ -9,20 +9,29 @@
   max-width: 1920px;
 }
 
-.projectViewMoreNav:hover .projectIcon.projectArrow {
-  background: white;
-  transform: translate(1rem, 0);
-}
-
 .projectCardBodyEnv {
   @apply flex flex-col;
-  
-  .projectCardBodyHeader{
+
+  .projectCardBodyHeader {
     @apply flex justify-between items-center;
+    span{
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none; /* Optional: Removes underline from links */
+    }
+    span:hover .projectArrow { /* Apply hover on the anchor tag to move the arrow */
+      transform: translateX(10px); /* Adjust as needed */
+    }
   }
 }
-.projectImage{
-  @apply rounded-2xl;
+
+.projectImage {
+  @apply rounded-2xl transition-opacity duration-700 ease-in-out;
+  opacity: 0.20;
+
+  :hover .projectArrow { /* Apply hover on the anchor tag to move the arrow */
+    transform: translateX(10px); /* Adjust as needed */
+  }
 }
 
 .blurEnv {
@@ -32,7 +41,14 @@
 }
 
 .projectTitle {
-  @apply text-white font-bold;
+  @apply text-white font-bold inline-flex items-center cursor-pointer;
+  margin-right: 2px;
+  
+}
+
+.projectArrow{
+  @apply ml-2;
+  transition: transform 300ms ease;
 }
 
 .projectBodyDetail {
@@ -49,11 +65,6 @@
   font-size: min(2.2vw, 20px);
 }
 
-.projectViewMoreNav {
-  @apply relative flex items-end justify-end cursor-pointer;
-}
-
-
 .projectCardEnv:hover .link-text {
   opacity: 0;
 }
@@ -62,31 +73,18 @@
   opacity: 1;
 }
 
+.projectCardEnv:hover .projectImage {
+  opacity: 1;
+}
+.projectCardEnv:hover .projectArrow {
+  transform: translateX(10px);
+  transition: transform 300ms ease-in-out;
+}
+
 .projectIcon {
   @apply ml-5 mb-5;
   @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
   background: white;
-
-  &.projectArrow {
-    @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
-    left: -0.5rem;
-    right: -0.5rem;
-    width: 1.125rem;
-    height: 0.125rem;
-    background: none;
-
-    &::before {
-      position: absolute;
-      content: '';
-      top: -0.25rem;
-      right: 0.0625rem;
-      width: 0.625rem;
-      height: 0.625rem;
-      border-top: 0.125rem solid #fff;
-      border-right: 0.125rem solid #fff;
-      transform: rotate(45deg);
-    }
-  }
 }
 
 
@@ -101,91 +99,83 @@
     }
     .projectImage {
       @apply w-full h-full object-cover mb-3 transition-all duration-300;
+      opacity: 1 !important;
     }
     .projectTechnologyEnv {
       @apply mb-0 justify-center items-center transition-all duration-300;
     }
-    .projectViewMoreNav {
-      @apply opacity-0 m-0;
-      display: none !important;
+    .break-line {
+      @apply mb-2 mt-2 opacity-100;
+    }
+    .projectBodyDetail {
+      @apply mt-2 mb-2 leading-3 font-light;
+
+    }
+  }
+  @media (min-width: 571px) and (max-width: 978px) {
+    .projectEnv {
+      @apply transition-all;
+    }
+    .projectCardEnv {
+      @apply flex justify-center items-start w-full h-full overflow-hidden p-3 transition-all duration-300;
+
+      .projectCardBodyEnv {
+        @apply mr-3 mt-0 ml-6 transition-all duration-300;
+
+        .projectCardBodyHeader {
+          @apply mb-4;
+        }
+
+        .projectBodyDetail {
+          @apply mt-2 mb-2 leading-6 font-light;
+        }
+      }
+    }
+    .projectImage {
+      @apply object-cover;
+      opacity: 1 !important;
+      height: 100%;
+    }
+    .projectTechnologyEnv {
+      @apply mt-1 justify-start transition-all duration-300 justify-self-end;
+      .projectTechnology {
+        @apply mt-5;
+        font-size: min(2vw, 12px);
+      }
+    }
+  }
+  @media (min-width: 979px) and (max-width: 1280px) {
+    .blurEnv {
+      max-width: 45%;
+      @apply flex-wrap transition-all duration-300;
+    }
+    .projectEnv {
+      @apply flex justify-center flex-wrap p-1 transition-all duration-300;
+    }
+    .projectCardBodyEnv {
+      @apply ml-7 mr-7 mb-4 mt-4 transition-all duration-300;
+      .projectBodyDetail {
+        @apply m-0;
+      }
+    }
+    .projectCardEnv {
+      @apply flex flex-col justify-center items-center overflow-hidden w-full transition-all duration-300;
+    }
+    .projectImage {
+      @apply mt-5;
+      opacity: 1 !important;
+      max-width: 90%;
+      max-height: 90%;
+    }
+    .projectTechnologyEnv {
+      @apply flex justify-center items-center mt-1 transition-all duration-300;
+      .projectTechnology {
+        font-size: min(2vw, 12px);
+      }
     }
     .break-line {
       @apply mb-2 mt-2 opacity-100;
     }
-    .projectBodyDetail{
-        @apply mt-2 mb-2 leading-3 font-light;
-        
-    }
-  }
-  @media (min-width: 571px) and (max-width: 978px) {
-      .projectEnv{
-        @apply transition-all;
-      }
-      .projectCardEnv {
-        @apply flex justify-center items-start w-full h-full overflow-hidden p-3 transition-all duration-300;
-
-        .projectCardBodyEnv {
-          @apply mr-3 mt-0 ml-6 transition-all duration-300;
-          
-          .projectCardBodyHeader{
-            @apply mb-4;
-          }
-
-          .projectBodyDetail {
-            @apply mt-2 mb-2 leading-6 font-light;
-          }
-        }
-      }
-      .projectImage {
-        @apply object-cover;
-        aspect-ratio: 1;
-        height: 100%;
-      }
-      .projectTechnologyEnv {
-        @apply mt-1 justify-start transition-all duration-300 justify-self-end;
-        .projectTechnology {
-          @apply mt-5;
-          font-size: min(2vw, 12px);
-        }
-      }
-      .projectViewMoreNav {
-        @apply opacity-0 m-0;
-      }
-  }
-  @media (min-width: 979px) and (max-width: 1280px) {
-      .blurEnv {
-        max-width: 45%;
-        @apply flex-wrap transition-all duration-300;
-      }
-      .projectEnv {
-        @apply flex justify-center flex-wrap p-1 transition-all duration-300;
-      }
-      .projectCardBodyEnv {
-        @apply ml-7 mr-7 mb-4 mt-4 transition-all duration-300;
-        .projectBodyDetail {
-          @apply m-0;
-        }
-      }
-      .projectCardEnv {
-        @apply flex flex-col justify-center items-center overflow-hidden w-full transition-all duration-300;
-      }
-      .projectImage {
-        @apply mt-5;
-        max-width: 90%;
-        max-height: 90%;
-      }
-      .projectTechnologyEnv {
-        @apply flex justify-center items-center mt-1 transition-all duration-300;
-        .projectTechnology {
-          font-size: min(2vw, 12px);
-        }
-      }
-      .projectViewMoreNav {
-        @apply opacity-0 m-0;
-      }
-      .break-line {
-        @apply mb-2 mt-2 opacity-100;
-      }
   }
   @media (min-width: 1281px) {
     .blurEnv {
@@ -216,9 +206,6 @@
       .projectTechnology {
         font-size: min(2vw, 14px);
       }
-    }
-    .projectViewMoreNav {
-      @apply opacity-100 pb-0;
     }
     .break-line {
       @apply mb-2 mt-2 opacity-100;
