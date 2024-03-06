@@ -93,10 +93,11 @@
 @layer components {
   @media (max-width: 570px) {
     .projectEnv {
-      @apply p-6 transition-all duration-300;
+      @apply p-2 transition-all duration-300;
     }
     .projectCardEnv {
-      @apply flex flex-col justify-center items-center w-full h-full overflow-hidden p-3 transition-all duration-300;
+      @apply flex flex-col justify-center items-center w-full h-full overflow-hidden transition-all duration-300;
+      padding: 1.3rem;
     }
     .projectImage {
       @apply w-full h-full object-cover mb-3 transition-all duration-300;
@@ -106,6 +107,7 @@
     }
     .projectViewMoreNav {
       @apply opacity-0 m-0;
+      display: none !important;
     }
     .break-line {
       @apply mb-2 mt-2 opacity-100;

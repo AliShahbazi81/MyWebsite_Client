@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import CardHeader from "@/components/cards/CardHeader";
 import TagElement from "@/components/cards/TagElement";
 import DescriptionLine from "@/components/cards/DescriptionLine";
@@ -38,22 +38,32 @@ const cardData = [
 
 export default function MyExpertise() {
 	const [currentIndex, setCurrentIndex] = useState(0);
-	const [direction, setDirection] = useState('prev');
+	const [direction, setDirection] = useState('right');
+	const [isMobile, setIsMobile] = useState(false);
 	const {t} = useTranslation('common');
 
 	const totalCards = cardData.length;
 
 	const nextCard = () => {
 		setCurrentIndex((prevIndex) => (prevIndex + 1) % totalCards);
-		setDirection('next');
+		setDirection('right');
 	};
 
 	const prevCard = () => {
-		setCurrentIndex((prevIndex) => {
-			return prevIndex - 1 < 0 ? totalCards - 1 : prevIndex - 1;
-		});
-		setDirection('prev');
+		setCurrentIndex((prevIndex) => (prevIndex - 1 < 0 ? totalCards - 1 : prevIndex - 1));
+		setDirection('left');
 	};
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsMobile(window.innerWidth < 768);
+		};
+		handleResize();
+		window.addEventListener('resize', handleResize);
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
 
 	const determineVisibleCards = () => {
 		let cardsToShow = [];
@@ -64,15 +74,15 @@ export default function MyExpertise() {
 		return cardsToShow;
 	};
 
-	const visibleCards = determineVisibleCards();
+	const visibleCards = isMobile ? cardData : determineVisibleCards();
 	return (
 		<div className={'cardEnv'}>
 			<TransitionGroup className="cardTransition">
 				{visibleCards.map((card) => (
 					<CSSTransition
 						key={card.id}
-						timeout={250}
-						classNames={direction === 'next' ? "slide" : "slide-prev"}
+						timeout={700}
+						classNames={direction === 'right' ? 'slideRight' : 'slideLeft'}
 					>
 						<div className={`cardExpertise ${card.id + "Card"}`}>
 							<CardHeader

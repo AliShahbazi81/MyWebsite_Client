@@ -13,11 +13,16 @@
 
 .cardEnv {
   @apply flex flex-col items-center justify-start;
+  position: relative;
+  overflow: hidden; /* Hide the sliding elements */
 }
 
 
 .cardExpertise {
   @apply z-20 mb-4;
+  position: relative;
+  width: 100%;
+  top: 0;
 }
 
 .cardHeader {
@@ -59,6 +64,109 @@
   width: 2px;
 }
 
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateX(50%);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(25%);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    transform: translateX(-50%);
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateX(-50%);
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    transform: translateX(50%);
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+
+.slideRight-enter-active {
+  animation: slideInFromRight 0.7s linear forwards;
+}
+
+.slideRight-exit-active {
+  animation: slideOutToLeft 0.7s linear forwards;
+}
+
+.slideLeft-enter-active {
+  animation: slideInFromLeft 0.7s linear forwards;
+}
+
+.slideLeft-exit-active {
+  animation: slideOutToRight 0.7s linear forwards;
+}
+
+
 .technologyEnv {
   @apply flex flex-col items-start justify-start;
 }
@@ -79,48 +187,6 @@
 
 .navigation {
   @apply flex justify-center items-center w-full z-50;
-}
-
-/* Entering for the next card */
-.slide-enter {
-  transform: translateX(100%);
-  opacity: 0;
-}
-.slide-enter-active {
-  transform: translateX(0);
-  opacity: 1;
-  transition: transform 400ms, opacity 400ms;
-}
-
-/* Exiting for the next card */
-.slide-exit {
-  opacity: 1;
-}
-.slide-exit-active {
-  transform: translateX(-100%);
-  opacity: 0;
-  transition: transform 400ms, opacity 400ms;
-}
-
-/* Entering for the previous card */
-.slide-prev-enter {
-  transform: translateX(-100%);
-  opacity: 0;
-}
-.slide-prev-enter-active {
-  transform: translateX(0);
-  opacity: 1;
-  transition: transform 800ms, opacity 800ms;
-}
-
-/* Exiting for the previous card */
-.slide-prev-exit {
-  opacity: 1;
-}
-.slide-prev-exit-active {
-  transform: translateX(100%);
-  opacity: 0;
-  transition: transform 400ms, opacity 400ms;
 }
 
 

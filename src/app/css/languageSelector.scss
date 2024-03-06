@@ -17,7 +17,7 @@
   }
 
   .languageList {
-    @apply flex flex-col justify-center items-center pt-1;
+    @apply flex flex-col justify-center items-center pt-1 bg-background/95 backdrop-blur-3xl;
     list-style: none;
     margin: 0;
     position: absolute;
@@ -27,7 +27,6 @@
     transition: visibility 5s 300ms, opacity 300ms, max-height 300ms ease-in-out;
     top: 100%;
     left: -10px;
-    background: transparent;
     border-radius: 4px;
     width: 5rem;
     z-index: 10; // Ensure it's above other content
