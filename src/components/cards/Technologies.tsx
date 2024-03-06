@@ -9,12 +9,11 @@ export default function Technologies({ keyword }: Props) {
 			<div className="flex flex-wrap justify-center items-center">
 				  <div className="technologyIcons">
 						<Image
+							className={'technologyIcon'}
 							  src={`/images/keywords/${keyword}.png`}
 							  alt={`${keyword}`}
-							  layout={"responsive"}
 							  width={40}
 							  height={40}
-							  objectFit="cover"
 							  title={`${keyword}`}
 						/>
 				  </div>

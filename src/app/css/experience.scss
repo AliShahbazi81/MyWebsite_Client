@@ -13,17 +13,17 @@
       width: 60%;
 
       .expHeader {
-        font-size: min(2vw, 18px);
+        font-size: min(2.5vw, 18px);
       }
 
       .headerCountry {
         @apply flex items-center justify-start ml-5 text-gray-400;
-        font-size: min(1.6vw, 14px);
+        font-size: min(2.5vw, 14px);
       }
     }
 
     .expDate {
-      font-size: min(2vw, 18px);
+      font-size: min(2.4vw, 18px);
     }
   }
 
@@ -34,8 +34,6 @@
     overflow: hidden;
 
     .descriptionEnv {
-      @apply m-6 mb-8;
-      
       .projectTitle{
         font-size: min(3vw, 18px);
       }
@@ -43,7 +41,7 @@
       .experienceDescription {
         @apply font-light;
         width: 90%;
-        font-size: min(2vw, 16px);
+        font-size: min(3vw, 16px);
       }
     }
 
@@ -71,7 +69,10 @@
         }
 
         .experienceDescription{
-          @apply text-base leading-5 ;
+          @apply leading-6 mt-6 ml-6 mb-6;
+        }
+        .projectTitle{
+          @apply ml-6 mt-6;
         }
       }
     }
@@ -86,7 +87,10 @@
           width: 70%;
 
           .experienceDescription{
-            @apply  leading-6;
+            @apply leading-6 mt-6 ml-6 mb-6;
+          }
+          .projectTitle{
+            @apply ml-6 mt-6;
           }
         }
       }
@@ -103,6 +107,10 @@
       }
       .bodyEnv {
         width: 50%;
+        
+        .descriptionEnv{
+          @apply m-6 mb-8;
+        }
       }
       
       .experienceDescription{

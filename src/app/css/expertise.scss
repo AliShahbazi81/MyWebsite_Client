@@ -187,6 +187,23 @@
     }
     .cardTransition {
       width: 90%;
+      
+      .cardTitle{
+        @apply text-wrap;
+        font-size: min(3vw, 16px);
+      }
+      
+      .descriptionText{
+        font-size: min(3vw, 14px);
+      }
+      
+      .element{
+        font-size: min(3vw, 12px);
+      }
+      
+      .technologyTitle{
+        font-size: min(3vw, 16px);
+      }
     }
     .cardExpertise .break-line {
       @apply opacity-0;
@@ -196,12 +213,27 @@
     }
     .technologyIcons {
       @apply w-9 h-9 mb-5;
+      
+      .technologyIcon{
+        width: 80%;
+        height: 80%;
+      }
     }
   }
   @media (min-width: 1024px) and (max-width: 1280px) {
     .cardEnv {
       @apply p-16;
+
+      .cardTitle{
+        @apply text-wrap;
+        font-size: min(3vw, 22px);
+      }
+
+      .descriptionText{
+        font-size: min(3vw, 16px);
+      }
     }
+    
     .cardTransition {
       @apply w-full h-full;
     }

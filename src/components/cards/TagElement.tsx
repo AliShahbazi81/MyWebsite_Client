@@ -19,9 +19,9 @@ export default function TagElement({softwareDevelopment, backend, frontend, data
 	  }
 	  return(
 			<div className={'flex items-start justify-start'}>
-				  <h1 className={'element'}>
+				  <h6 className={'element'}>
 						{findElement()}
-				  </h1>
+				  </h6>
 			</div>
 	  )
 }

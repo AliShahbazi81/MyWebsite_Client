@@ -18,8 +18,9 @@
     }
 
     .socialExplanation {
-      @apply mt-5 text-base font-light whitespace-pre-wrap;
+      @apply mt-5 text-base font-bold whitespace-pre-wrap text-center leading-7;
       font-size: min(3vw, 20px);
+      
     }
 
     .socialIconsEnv {
@@ -69,13 +70,13 @@
 }
 
 @layer components {
-  @media (min-width: 1800px) {
+  @media (min-width: 1700px) {
     .footerEnv {
       @apply flex justify-center items-center;
 
       .footer {
         @apply flex flex-col flex-wrap p-12 self-center;
-        height: 55vh;
+        height: 60vh;
 
         .socialEnv {
           @apply flex flex-col items-center justify-between flex-wrap pl-12 pr-8 mb-8;
@@ -102,7 +103,7 @@
             width: 70%;
 
             .referenceInfoEnv {
-              @apply flex justify-center items-center pb-8 pr-6 ;
+              @apply flex justify-center items-start pb-8 pr-6 ;
 
               .referenceText {
                 width: 70%;
@@ -120,7 +121,7 @@
   }
 
   @media (min-width: 1281px) {
-    @media (max-width: 1799px) {
+    @media (max-width: 1699px) {
       .footer {
         @apply flex flex-col-reverse items-center justify-center;
 
@@ -188,6 +189,10 @@
           @apply flex flex-col items-center justify-between flex-wrap pt-12 pb-12;
           width: 100%;
 
+          .socialExplanation{
+            width: 60%;
+          }
+
           .socialIconsEnv {
             width: 60%;
           }
@@ -220,7 +225,7 @@
 
         .socialEnv {
           @apply pt-12 pb-12;
-
+          width: 80%;
           .copyRight {
             @apply flex flex-col justify-center items-center;
 
