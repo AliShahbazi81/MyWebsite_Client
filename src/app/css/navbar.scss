@@ -45,7 +45,6 @@ nav {
 
 .mobile-menu-button {
   @apply flex justify-end items-end content-end w-full rounded-md shadow-sm px-4 py-2 bg-transparent text-sm font-medium;
-  margin-left: auto; /* This pushes the button to the right */
 }
 
 .mobile-icon {
@@ -65,47 +64,46 @@ nav {
 }
 
 .menu-slide-container {
-  @apply fixed top-0 right-0 h-full bg-background/30 backdrop-blur-lg z-50;
-  @apply rounded-tl-lg rounded-tr-lg;
-  width: 50vw; // Adjust as needed to match your design
-  transform: translateX(0%); // Start off-screen to the right
-  transition: transform 1000ms ease-in-out; // Adjust the duration to your preference
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu-items {
-  @apply text-center;
+  @apply fixed flex flex-col top-0 right-0 h-full bg-background/30 backdrop-blur-lg z-50 items-center justify-center;
+  width: 50vw;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+  padding: 20px;
   
-  .menu-item{
-    @apply text-white mb-10;
+
+  &.is-open {
+    transform: translateX(0);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   }
+
+  .menu-item {
+    @apply text-white mb-6;
+  }
+
 }
-
-
-@layer components{
+@layer components {
   @media (max-width: 768px) {
     .navbar-flex-container {
       @apply flex items-center justify-between;
     }
-    .navbar-logo-link{
+    .navbar-logo-link {
       @apply opacity-0;
     }
-    .mobile-menu-button{
+    .mobile-menu-button {
       @apply mt-8 mr-5;
     }
   }
-  
-  @media (min-width: 769px) 
-  {
-    .nav-desktop{
+
+  @media (min-width: 769px) {
+    .nav-desktop {
       @apply transition-all top-0 animate-slideDown ease-in-out duration-1000 bg-opacity-60 backdrop-filter backdrop-blur-sm;
     }
     .navbar-flex-container {
       @apply flex items-center justify-center;
     }
-    .navbar-logo-link{
+    .navbar-logo-link {
       @apply opacity-100;
     }
   }

@@ -1,7 +1,6 @@
 'use client'
 import Link from 'next/link';
-import {Fragment, useEffect, useState} from 'react';
-import {Menu, Transition} from '@headlessui/react';
+import {useEffect, useRef, useState} from 'react';
 import {Bars3Icon} from '@heroicons/react/24/outline';
 import Image from "next/image";
 import "../app/css/navbar.scss"
@@ -11,6 +10,10 @@ import {useTranslation} from "next-i18next";
 
 export default function Navbar() {
 	const [isSticky, setIsSticky] = useState(false);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const closeMenu = () => setIsMenuOpen(false);
+	const menuRef = useRef<HTMLDivElement>(null);
+	const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 	const {t} = useTranslation('common');
 
 	useEffect(() => {
@@ -19,13 +22,20 @@ export default function Navbar() {
 			setIsSticky(shouldBeSticky);
 		};
 
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
+		const handleOutsideClick = (event: MouseEvent) => {
+			if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+				closeMenu();
+			}
+		};
 
-	function classNames(...classes: any) {
-		return classes.filter(Boolean).join(' ');
-	}
+		window.addEventListener('scroll', handleScroll);
+		document.addEventListener('mousedown', handleOutsideClick);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+			document.removeEventListener('mousedown', handleOutsideClick);
+		};
+	}, []);
 
 	return (
 		<nav className={`left-0 w-full z-40 fixed ${isSticky ? 'nav-desktop' : 'relative top-10 bg-transparent h-0'}`}>
@@ -46,68 +56,57 @@ export default function Navbar() {
 						<LanguageSelector/>
 					</div>
 					<div className="-mr-2 flex md:hidden">
-						<Menu as="div" className="relative inline-block text-left">
-							<Menu.Button className="mobile-menu-button">
-								<Bars3Icon className="mobile-icon" aria-hidden="true"/>
-							</Menu.Button>
-							<Transition
-								as={Fragment}
-								enter="transition ease-in-out duration-800"
-								enterFrom="transform translate-x-full"
-								enterTo="transform translate-x-0"
-								leave="transition ease-in-out duration-800"
-								leaveFrom="transform translate-x-0"
-								leaveTo="transform translate-x-full"
-							>
-								<Menu.Items className="menu-slide-container">
-									<div className="menu-items">
-										<Menu.Item>
-											{({active}) => (
-												<Link href="/">
-													<span
-														className={classNames(active ? 'menu-item-active' : '', 'menu-item')}>{t('navbarHome')}</span>
-												</Link>
-											)}
-										</Menu.Item>
-										<Menu.Item>
-											{({active}) => (
-												<Link href="/#expertise">
-													<span
-														className={classNames(active ? 'menu-item-active' : '', 'menu-item')}>{t('navbarExpertise')}</span>
-												</Link>
-											)}
-										</Menu.Item>
-										<Menu.Item>
-											{({active}) => (
-												<Link href="/#experience">
-													<span
-														className={classNames(active ? 'menu-item-active' : '', 'menu-item')}>{t('navbarExperience')}</span>
-												</Link>
-											)}
-										</Menu.Item>
-										<Menu.Item>
-											{({active}) => (
-												<Link href="/#education">
-													<span
-														className={classNames(active ? 'menu-item-active' : '', 'menu-item')}>{t('navbarEducation')}</span>
-												</Link>
-											)}
-										</Menu.Item>
-										<Menu.Item>
-											{({active}) => (
-												<Link href="/#contact-me">
-													<span
-														className={classNames(active ? 'menu-item-active' : '', 'menu-item')}>{t('navbarContactMe')}</span>
-												</Link>
-											)}
-										</Menu.Item>
-										<Menu.Item>
-											<LanguageSelector />
-										</Menu.Item>
-									</div>
-								</Menu.Items>
-							</Transition>
-						</Menu>
+						<button className="mobile-menu-button" onClick={toggleMenu}>
+							<Bars3Icon className="mobile-icon" aria-hidden="true"/>
+						</button>
+						<div ref={menuRef} className={`menu-slide-container ${isMenuOpen ? 'is-open' : ''}`}>
+								<Link href="/" className={'mb-6'}>
+									<Image src="/images/Logo.png" alt="Logo" width={70} height={70}/>
+								</Link>
+							<Link href="/">
+								<span
+									className={'menu-item'}
+									onClick={closeMenu}
+								>{t('navbarHome')}
+								</span>
+							</Link>
+							<Link href="/#expertise">
+								<span
+									className={'menu-item'}
+									onClick={closeMenu}
+								>{t('navbarExpertise')}
+								</span>
+							</Link>
+							<Link href="/#projects">
+								<span
+									className={'menu-item'}
+									onClick={closeMenu}
+								>{t('navbarProjects')}
+								</span>
+							</Link>
+							<Link href="/#experience">
+								<span
+									className={'menu-item'}
+									onClick={closeMenu}
+								>{t('navbarExperience')}
+								</span>
+							</Link>
+							<Link href="/#education">
+								<span
+									className={'menu-item'}
+									onClick={closeMenu}
+								>{t('navbarEducation')}
+								</span>
+							</Link>
+							<Link href="/#contact-me">
+								<span
+									className={'menu-item'}
+									onClick={closeMenu}
+								>{t('navbarContactMe')}
+								</span>
+							</Link>
+							<LanguageSelector/>
+						</div>
 					</div>
 				</div>
 			</div>
