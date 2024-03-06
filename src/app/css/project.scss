@@ -16,6 +16,10 @@
 
 .projectCardBodyEnv {
   @apply flex flex-col;
+  
+  .projectCardBodyHeader{
+    @apply flex justify-between items-center;
+  }
 }
 .projectImage{
   @apply rounded-2xl;
@@ -119,7 +123,11 @@
         @apply flex justify-center items-start w-full h-full overflow-hidden p-3 transition-all duration-300;
 
         .projectCardBodyEnv {
-          @apply mr-3 mt-0 transition-all duration-300;
+          @apply mr-3 mt-0 ml-6 transition-all duration-300;
+          
+          .projectCardBodyHeader{
+            @apply mb-4;
+          }
 
           .projectBodyDetail {
             @apply mt-2 mb-2 leading-6 font-light;
@@ -127,11 +135,12 @@
         }
       }
       .projectImage {
-        @apply object-cover mr-4;
+        @apply object-cover;
+        aspect-ratio: 1;
         height: 100%;
       }
       .projectTechnologyEnv {
-        @apply mt-1 justify-start transition-all duration-300;
+        @apply mt-1 justify-start transition-all duration-300 justify-self-end;
         .projectTechnology {
           @apply mt-5;
           font-size: min(2vw, 12px);
@@ -147,7 +156,7 @@
         @apply flex-wrap transition-all duration-300;
       }
       .projectEnv {
-        @apply flex justify-start items-start flex-wrap p-1 transition-all duration-300;
+        @apply flex justify-center flex-wrap p-1 transition-all duration-300;
       }
       .projectCardBodyEnv {
         @apply ml-7 mr-7 mb-4 mt-4 transition-all duration-300;

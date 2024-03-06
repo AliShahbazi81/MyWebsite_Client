@@ -209,11 +209,12 @@
 
         .reference {
           @apply flex flex-col items-start justify-start pt-12;
+          width: 90%;
 
           .referenceEnv {
             @apply flex flex-col justify-center items-center;
             .referenceInfoEnv {
-              @apply flex justify-center items-center pb-5 pr-6;
+              @apply flex justify-center items-start pb-5 pr-6 mt-6;
               width: 100%;
 
               .referenceText {

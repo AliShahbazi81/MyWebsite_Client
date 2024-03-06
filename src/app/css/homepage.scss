@@ -1,20 +1,20 @@
 @tailwind components;
 
-.homePageEnv{
+.homePageEnv {
   @apply relative flex items-center justify-center;
   height: 100vh;
   width: 100vw;
   background: linear-gradient(to bottom, #1B2736, #1A191D);
 
-  .homePageImage{
+  .homePageImage {
     @apply block;
     max-width: 1920px;
     max-height: 1080px;
     object-fit: cover; /* These are for illustrative purposes; */
     object-position: center; /* Adjust based on actual implementation needs */
   }
-  
-  .homePage{
+
+  .homePage {
     @apply flex items-center justify-center flex-wrap;
     height: 100vh;
     width: 100vw;
@@ -49,6 +49,74 @@
     animation: scroll 2s linear infinite;
   }
 }
+
+.scrollDown {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translate(-50%, 0);
+  z-index: 1000;
+
+  &::before {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    content: '';
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, 40px) scale(0.5, 0.5);
+    background: #ccc;
+    animation: scrollDown 2.5s linear infinite
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translate(-50%, 40px) scale(0.5, 0.5);
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+  10% {
+    transform: translate(-50%, 20px) scale(0.4, 0.65);
+    animation-timing-function: ease-out;
+  }
+  20% {
+    transform: translate(-50%, 0px) scale(0.6, 0.4);
+    animation-timing-function: ease;
+  }
+  30% {
+    transform: translate(-50%, 0px) scale(0.5, 0.5);
+    animation-timing-function: ease-in;
+    opacity: 1;
+    filter: blur(0px);
+  }
+  50% {
+    transform: translate(-50%, 0px) scale(0.9, 0.9);
+    opacity: .4;
+    filter: blur(.5px);
+  }
+  65% {
+    transform: translate(-50%, 20px) scale(1, 1.2);
+    filter: blur(1px);
+    opacity: .3;
+  }
+  80% {
+    transform: translate(-50%, 40px) scale(1.05, 0.95);
+    animation-timing-function: ease-out;
+    opacity: .4;
+    filter: blur(.5px);
+  }
+  100% {
+    transform: translate(-50%, 40px) scale(0.5, 0.5);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
 
 @keyframes scroll {
   0% {
@@ -104,14 +172,14 @@
 
 .nameInitial {
   @apply text-center font-bold z-10 text-primary;
-  font-size: min(8vw, 100px);
+  font-size: min(12vw, 100px);
   opacity: 0;
   animation: slideToRight 1s ease-in-out 1s forwards;
 }
 
 .name {
   @apply text-center font-bold z-10 text-white;
-  font-size: min(8vw, 100px);
+  font-size: min(12vw, 100px);
   animation: fadeIn 1s ease-in-out forwards;
 }
 
@@ -122,17 +190,21 @@
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_ Profession -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .profession {
   @apply absolute text-center text-white z-10 pt-36;
-  font-size: min(2vw, 24px);
+  font-size: min(4.2vw, 24px);
 }
 
-@layer components{
-  @media (max-width: 1240px) {
-    .mouseMain{
-      @apply opacity-0;
-      opacity: 0 !important;
+@layer components {
+  @media (max-width: 768px) {
+    .mouseMain {
+      display: none;
     }
-    .profession{
-      @apply -mt-10
+  }
+  @media (min-width: 769px) {
+    .mouseMain {
+      display: block;
+    }
+    .scrollDown {
+      display: none;
     }
   }
 }

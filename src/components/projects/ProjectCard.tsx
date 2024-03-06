@@ -43,7 +43,7 @@ export default function ProjectCard(
 				</Image>
 			</Link>
 			<div className={'projectCardBodyEnv'}>
-				<div className={'flex justify-between items-center'}>
+				<div className={'projectCardBodyHeader'}>
 					<h2 className={'projectTitle'}>
 						{projectName}
 					</h2>

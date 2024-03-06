@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        md: '769px',
+      },
       backdropFilter: { 'none': 'none', 'blur': 'blur(20px)' },
       whitespace: {
         'pre-wrap': 'pre-wrap',
