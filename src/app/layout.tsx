@@ -3,6 +3,7 @@ import "./globals.css";
 import {Inter} from "next/font/google";
 import ToasterProvider from "@/app/providers/ToasterProvider";
 import {Analytics} from "@vercel/analytics/react"
+import {SpeedInsights} from "@vercel/speed-insights/next"
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -24,6 +25,7 @@ export default function RootLayout(
 		<main className={'mainDiv relative'}>
 			{children}
 			<Analytics/>
+			<SpeedInsights/>
 		</main>
 		</body>
 		</html>
