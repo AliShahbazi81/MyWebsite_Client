@@ -10,6 +10,16 @@ export default function MyProjects() {
 		<div className="projectEnv">
 			<GlassCard>
 				<ProjectCard
+					imageName={"MahsaDance"}
+					projectName={('Mahsa Dance')}
+					projectDetail={t('projectDescriptionMahsaDance')}
+					techName={['.NET', 'NextJS', 'Tailwind', 'Redux']}
+					webUrl={"https://mahsa-dnc.com/"}
+					projectDetailUrl={"mahsa-dance"}
+				/>
+			</GlassCard>
+			<GlassCard>
+				<ProjectCard
 					imageName={"CarAuction"}
 					projectName={t('projectTitleCarAuction')}
 					projectDetail={t('projectDescriptionCarAuction')}

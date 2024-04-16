@@ -19,6 +19,7 @@
   "expertiseToolsTitle": "Tools",
   "expertiseVersionControlTitle": "Version Control",
   "expertiseSourceCodeTitle": "Source Code",
+  "expertiseWebsiteTitle": "Website",
   "expertiseMessageBusTitle": "Message Bus",
   "expertiseContainerTitle": "Container",
   "expertiseTitleTechnologies": "Technologies",
@@ -39,8 +40,10 @@
   "projectDescriptionUserActivity": "The Activity Application is a .NET Core and React-based platform for creating, sharing, and joining activities, featuring user interaction and participation management.",
   "projectTitleCinemaTicket": "Cinema Ticket",
   "projectDescriptionCinemaTicket": "Cinema Ticket is a full-stack web application using React and ASP.NET Core, enabling users to buy tickets and administrators to manage listings and sales.",
-  
-  
+  "projectTitleMahsaDance": "Mahsa Dance",
+  "projectDescriptionMahsaDance": "Mahsa Dance offers an online platform for secure and interactive dance course delivery, utilizing .NET Core, NextJs, and SQL Server.",
+
+
   "projectCarAuctionIntro": "Introduction to Carsties Auctions",
   "projectCarAuctionIntroDescription": "The <1>Carsties Auctions</1> platform is an innovative online car auction system that transforms the dynamics of vehicle trading. With a focus on creating a seamless, efficient, and transparent buying and selling experience, the project is rooted in a <3>microservices architecture</3>. This approach harnesses a variety of advanced technologies and methodologies to ensure the platform's scalability, performance, and user satisfaction.",
   "projectCarAuctionFeatures": "Core Features and User Experience",
@@ -114,9 +117,22 @@
   "projectUserActivityPersonalDescription": "My role in this project spanned from initial concept design, through development, to final deployment. I was pivotal in integrating <1>SignalR</1> for real-time communication, crafting the <3>React</3> frontend components, and establishing a secure <5>.NET Core</5> backend. This project refined my skills in full-stack development, particularly in creating applications that require immediate data updates and user interactions.",
 
 
+  "projectMahsaDanceIntro": "Introduction to Mahsa Dance",
+  "projectMahsaDanceIntroDescription": "Mahsa Dance is a specialized online platform designed for a dance tutor to deliver dance courses to students globally. Utilizing advanced technologies like <1>.NET Core</1>, <3>NextJs</3>, and <5>SQL Server</5>, the platform integrates e-commerce with educational tools to enrich both the tutor and student experiences.",
+  "projectMahsaDanceFeatures": "Core Features",
+  "projectMahsaDanceFeaturesDescription": "Key features include a <1>shop section</1> for selecting and purchasing courses, secured by robust payment gateways. A distinctive video delivery system protects course content via a secure proxy, preventing unauthorized sharing. Additionally, customizable discounts and promotional offers enhance user engagement and sales.",
+  "projectMahsaDanceTechnology": "Technology Stack",
+  "projectMahsaDanceTechnologyDescription": "The platform's frontend uses <1>NextJs</1> and <3>TypeScript</3>, styled with <5>Tailwind CSS</5> and <7>SCSS</7> for a responsive and modern user interface. The backend, powered by <9>.NET Core</9> and managed by <11>SQL Server</11>, integrates <13>Cloudflare CDN</13> for optimized global content delivery.",
+  "projectMahsaDanceDevelopment": "Security and Data Handling",
+  "projectMahsaDanceDevelopmentDescription": "A sophisticated caching and proxy mechanism for video streaming reduces redundancy and load times, enhancing content security and delivery efficiency. Videos are securely downloaded and cached for subsequent accesses, ensuring efficient and secure data flow.",
+  "projectMahsaDancePersonal": "Personal Contributions",
+  "projectMahsaDancePersonalDescription": "Throughout the project's lifecycle, I led the design and implementation of core features, including the secure video streaming proxy, the integration of <1>Cloudflare CDN</1>, and the development of the responsive frontend with <3>NextJs</3> and <5>Tailwind CSS</5>. This role refined my skills in full-stack development and secure platform design.",
 
 
-"experienceCedarValleyDateFrom": "Sep 2023",
+
+
+
+  "experienceCedarValleyDateFrom": "Sep 2023",
   "experienceCedarValleyDateTo": "Jan 2024",
   "experienceCedarValleyDescription": "At Cedar Valley, I spearheaded the digital transformation of manual, paper-based processes into sophisticated digital systems as a Backend Developer, leveraging .NET Core and C# for developing robust backend systems. My contributions range from enhancing ingredient and logistics tracking to implementing RabbitMQ for message queuing and occasionally supporting the frontend with React.js, all underpinned by Microsoft SQL Server. This work has been crucial in reducing manual labor, errors, and enhancing operational efficiency and accountability.",
   "experienceCedarValleyCountry": "Canada, Windsor",
@@ -156,7 +172,7 @@
   "contactMeSubjectLabel": "Subject",
   "contactMeMessageLabel": "Your Message",
 
-  "contactMeClearButtonLabel": "Name",
+  "contactMeClearButtonLabel": "Clear",
   "contactMeSendButtonLabel": "Send",
   "contactMeSendingButtonLabel": "Sending...",
   

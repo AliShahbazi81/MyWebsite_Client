@@ -19,6 +19,7 @@
   "expertiseToolsTitle": "Outils",
   "expertiseVersionControlTitle": "Contrôle de version",
   "expertiseSourceCodeTitle": "Code source",
+  "expertiseWebsiteTitle": "Site web",
   "expertiseMessageBusTitle": "Bus de messages",
   "expertiseContainerTitle": "Conteneur",
   "expertiseTitleTechnologies": "Technologies",
@@ -98,6 +99,18 @@
   "projectUserActivityDevelopmentDescription": "Le parcours de développement de l'Application d'Activité a mis l'accent sur les pratiques de code propre, une architecture modulaire et l'implémentation d'échanges de données en temps réel pour favoriser un engagement communautaire vivant. Des phases de tests rigoureuses ont garanti une plateforme sans bug et conviviale, prête à évoluer et à s'adapter aux besoins changeants de sa base d'utilisateurs.",
   "projectUserActivityPersonal": "Contributions Personnelles",
   "projectUserActivityPersonalDescription": "Mon rôle dans ce projet s'est étendu de la conception conceptuelle initiale, à travers le développement, jusqu'au déploiement final. J'ai joué un rôle clé dans l'intégration de <1>SignalR</1> pour la communication en temps réel, la création des composants frontend <3>React</3>, et l'établissement d'un backend <5>.NET Core</5> sécurisé. Ce projet a affiné mes compétences en développement full-stack, en particulier dans la création d'applications nécessitant des mises à jour de données immédiates et des interactions utilisateur.",
+
+  "projectMahsaDanceIntro": "Introduction à Mahsa Dance",
+  "projectMahsaDanceIntroDescription": "Mahsa Dance est une plateforme en ligne spécialisée conçue pour permettre à un professeur de danse de proposer des cours de danse à des étudiants du monde entier. Utilisant des technologies avancées telles que <1>.NET Core</1>, <3>NextJs</3> et <5>SQL Server</5>, la plateforme intègre le commerce électronique avec des outils pédagogiques pour enrichir les expériences des enseignants et des élèves.",
+  "projectMahsaDanceFeatures": "Fonctionnalités clés",
+  "projectMahsaDanceFeaturesDescription": "Les fonctionnalités principales incluent une <1>section boutique</1> pour sélectionner et acheter des cours, sécurisée par des passerelles de paiement robustes. Un système de livraison vidéo distinctif protège le contenu des cours via un proxy sécurisé, empêchant le partage non autorisé. De plus, des réductions personnalisables et des offres promotionnelles améliorent l'engagement des utilisateurs et les ventes.",
+  "projectMahsaDanceTechnology": "Pile technologique",
+  "projectMahsaDanceTechnologyDescription": "Le frontend de la plateforme utilise <1>NextJs</1> et <3>TypeScript</3>, stylisé avec <5>Tailwind CSS</5> et <7>SCSS</7> pour une interface utilisateur réactive et moderne. Le backend, alimenté par <9>.NET Core</9> et géré par <11>SQL Server</11>, intègre <13>Cloudflare CDN</13> pour optimiser la livraison de contenu à l'échelle mondiale.",
+  "projectMahsaDanceDevelopment": "Sécurité et gestion des données",
+  "projectMahsaDanceDevelopmentDescription": "Un mécanisme de proxy et de mise en cache sophistiqué pour le streaming vidéo réduit la redondance et les temps de chargement, améliorant la sécurité du contenu et l'efficacité de la livraison. Les vidéos sont téléchargées de manière sécurisée et mises en cache pour des accès ultérieurs, garantissant un flux de données efficace et sécurisé.",
+  "projectMahsaDancePersonal": "Contributions personnelles",
+  "projectMahsaDancePersonalDescription": "Tout au long du cycle de vie du projet, j'ai dirigé la conception et la mise en œuvre des fonctionnalités clés, incluant le proxy de streaming vidéo sécurisé, l'intégration de <1>Cloudflare CDN</1>, et le développement du frontend réactif avec <3>NextJs</3> et <5>Tailwind CSS</5>. Ce rôle a affiné mes compétences en développement full-stack et en conception de plateformes sécurisées.",
+
 
   "experienceCedarValleyDateFrom": "Sep 2023",
   "experienceCedarValleyDateTo": "Jan 2024",

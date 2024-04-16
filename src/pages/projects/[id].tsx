@@ -15,6 +15,8 @@ import CinemaTicket from "@/components/projects/explanations/CinemaTicket";
 import NotFound from "@/app/not-found";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useTranslation} from "next-i18next";
+import MahsaDance from "@/components/projects/explanations/MahsaDance";
+import Language from "@mui/icons-material/Language";
 
 interface ProjectPageProps {
 	project: Omit<ProjectData, 'explanation'>;
@@ -28,6 +30,7 @@ type ExplanationComponentsMap = {
 
 // Define the actual mapping
 const ExplanationComponents: ExplanationComponentsMap = {
+	"mahsa-dance": MahsaDance,
 	"car-auction": CarAuction,
 	"e-commerce": ECommerce,
 	"e-learning": ELearning,
@@ -270,6 +273,20 @@ const ProjectPage: React.FC<ProjectPageProps> = ({project}: { project: ProjectDa
 																quality={100}
 																title={`Source Code for ${project.name}`}
 															/>
+														</Link>
+													</div>
+												</div>
+											) : null
+										}
+										{
+											project.webUrl ? (
+												<div className={'technologyEnv'}>
+													<h3 className={'projectTitle'}>
+														{t('expertiseWebsiteTitle')}:
+													</h3>
+													<div className={'technologyIconEnv'}>
+														<Link href={project.webUrl} title={'Link to website'}>
+															<Language color={'primary'}/>
 														</Link>
 													</div>
 												</div>

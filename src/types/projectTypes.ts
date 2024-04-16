@@ -10,6 +10,7 @@ interface ProjectData {
 	tools?: string[];
 	versionControl: string[];
 	sourceCode?: string;
+	webUrl?: string;
 }
 
 export type { ProjectData };

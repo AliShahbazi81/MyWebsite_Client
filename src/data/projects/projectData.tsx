@@ -2,6 +2,17 @@ import {ProjectData} from "@/types/projectTypes";
 
 export const data: ProjectData[] = [
 	{
+		id: "mahsa-dance",
+		name: "projectTitleMahsaDance",
+		explanationKey: "mahsa-dance",
+		backend: ['DotNetCore'],
+		frontend: ['NextJs', 'Tailwind', 'Redux', "TypeScript"],
+		database: ['SqlServer'],
+		tools: ['MailKit', 'CloudFlare'],
+		versionControl: ["Git"],
+		webUrl: "https://mahsa-dnc.com/"
+	},
+	{
 		id: "car-auction",
 		name: "projectTitleCarAuction",
 		explanationKey: "car-auction",

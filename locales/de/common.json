@@ -19,6 +19,7 @@
   "expertiseToolsTitle": "Werkzeuge",
   "expertiseVersionControlTitle": "Versionskontrolle",
   "expertiseSourceCodeTitle": "Quellcode",
+  "expertiseWebsiteTitle": "Webseite",
   "expertiseMessageBusTitle": "Nachrichtenbus",
   "expertiseContainerTitle": "Container",
   "expertiseTitleTechnologies": "Technologien",
@@ -107,9 +108,20 @@
   "projectUserActivityDevelopmentDescription": "Die Entwicklungsreise der Aktivitätsanwendung legte Wert auf saubere Codierungspraktiken, modulare Architektur und die Implementierung des Echtzeit-Datenaustauschs, um ein lebhaftes Community-Engagement zu fördern. Umfangreiche Testphasen stellten eine fehlerfreie und benutzerfreundliche Plattform sicher, bereit zum Skalieren und Anpassen an die sich entwickelnden Bedürfnisse ihrer Benutzerbasis.",
   "projectUserActivityPersonal": "Persönliche Beiträge",
   "projectUserActivityPersonalDescription": "Meine Rolle in diesem Projekt erstreckte sich von der anfänglichen Konzeptgestaltung über die Entwicklung bis zur endgültigen Bereitstellung. Ich war entscheidend bei der Integration von <1>SignalR</1> für die Echtzeitkommunikation, der Gestaltung der <3>React</3>-Frontend-Komponenten und der Etablierung eines sicheren <5>.NET Core</5>-Backends. Dieses Projekt verfeinerte meine Fähigkeiten in der Full-Stack-Entwicklung, insbesondere bei der Erstellung von Anwendungen, die sofortige Datenaktualisierungen und Benutzerinteraktionen erfordern.",
-  
 
-"experienceCedarValleyDateFrom": "Sep 2023",
+  "projectMahsaDanceIntro": "Einführung in Mahsa Dance",
+  "projectMahsaDanceIntroDescription": "Mahsa Dance ist eine spezialisierte Online-Plattform, die für Tanzlehrer entwickelt wurde, um Tanzkurse weltweit anzubieten. Mit fortschrittlichen Technologien wie <1>.NET Core</1>, <3>NextJs</3> und <5>SQL Server</5> verbindet die Plattform E-Commerce mit Bildungswerkzeugen, um sowohl die Erfahrungen von Lehrern als auch von Schülern zu bereichern.",
+  "projectMahsaDanceFeatures": "Kernfunktionen",
+  "projectMahsaDanceFeaturesDescription": "Zu den Hauptfunktionen gehören ein <1>Shop-Bereich</1> für die Auswahl und den Kauf von Kursen, gesichert durch robuste Zahlungsschnittstellen. Ein ausgeklügeltes Videoübertragungssystem schützt Kursinhalte über einen sicheren Proxy und verhindert unautorisiertes Teilen. Zusätzlich verbessern anpassbare Rabatte und Werbeangebote das Benutzerengagement und die Verkäufe.",
+  "projectMahsaDanceTechnology": "Technologiestapel",
+  "projectMahsaDanceTechnologyDescription": "Das Frontend der Plattform verwendet <1>NextJs</1> und <3>TypeScript</3>, gestaltet mit <5>Tailwind CSS</5> und <7>SCSS</7> für eine responsive und moderne Benutzeroberfläche. Das Backend, betrieben von <9>.NET Core</9> und verwaltet von <11>SQL Server</11>, integriert <13>Cloudflare CDN</13> für eine optimierte weltweite Inhaltsauslieferung.",
+  "projectMahsaDanceDevelopment": "Sicherheit und Datenverarbeitung",
+  "projectMahsaDanceDevelopmentDescription": "Ein anspruchsvoller Caching- und Proxy-Mechanismus für das Videostreaming reduziert Redundanz und Ladezeiten, verbessert die Inhaltsicherheit und die Effizienz der Auslieferung. Videos werden sicher heruntergeladen und für den späteren Zugriff zwischengespeichert, was einen effizienten und sicheren Datenfluss gewährleistet.",
+  "projectMahsaDancePersonal": "Persönliche Beiträge",
+  "projectMahsaDancePersonalDescription": "Im gesamten Projektzyklus leitete ich das Design und die Implementierung der Kernfunktionen, einschließlich des sicheren Videostreaming-Proxys, der Integration von <1>Cloudflare CDN</1>, und der Entwicklung des responsiven Frontends mit <3>NextJs</3> und <5>Tailwind CSS</5>. Diese Rolle verfeinerte meine Fähigkeiten in der Full-Stack-Entwicklung und im sicheren Plattformdesign.",
+
+
+  "experienceCedarValleyDateFrom": "Sep 2023",
   "experienceCedarValleyDateTo": "Jan 2024",
   "experienceCedarValleyDescription": "Bei Cedar Valley leitete ich als Backend-Entwickler die digitale Transformation von manuellen, papierbasierten Prozessen zu ausgefeilten digitalen Systemen. Dabei setzte ich .NET Core und C# ein, um robuste Backend-Systeme zu entwickeln. Meine Beiträge reichen von der Verbesserung der Nachverfolgung von Zutaten und Logistik bis hin zur Implementierung von RabbitMQ für Message Queuing und gelegentlicher Unterstützung des Frontends mit React.js, alles gestützt auf Microsoft SQL Server. Diese Arbeit war entscheidend, um manuelle Arbeit, Fehler zu reduzieren und die betriebliche Effizienz und Verantwortlichkeit zu erhöhen.",
   "experienceCedarValleyCountry": "Kanada, Windsor",

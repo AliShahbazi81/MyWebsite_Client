@@ -4,12 +4,14 @@ import ProjectTechnology from "@/components/projects/ProjectTechnology";
 import "./../../app/css/project.scss"
 import Link from "next/link";
 import {useRouter} from "next/router";
+import Language from "@mui/icons-material/Language";
 
 type Props = {
 	imageName: string
 	projectName: string
 	projectDetail: string
 	github?: string
+	webUrl?: string
 	techName: string[],
 	projectDetailUrl: string;
 }
@@ -21,6 +23,7 @@ export default function ProjectCard(
 		projectDetail,
 		techName,
 		github,
+		webUrl,
 		projectDetailUrl,
 	}: Props) {
 	const router = useRouter();
@@ -62,6 +65,11 @@ export default function ProjectCard(
 								width={25}
 								height={20}
 							/>
+						</Link>
+					) : null}
+					{webUrl ? (
+						<Link href={webUrl}>
+							<Language />
 						</Link>
 					) : null}
 				</div>
